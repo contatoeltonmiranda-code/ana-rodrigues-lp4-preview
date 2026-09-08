@@ -1,13 +1,14 @@
 {
   "index@1440": {
     "overflow": 0,
-    "altura": 14019,
-    "imgs": 24,
+    "altura": 13017,
+    "imgs": 44,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
     "pendentes": [
       "checkout",
+      "copy-familias",
       "checkout",
       "lp02-curso",
       "lp02-curso",
@@ -33,13 +34,14 @@
   },
   "index@1024": {
     "overflow": 0,
-    "altura": 13608,
-    "imgs": 24,
+    "altura": 12687,
+    "imgs": 44,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
     "pendentes": [
       "checkout",
+      "copy-familias",
       "checkout",
       "lp02-curso",
       "lp02-curso",
@@ -65,13 +67,14 @@
   },
   "index@768": {
     "overflow": 0,
-    "altura": 16098,
-    "imgs": 24,
+    "altura": 14082,
+    "imgs": 44,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
     "pendentes": [
       "checkout",
+      "copy-familias",
       "checkout",
       "lp02-curso",
       "lp02-curso",
@@ -97,13 +100,14 @@
   },
   "index@390": {
     "overflow": 0,
-    "altura": 21452,
-    "imgs": 24,
+    "altura": 16650,
+    "imgs": 44,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
     "pendentes": [
       "checkout",
+      "copy-familias",
       "checkout",
       "lp02-curso",
       "lp02-curso",
