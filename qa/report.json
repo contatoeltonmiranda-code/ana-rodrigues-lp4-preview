@@ -1,0 +1,130 @@
+{
+  "index@1440": {
+    "overflow": 0,
+    "altura": 14019,
+    "imgs": 24,
+    "partidas": [],
+    "semDestino": [],
+    "ancoras": [],
+    "pendentes": [
+      "checkout",
+      "checkout",
+      "lp02-curso",
+      "lp02-curso",
+      "checkout-essenza",
+      "checkout-sapori",
+      "checkout",
+      "lp02-curso",
+      "checkout",
+      "politica-privacidade"
+    ],
+    "ctas": 6,
+    "ctaTexto": [
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)",
+      "Escolher plano Essenza",
+      "Escolher plano Sapori",
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)"
+    ],
+    "h1": 1,
+    "consola": [],
+    "http4xx": []
+  },
+  "index@1024": {
+    "overflow": 0,
+    "altura": 13608,
+    "imgs": 24,
+    "partidas": [],
+    "semDestino": [],
+    "ancoras": [],
+    "pendentes": [
+      "checkout",
+      "checkout",
+      "lp02-curso",
+      "lp02-curso",
+      "checkout-essenza",
+      "checkout-sapori",
+      "checkout",
+      "lp02-curso",
+      "checkout",
+      "politica-privacidade"
+    ],
+    "ctas": 6,
+    "ctaTexto": [
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)",
+      "Escolher plano Essenza",
+      "Escolher plano Sapori",
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)"
+    ],
+    "h1": 1,
+    "consola": [],
+    "http4xx": []
+  },
+  "index@768": {
+    "overflow": 0,
+    "altura": 16098,
+    "imgs": 24,
+    "partidas": [],
+    "semDestino": [],
+    "ancoras": [],
+    "pendentes": [
+      "checkout",
+      "checkout",
+      "lp02-curso",
+      "lp02-curso",
+      "checkout-essenza",
+      "checkout-sapori",
+      "checkout",
+      "lp02-curso",
+      "checkout",
+      "politica-privacidade"
+    ],
+    "ctas": 6,
+    "ctaTexto": [
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)",
+      "Escolher plano Essenza",
+      "Escolher plano Sapori",
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)"
+    ],
+    "h1": 1,
+    "consola": [],
+    "http4xx": []
+  },
+  "index@390": {
+    "overflow": 0,
+    "altura": 21452,
+    "imgs": 24,
+    "partidas": [],
+    "semDestino": [],
+    "ancoras": [],
+    "pendentes": [
+      "checkout",
+      "checkout",
+      "lp02-curso",
+      "lp02-curso",
+      "checkout-essenza",
+      "checkout-sapori",
+      "checkout",
+      "lp02-curso",
+      "checkout",
+      "politica-privacidade"
+    ],
+    "ctas": 6,
+    "ctaTexto": [
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)",
+      "Escolher plano Essenza",
+      "Escolher plano Sapori",
+      "Quero ser acompanhada(o)",
+      "Quero ser acompanhada(o)"
+    ],
+    "h1": 1,
+    "consola": [],
+    "http4xx": []
+  }
+}

@@ -10,7 +10,7 @@
    ===================================================================== */
 :root{
   --cream:#F5F3F2; --paper:#FFFFFF; --white:#FFFFFF;
-  --areia:#F3E6DD; --areia-fim:#EFD9CC;
+  --areia:#F1E3D8; --areia-fim:#ECD6C8;
   --rosa-tinta:#F6ECEF; --amarelo-tinta:#FBF3DE;
   --coral:#E9684C; --coral-esc:#A8401F; --coral-claro:#F3B7A5;
   --rosa:#B45764; --rosa-esc:#96443C; --rosa-claro:#E1B7C7;
@@ -148,7 +148,9 @@ section{position:relative}
 .hero .cta-row{margin-top:36px}
 .hero .btn{min-width:320px}
 /* SEC 2 — A TRANSFORMACAO (8 cartoes, grelha 2 col) */
-.sec-transform{background:var(--areia);overflow:hidden}
+/* sombreado no topo (areia-fim -> areia 190px): a aba from-hero precisa de
+   contraste de fundo, o mesmo fix da LP 3 na .sec-duv */
+.sec-transform{background:linear-gradient(180deg,var(--areia-fim) 0,var(--areia) 190px);overflow:hidden}
 .transform-intro{max-width:760px;margin:0 auto;text-align:center}
 .transform-intro p{font-size:16.4px;color:var(--texto);line-height:1.72;margin-bottom:14px}
 .transform-intro p strong{color:var(--ink);font-weight:600}
