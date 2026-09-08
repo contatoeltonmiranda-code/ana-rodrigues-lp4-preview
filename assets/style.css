@@ -280,7 +280,9 @@ section{position:relative}
 .plano::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--angle),rgba(233,104,76,0) 0deg,rgba(233,104,76,0) 200deg,var(--coral) 260deg,var(--rosa) 310deg,#fff 330deg,var(--coral) 350deg,rgba(233,104,76,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:0}
 .plano>*{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){.plano::before{animation:none}}
-.plano.destaque{background:linear-gradient(150deg,#FFFFFF 0%,#FCF3F0 100%);box-shadow:0 26px 60px rgba(156,109,94,.26)}
+/* r1 item 8: Sapori com background proprio, mais destaque (rosa da paleta) */
+.plano.destaque{background:linear-gradient(155deg,#FCF1EE 0%,#F4DCDC 58%,#EFD0D2 100%);box-shadow:0 30px 64px rgba(150,68,60,.30);border-radius:26px}
+.plano.destaque::before{padding:2.5px}
 .plano h3{font-size:clamp(26px,3vw,34px);letter-spacing:-.3px;margin-bottom:4px}
 .plano .pl-meta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:10px 0 0}
 .plano .pm{display:inline-flex;align-items:center;gap:7px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--coral-esc);background:rgba(233,104,76,.12);border:1px solid rgba(233,104,76,.36);border-radius:50px;padding:6px 14px}
