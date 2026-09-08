@@ -329,14 +329,20 @@ section{position:relative}
 .sobre-body h2{margin-bottom:16px}
 .sobre-body p{font-size:15.5px;color:var(--texto);margin-bottom:14px;line-height:1.7}
 .sobre-body p strong{color:var(--ink);font-weight:600}
-/* caixinha Formacao (escada portada da LP 3 — mesma geometria e JS) */
-.sec-forma{background:var(--rosa-tinta);overflow:visible;padding-top:0;margin-top:0;padding-bottom:88px}
+/* caixinha Formacao — r1 item 9: seccao propria logo abaixo do Sobre, fundo
+   com FOTOS DA EXPERT do jeito da ref 17 (metade direita, lado a lado, cover) */
+.sec-forma{background:var(--rosa-tinta);overflow:hidden;padding:88px 0}
+.forma-fotos{position:absolute;top:0;right:0;bottom:0;width:44%;display:flex;pointer-events:none}
+.forma-fotos img{width:50%;height:100%;object-fit:cover;object-position:center top}
+.forma-fotos img:first-child{filter:none}
+.forma-fotos::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--rosa-tinta) 0%,rgba(246,236,239,0) 34%)}
+.forma-wrap{position:relative;z-index:2}
 .form-box{position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:28px 30px;box-shadow:var(--sh-soft);overflow:hidden}
 .form-box::after{content:"";position:absolute;top:0;left:30px;width:64px;height:4px;border-radius:0 0 4px 4px;background:var(--grad-coral-claro);box-shadow:0 0 10px rgba(233,104,76,.4)}
 .form-box h3{font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:11px}
 .form-box h3 .fh{width:34px;height:34px;border-radius:50%;background:var(--grad-coral);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .form-box h3 .fh svg{width:18px;height:18px;stroke:#fff;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.sec-forma .form-box{position:relative;z-index:2;top:-75px;margin:0 auto -75px;max-width:920px;padding:34px 38px 40px;box-shadow:0 26px 60px rgba(156,109,94,.16)}
+.sec-forma .form-box{max-width:620px;margin:0 0 0 0;padding:34px 38px 40px;box-shadow:0 26px 60px rgba(156,109,94,.16)}
 .sec-forma .form-box::after{left:38px;width:78px}
 .sec-forma .form-box h3{font-size:24px;margin-bottom:0;position:relative;z-index:3}
 .sec-forma .form-box h3 .fh{width:40px;height:40px}
@@ -407,7 +413,14 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .hero{padding:60px 0 88px}
   .sobre-split{grid-template-columns:1fr;gap:44px}
   .sobre-visual{order:-1;max-width:300px}
+  .sec-forma{padding:64px 0}
+  .forma-fotos{position:relative;width:100%;height:250px;max-width:560px;margin:0 auto 30px}
+  .forma-fotos img{border-radius:14px;box-shadow:0 16px 36px rgba(156,109,94,.20)}
+  .forma-fotos img:first-child{border-radius:14px 0 0 14px}
+  .forma-fotos img:last-child{border-radius:0 14px 14px 0}
+  .forma-fotos::after{display:none}
   .sec-forma .form-box{max-width:620px}
+
   .escada{--esc-k:0;--esc-ds:.92;margin-top:6px;padding-top:0}
   .esc-svg{display:none}
   .esc-lista{flex-direction:column;gap:14px}
