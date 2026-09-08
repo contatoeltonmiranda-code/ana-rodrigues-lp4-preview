@@ -139,7 +139,14 @@ section{position:relative}
    inferior e uniforme (#F3EAE2), que e o que a aba from-hero pinta. */
 .hero{position:relative;padding:72px 0 104px;background:linear-gradient(180deg,#FAF7F5 0%,#F3EAE2 100%);overflow:hidden;isolation:isolate}
 .hero .wrap{max-width:900px;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
-.hero-logo{width:clamp(150px,18vw,218px);height:auto;margin:0 auto 26px;filter:drop-shadow(0 14px 30px rgba(156,109,94,.22))}
+.hero-logo{width:clamp(116px,12.5vw,152px);height:auto;margin:0 auto 24px;filter:drop-shadow(0 12px 26px rgba(156,109,94,.20))}
+/* prova social do hero (r1 item 1): rostos em circulos + contagem de familias */
+.hero-prova{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px}
+.prova-faces{display:flex}
+.prova-faces img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2.5px solid #fff;box-shadow:0 6px 14px rgba(156,109,94,.24);margin-left:-12px;background:var(--areia)}
+.prova-faces img:first-child{margin-left:0}
+.prova-txt{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--rosa-esc);letter-spacing:.1px}
+@media(max-width:600px){.hero-logo{width:104px}.hero-prova{margin-top:24px;gap:11px}.prova-faces img{width:38px;height:38px;border-width:2px;margin-left:-10px}.prova-txt{font-size:13.5px}}
 .hero h1{font-size:clamp(29px,4.1vw,50px);line-height:1.08;letter-spacing:-.5px;text-transform:uppercase}
 .hero h1 .h1-l2{display:block;font-size:.62em;letter-spacing:.14em;margin-top:10px;color:var(--rosa-esc);-webkit-text-fill-color:currentColor}
 .hero .sub{font-size:clamp(15px,1.2vw,17.5px);color:var(--texto);line-height:1.66;margin:26px 0 0;max-width:680px}
