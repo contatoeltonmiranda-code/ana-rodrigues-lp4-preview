@@ -180,15 +180,18 @@ section{position:relative}
 @media(max-width:600px){.preciso-painel{border-radius:30px 30px 0 0;padding:48px 0 58px}.preciso-painel .transform-fecho{font-size:15px}}
 @media(max-width:960px){.ind-cards{grid-template-columns:1fr;max-width:640px}}
 @media(max-width:600px){.ind-cards{gap:8px;margin-top:26px}.ind-card{padding:12px 2px;gap:12px}.ind-card p{font-size:14.4px;padding-top:5px}.ind-ico{width:36px;height:36px}.ind-ico svg{width:18px;height:18px}}
-/* SEC 3 — MODO DE FUNCIONAMENTO: TIMELINE VERTICAL COM PONTOS (pedido da cliente) */
-.sec-func{background:var(--paper);overflow:clip}
+/* SEC 3 — MODO DE FUNCIONAMENTO: TIMELINE VERTICAL COM PONTOS (pedido da cliente)
+   r1 item 4: STACK SCROLL — cada card fica sticky e o seguinte cobre o anterior
+   (so aparece um filete do topo do anterior); scrollar pra cima desfaz.
+   overflow:clip removido (ancestral com overflow quebra position:sticky). */
+.sec-func{background:var(--paper)}
 .func-head{max-width:860px;margin:0 auto 8px;text-align:center}
 .func-head .lead{margin-top:4px}
 .func-head .lead2{margin-top:10px}
 .timeline{position:relative;max-width:820px;margin:56px auto 0;padding-left:64px}
 .timeline::before{content:"";position:absolute;left:27px;top:8px;bottom:8px;width:2.5px;border-radius:2px;
   background:linear-gradient(180deg,var(--coral-claro) 0%,var(--coral) 46%,var(--rosa) 100%)}
-.tl-item{position:relative;padding:0 0 42px}
+.tl-item{position:sticky;top:calc(96px + var(--i,0)*42px);padding:0 0 42px;z-index:calc(1 + var(--i,0))}
 .tl-item:last-child{padding-bottom:6px}
 .tl-dot{position:absolute;left:-64px;top:0;width:57px;height:57px;border-radius:50%;
   background:var(--grad-coral);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:21px;
@@ -233,12 +236,14 @@ section{position:relative}
 .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
 @media(max-width:960px){
   .timeline{padding-left:56px}
+  .tl-item{top:calc(84px + var(--i,0)*34px)}
   .tl-dot{left:-56px;width:48px;height:48px;font-size:18px}
   .timeline::before{left:23px}
 }
 @media(max-width:600px){
   .timeline{padding-left:46px;margin-top:40px}
   .timeline::before{left:18px;width:2px}
+  .tl-item{top:calc(66px + var(--i,0)*24px);padding-bottom:32px}
   .tl-dot{left:-46px;width:38px;height:38px;font-size:15px;box-shadow:0 6px 16px rgba(156,109,94,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
   .tl-box{padding:20px 18px 18px}
   .tl-item h3{font-size:17px}
