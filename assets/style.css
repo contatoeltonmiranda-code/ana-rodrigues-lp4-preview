@@ -143,7 +143,7 @@ section{position:relative}
 .curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
 .curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
 .curva-div.from-hero{--curva-cor:#F3EAE2}
-.curva-div .cd-circle{position:absolute;top:83px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--rosa-esc);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(147,76,89,.30);z-index:2}
+.curva-div .cd-circle{position:absolute;top:56px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--rosa-esc);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(147,76,89,.30);z-index:2}
 .curva-div .cd-circle svg{width:22px;height:22px;fill:none;stroke:var(--cream);stroke-width:2.5}
 @media(max-width:768px){.curva-div{height:78px}.curva-div .cd-circle{width:44px;height:44px;top:58px}.curva-div .cd-circle svg{width:18px;height:18px}}
 @media(max-width:420px){.curva-div{height:66px}.curva-div .cd-circle{width:38px;height:38px;top:50px}.curva-div .cd-circle svg{width:16px;height:16px}}
@@ -268,8 +268,7 @@ section{position:relative}
 .func-mais h3{font-size:clamp(24px,3vw,34px);text-align:center;margin-bottom:8px}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
 .apoio{display:grid;grid-template-columns:1fr;gap:26px}
-.apoio-card{position:relative;--apoio-pt:44px;
-.apoio-card.sr-hidden{transform:none;transition:opacity .6s ease}display:grid;grid-template-columns:1fr 1fr;gap:0 34px;align-items:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
+.apoio-card{position:relative;--apoio-pt:44px;display:grid;grid-template-columns:1fr 1fr;gap:0 34px;align-items:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
 .apoio-card.bg-wa{--apoio-bg:url('test-8.webp')}
 .apoio-card.bg-curso{--apoio-bg:url('eb-1.webp')}
 /* imagem em coluna propria: card 1 a DIREITA (fade na borda ESQUERDA),
@@ -289,7 +288,7 @@ section{position:relative}
 .apoio-card h4{font-size:19px;line-height:1.3;margin-bottom:12px;color:var(--ink);text-align:left;padding:0 6px 0 0}
 /* icone do titulo: metade para dentro, metade para fora da BORDA do card
    (top do .apoio-corpo - padding do card), alinhado a ESQUERDA */
-.apoio-card h4 .apoio-tag{position:absolute;top:calc(-1*var(--apoio-pt) - 8px);left:-12px;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--grad-amarelo);box-shadow:0 6px 16px rgba(156,109,94,.34),inset 0 0 0 2px rgba(255,255,255,.5);z-index:2}
+.apoio-card h4 .apoio-tag{position:absolute;top:calc(-1*var(--apoio-pt));left:-12px;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--grad-amarelo);box-shadow:0 6px 16px rgba(156,109,94,.34),inset 0 0 0 2px rgba(255,255,255,.5);z-index:2}
 /* r6 item 2: no 2o card (bg-curso) o texto fica a DIREITA — o icone acompanha,
    na borda superior do lado DIREITO (metade fora, como no card 1 a esquerda) */
 .apoio-card.bg-curso h4 .apoio-tag{left:auto;right:-12px}
