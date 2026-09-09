@@ -188,21 +188,23 @@ section{position:relative}
 /* r1 item 3: seccao propria "Foi precisamente..." — painel com canto superior
    arredondado ESQ+DIR (ref 6), sobre a areia da seccao de cima */
 .sec-preciso{background:var(--areia);padding:0}
-.preciso-painel{background:var(--paper);border-radius:52px 52px 0 0;padding:66px 0 78px;box-shadow:0 -14px 34px rgba(156,109,94,.10);position:relative}
+/* r2 item 2 (ref 19): folga ate o titulo da seccao seguinte reduzida a metade
+   (78+88=166px -> 40+46=86px) */
+.preciso-painel{background:var(--paper);border-radius:52px 52px 0 0;padding:66px 0 40px;box-shadow:0 -14px 34px rgba(156,109,94,.10);position:relative}
 /* r1 item 3 (retrabalho): 2 colunas como a ref 6 — texto esq., botao centrado
    ao meio da altura na dir. */
 .preciso-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
 .preciso-grid .transform-fecho{margin:0;text-align:left;font-size:17px}
 .preciso-cta{display:flex;justify-content:center}
 @media(max-width:860px){.preciso-grid{grid-template-columns:1fr;gap:26px}.preciso-grid .transform-fecho{text-align:center;margin:0 auto}.preciso-cta{margin-top:2px}}
-@media(max-width:600px){.preciso-painel{border-radius:30px 30px 0 0;padding:48px 0 58px}.preciso-grid .transform-fecho{font-size:15px}}
+@media(max-width:600px){.preciso-painel{border-radius:30px 30px 0 0;padding:48px 0 26px}.preciso-grid .transform-fecho{font-size:15px}.sec-func{padding-top:30px}}
 @media(max-width:960px){.transform-grid{grid-template-columns:1fr;gap:8px;max-width:680px}.tg-col .tg-fecho{border-left:none;padding-left:0}.ind-cards{grid-template-columns:1fr;max-width:640px}}
 @media(max-width:600px){.ind-cards{gap:8px;margin-top:22px}.ind-card{padding:12px 2px;gap:12px}.ind-card p{font-size:14.4px;padding-top:5px}.ind-num{width:30px;height:30px;font-size:12.5px}}
 /* SEC 3 — MODO DE FUNCIONAMENTO: TIMELINE VERTICAL COM PONTOS (pedido da cliente)
    r1 item 4: STACK SCROLL — cada card fica sticky e o seguinte cobre o anterior
    (so aparece um filete do topo do anterior); scrollar pra cima desfaz.
    overflow:clip removido (ancestral com overflow quebra position:sticky). */
-.sec-func{background:var(--paper)}
+.sec-func{background:var(--paper);padding-top:46px}
 .func-head{max-width:860px;margin:0 auto 8px;text-align:center}
 .func-head .lead{margin-top:4px}
 .func-head .lead2{margin-top:10px}
