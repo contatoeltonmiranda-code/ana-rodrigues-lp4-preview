@@ -353,9 +353,13 @@ section{position:relative}
   .covers img{width:104px}
 }
 /* SEC 4 — PRECO (2 planos lado a lado) — r3 item 4: espacamento mais denso
-   (banner -> titulo: 110->54px; titulo -> planos: 56->34px) */
+   (banner -> titulo: 110->54px; titulo -> planos: 56->34px)
+   r4 item 4 (ref 36): no lugar do filete fino de largura inteira, a BARRA
+   GROSSA meia-largura do acervo (padrao "barras meia-pagina" de
+   dany-metodo-espere .sec-quem::before): 50% de largura, gradiente da paleta
+   a esvaziar ate o MEIO da seccao no sentido horizontal */
 .sec-preco{background:var(--paper);overflow:hidden;padding-top:54px}
-.sec-preco::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--coral),transparent);pointer-events:none;z-index:2}
+.sec-preco::before{content:"";position:absolute;top:0;right:0;width:50%;height:10px;background:linear-gradient(270deg,var(--amarelo) 0%,var(--rosa) 46%,transparent 100%);pointer-events:none;z-index:2;filter:drop-shadow(0 0 10px rgba(189,98,115,.28))}
 .planos{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:940px;margin:34px auto 0;align-items:stretch}
 .plano{position:relative;z-index:1;background:linear-gradient(150deg,#FFFFFF 0%,#FDF8F5 100%);border-radius:26px;padding:44px 36px 36px;text-align:center;box-shadow:0 22px 52px rgba(156,109,94,.18);display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease}
 @media(hover:hover){.plano:hover{transform:translateY(-5px);box-shadow:0 28px 60px rgba(156,109,94,.24)}}
