@@ -325,7 +325,7 @@ section{position:relative}
    continuar a caber: 3.6*cw <= 100vw) — a pilha sai do .wrap (full-bleed,
    mesmo truque do carrossel) e a capa ementa alinha a DIREITA, EMBAIXO da
    ultima capa da direita (viajar com um bebe), nao centrada na largura toda */
-.covers-pilha{--cw:clamp(150px,27.5vw,400px);--cm:calc(var(--cw) * -.35);display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:40px calc(50% - 50vw) 0;padding:6px 0 30px}
+.covers-pilha{--cw:clamp(135px,20.5vw,300px);--cm:calc(var(--cw) * -.35);display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:40px calc(50% - 50vw) 0;padding:6px 0 30px}
 .covers-break{flex-basis:100%;height:18px}
 .covers-pilha img{width:var(--cw);height:auto;border-radius:14px;border:1px solid rgba(156,109,94,.16);box-shadow:0 16px 34px rgba(156,109,94,.24);background:#fff;transition:transform .35s ease,box-shadow .35s ease,z-index 0s;margin-left:var(--cm);position:relative;z-index:1}
 .covers-pilha img:nth-child(odd){transform:rotate(3.2deg)}
@@ -333,7 +333,7 @@ section{position:relative}
 .covers-pilha img:first-child{margin-left:0;transform:rotate(-2.4deg)}
 /* r6 item 3: a ementa alinha a DIREITA com a ULTIMA capa da linha de cima —
    margin-right = metade da folga da linha centrada (a linha tem 3.6*cw) */
-.covers-pilha img:last-child{margin-left:auto;margin-right:calc((100% - 3.6 * var(--cw)) / 2);margin-top:-30px}
+.covers-pilha img:last-child{margin-left:auto;margin-right:calc(50% - 2.3 * var(--cw));margin-top:-30px}
 @media(hover:hover){
   .covers-pilha img:hover{transform:rotate(0deg) translateY(-16px) scale(1.22);z-index:9;box-shadow:0 30px 60px rgba(156,109,94,.34);transition:transform .35s ease,box-shadow .35s ease}
   .covers-pilha img:hover~img{z-index:0}
