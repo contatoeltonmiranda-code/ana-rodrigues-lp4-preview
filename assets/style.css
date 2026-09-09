@@ -456,15 +456,16 @@ section{position:relative}
    inteira (cover, sem overlay — regra de ouro), card branco SOBREPOSTO a borda
    superior da seccao (entre ela e o Sobre), centralizado e mais largo.
    padding-top:1px impede o colapso da margem negativa do card com a seccao
-   (senao a SECCAO inteira sobe e tapa o rodape do Sobre). */
+   (senao a SECCAO inteira sobe e tapa o rodape do Sobre).
+   r5 item 6: fundo com TODAS as 12 fotos da expert (grelha 6x2, cover);
+   a divisoria (aba) abaixo da seccao foi REMOVIDA (r5). */
 .sec-forma{background:var(--rosa-tinta);overflow:visible;padding:1px 0 88px}
-.forma-fotos{position:absolute;inset:0;display:flex;pointer-events:none;z-index:0;overflow:hidden}
-.forma-fotos img{width:50%;height:100%;object-fit:cover;object-position:center top}
+.forma-fotos{position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);pointer-events:none;z-index:0;overflow:hidden}
+.forma-fotos img{width:100%;height:100%;object-fit:cover;object-position:center top}
 /* r4 item 6 (ref 37): MEIO CURVADAS de forma SUTIL — rotacao +/-3-4 graus
-   (a mesma "curvatura" dos covers), bordas externas fixas e scale a cobrir
-   os cantos; o container clipa para nao haver overflow */
-.forma-fotos img:first-child{transform:rotate(-3.4deg) scale(1.16);transform-origin:left center}
-.forma-fotos img:last-child{transform:rotate(3.4deg) scale(1.16);transform-origin:right center}
+   com scale a cobrir os cantos; o container clipa para nao haver overflow */
+.forma-fotos img:nth-child(odd){transform:rotate(-3.2deg) scale(1.18)}
+.forma-fotos img:nth-child(even){transform:rotate(3.2deg) scale(1.18)}
 .forma-wrap{position:relative;z-index:2}
 .form-box{position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:28px 30px;box-shadow:var(--sh-soft);overflow:hidden}
 /* r3 item 5 (ref 32): BARRA GROSSA com gradiente no LADO DIREITO do card (no
@@ -553,6 +554,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .sobre-head,.sobre-body{grid-column:auto;grid-row:auto}
   .sec-forma{padding:1px 0 64px}
   .sec-forma .form-box{margin:-44px auto 0;max-width:640px}
+  .forma-fotos{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr)}
 
   .escada{--esc-k:0;--esc-ds:.92;margin-top:6px;padding-top:0}
   .esc-svg{display:none}
@@ -577,6 +579,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .sec-forma .form-box{margin-top:-34px;padding:26px 22px}
   .sec-forma .form-box::after{width:6px}
   .sec-forma .form-box h3{font-size:21px}
+  .forma-fotos{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr)}
   .escada{--esc-ds:.8}
   .esc-item{gap:12px;margin-left:0}
   .esc-txt{font-size:14.2px}
