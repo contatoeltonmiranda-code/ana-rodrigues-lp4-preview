@@ -316,19 +316,23 @@ section{position:relative}
    r4 item 3 (ref 35): MEIO CURVADAS de forma SUTIL de novo — rotacao +/-3-4
    graus como estavam antes da r3 (odd +3.2 / even -3.6 / 1a -2.4)
    r5 item 4: a 4a capa (ementa) fica EMBAIXO da ultima — linha com 5 capas
-   + quebra de flex + capa ementa sozinha na 2a linha, centrada */
-.covers-pilha{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:40px auto 0;max-width:1080px;padding:6px 0 30px}
+   + quebra de flex + capa ementa sozinha na 2a linha
+   r6 item 3: TODAS as capas 2x (tamanho proporcional em vw para a linha de 5
+   continuar a caber: 3.6*cw <= 100vw) — a pilha sai do .wrap (full-bleed,
+   mesmo truque do carrossel) e a capa ementa alinha a DIREITA, EMBAIXO da
+   ultima capa da direita (viajar com um bebe), nao centrada na largura toda */
+.covers-pilha{--cw:clamp(150px,27.5vw,400px);--cm:calc(var(--cw) * -.35);display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:40px calc(50% - 50vw) 0;padding:6px 0 30px}
 .covers-break{flex-basis:100%;height:18px}
-.covers-pilha img{width:200px;height:auto;border-radius:14px;border:1px solid rgba(156,109,94,.16);box-shadow:0 16px 34px rgba(156,109,94,.24);background:#fff;transition:transform .35s ease,box-shadow .35s ease,z-index 0s;margin-left:-60px;position:relative;z-index:1}
+.covers-pilha img{width:var(--cw);height:auto;border-radius:14px;border:1px solid rgba(156,109,94,.16);box-shadow:0 16px 34px rgba(156,109,94,.24);background:#fff;transition:transform .35s ease,box-shadow .35s ease,z-index 0s;margin-left:var(--cm);position:relative;z-index:1}
 .covers-pilha img:nth-child(odd){transform:rotate(3.2deg)}
 .covers-pilha img:nth-child(even){transform:rotate(-3.6deg)}
 .covers-pilha img:first-child{margin-left:0;transform:rotate(-2.4deg)}
-.covers-pilha img:last-child{margin-left:0}
+.covers-pilha img:last-child{margin-left:auto;margin-top:-30px}
 @media(hover:hover){
   .covers-pilha img:hover{transform:rotate(0deg) translateY(-16px) scale(1.22);z-index:9;box-shadow:0 30px 60px rgba(156,109,94,.34);transition:transform .35s ease,box-shadow .35s ease}
   .covers-pilha img:hover~img{z-index:0}
 }
-@media(max-width:600px){.covers-pilha{margin:30px auto 0;padding-bottom:16px}.covers-pilha img{width:96px;margin-left:-46px;border-radius:10px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
+@media(max-width:600px){.covers-pilha{--cw:44vw;--cm:-18vw;margin:30px calc(50% - 50vw) 0;padding-bottom:16px}.covers-pilha img{border-radius:10px}.covers-pilha img:nth-child(4){margin-left:0}.covers-pilha img:last-child{margin-left:auto;margin-top:-18px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
 .func-fecho{max-width:860px;margin:52px auto 0;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(17px,2.1vw,21px);color:var(--ink);line-height:1.5}
 .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
 @media(max-width:960px){
@@ -337,8 +341,8 @@ section{position:relative}
   .tl-dot{left:-56px;width:48px;height:48px;font-size:18px}
   .timeline::before{left:23px}
 }
-/* covers tablet: entre 601-960 (a regra de 600px tem de vencer no telemovel) */
-@media(min-width:601px) and (max-width:960px){.covers-pilha img{width:150px;margin-left:-44px}}
+/* covers tablet: entre 601-960 o --cw proporcional (27.5vw) ja resolve —
+   regra fixa de 150px removida na r6 (item 3) */
 /* r4 item 2 / r5 item 3: abaixo de 900px o card vira 1 coluna interna — imagem
    fica sempre no fundo a DIREITA com fade a esvaziar no lado do texto */
 @media(max-width:900px){
