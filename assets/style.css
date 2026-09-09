@@ -146,8 +146,8 @@ section{position:relative}
 .hero-visual{position:relative}
 .hero-foto{max-width:400px;margin:0 auto;aspect-ratio:720/960}
 .hero-foto img{width:100%;height:100%;object-fit:cover}
-/* prova social do hero (r1 item 1): rostos em circulos + contador destacado (ref 2) */
-.hero-prova{display:flex;align-items:center;justify-content:flex-start;gap:16px;margin-top:34px;padding:16px 22px 16px 18px;background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;box-shadow:var(--sh-soft);max-width:max-content}
+/* prova social do hero: r2 item 1 (ref 18) — SEM card, transparente sobre a seccao */
+.hero-prova{display:flex;align-items:center;justify-content:flex-start;gap:16px;margin-top:34px;max-width:max-content}
 .prova-faces{display:flex}
 .prova-faces img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2.5px solid #fff;box-shadow:0 6px 14px rgba(156,109,94,.24);margin-left:-12px;background:var(--areia)}
 .prova-faces img:first-child{margin-left:0}
@@ -155,7 +155,7 @@ section{position:relative}
 .prova-num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.3px;-webkit-text-fill-color:transparent}
 .prova-lab{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13.5px;color:var(--rosa-esc);letter-spacing:.1px}
 @media(max-width:960px){.hero{padding:56px 0 88px}.hero-grid{grid-template-columns:1fr;gap:40px}.hero-txt{text-align:center}.hero-logo{margin-left:auto;margin-right:auto}.hero .sub{margin-left:auto;margin-right:auto}.hero-prova{margin-left:auto;margin-right:auto}.hero-foto{max-width:340px}}
-@media(max-width:600px){.hero{padding:44px 0 76px}.hero-logo{width:96px;margin-bottom:18px}.hero-grid{gap:30px}.hero-prova{margin-top:26px;gap:12px;padding:13px 17px 13px 14px}.prova-faces img{width:38px;height:38px;border-width:2px;margin-left:-10px}.prova-num{font-size:22px}.prova-lab{font-size:12.5px}.hero-foto{max-width:290px}}
+@media(max-width:600px){.hero{padding:44px 0 76px}.hero-logo{width:96px;margin-bottom:18px}.hero-grid{gap:30px}.hero-prova{margin-top:26px;gap:12px}.prova-faces img{width:38px;height:38px;border-width:2px;margin-left:-10px}.prova-num{font-size:22px}.prova-lab{font-size:12.5px}.hero-foto{max-width:290px}}
 .hero h1{font-size:clamp(29px,4.1vw,50px);line-height:1.08;letter-spacing:-.5px;text-transform:uppercase}
 .hero h1 .h1-l2{display:block;font-size:.62em;letter-spacing:.14em;margin-top:10px;color:var(--rosa-esc);-webkit-text-fill-color:currentColor}
 .hero .sub{font-size:clamp(15px,1.2vw,17.5px);color:var(--texto);line-height:1.66;margin:26px 0 0;max-width:680px}
