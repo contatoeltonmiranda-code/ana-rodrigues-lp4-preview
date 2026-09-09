@@ -240,8 +240,10 @@ section{position:relative}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
 .apoio{display:grid;gap:26px}
 .apoio-card{position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
-/* fundo temporario (transparencia) no lado do texto */
+/* fundo temporario (transparencia) no lado do texto — url relativa a style.css */
 .apoio-card::before{content:"";position:absolute;top:14px;bottom:14px;right:26px;width:min(46%,300px);background-image:var(--apoio-bg,none);background-size:contain;background-position:right center;background-repeat:no-repeat;opacity:.13;pointer-events:none;z-index:0}
+.apoio-card.bg-wa{--apoio-bg:url('test-8.webp')}
+.apoio-card.bg-curso{--apoio-bg:url('eb-1.webp')}
 .apoio-card .apoio-corpo{position:relative;z-index:1}
 .apoio-card h4{font-size:19px;line-height:1.3;margin-bottom:12px;color:var(--ink);text-align:center;padding:0 6px}
 /* icone do titulo: metade para dentro, metade para fora da borda superior, centrado */
@@ -269,7 +271,7 @@ section{position:relative}
 .area-reservada p{font-size:16.2px;color:var(--texto);line-height:1.7;max-width:780px;margin:0 auto}
 /* pilha de covers: r2 item 5 — maiores e mais largos (158->300px) */
 .covers-pilha{display:flex;justify-content:center;align-items:center;margin:40px auto 0;max-width:1080px;padding:6px 0 30px}
-.covers-pilha img{width:300px;height:auto;border-radius:14px;border:1px solid rgba(156,109,94,.16);box-shadow:0 16px 34px rgba(156,109,94,.24);background:#fff;transition:transform .35s ease,box-shadow .35s ease,z-index 0s;margin-left:-156px;position:relative;z-index:1}
+.covers-pilha img{width:290px;height:auto;border-radius:14px;border:1px solid rgba(156,109,94,.16);box-shadow:0 16px 34px rgba(156,109,94,.24);background:#fff;transition:transform .35s ease,box-shadow .35s ease,z-index 0s;margin-left:-150px;position:relative;z-index:1}
 .covers-pilha img:first-child{margin-left:0}
 .covers-pilha img:nth-child(odd){transform:rotate(3.2deg)}
 .covers-pilha img:nth-child(even){transform:rotate(-3.6deg)}
@@ -278,7 +280,7 @@ section{position:relative}
   .covers-pilha img:hover{transform:rotate(0deg) translateY(-16px) scale(1.22);z-index:9;box-shadow:0 30px 60px rgba(156,109,94,.34);transition:transform .35s ease,box-shadow .35s ease}
   .covers-pilha img:hover~img{z-index:0}
 }
-@media(max-width:600px){.covers-pilha{margin:30px auto 0;padding-bottom:16px}.covers-pilha img{width:104px;margin-left:-56px;border-radius:10px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
+@media(max-width:600px){.covers-pilha{margin:30px auto 0;padding-bottom:16px}.covers-pilha img{width:100px;margin-left:-54px;border-radius:10px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
 .func-fecho{max-width:860px;margin:52px auto 0;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(17px,2.1vw,21px);color:var(--ink);line-height:1.5}
 .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
 @media(max-width:960px){
@@ -286,8 +288,9 @@ section{position:relative}
   .tl-item{top:calc(84px + var(--i,0)*34px)}
   .tl-dot{left:-56px;width:48px;height:48px;font-size:18px}
   .timeline::before{left:23px}
-  .covers-pilha img{width:210px;margin-left:-108px}
 }
+/* covers tablet: entre 601-960 (a regra de 600px tem de vencer no telemovel) */
+@media(min-width:601px) and (max-width:960px){.covers-pilha img{width:200px;margin-left:-100px}}
 @media(max-width:600px){
   .timeline{padding-left:46px;margin-top:40px}
   .timeline::before{left:18px;width:2px}
@@ -344,7 +347,8 @@ section{position:relative}
    r2 item 7 (ref 24): carrossel quase ate as margens da seccao (full-bleed) e
    imagens mais pequenas para ~2 cards a mais visiveis */
 .sec-test{background:var(--areia);overflow:hidden}
-.test-carousel{overflow:hidden;margin:46px 0 0;
+/* r2 item 7: full-bleed — carrossel quase ate as margens da seccao (sai do .wrap) */
+.test-carousel{overflow:hidden;margin:46px calc(50% - 50vw) 0;
   -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3.5%,#000 96.5%,transparent 100%);
   mask-image:linear-gradient(90deg,transparent 0,#000 3.5%,#000 96.5%,transparent 100%)}
 .test-track{display:flex;width:max-content;animation:test-roll 85s linear infinite}
@@ -374,8 +378,10 @@ section{position:relative}
 .sobre-body p strong{color:var(--ink);font-weight:600}
 /* caixinha Formacao — r2 item 9 (ref 26): FOTOS DA EXPERT como FUNDO da seccao
    inteira (cover, sem overlay — regra de ouro), card branco SOBREPOSTO a borda
-   superior da seccao (entre ela e o Sobre), centralizado e mais largo */
-.sec-forma{background:var(--rosa-tinta);overflow:visible;padding:0 0 88px}
+   superior da seccao (entre ela e o Sobre), centralizado e mais largo.
+   padding-top:1px impede o colapso da margem negativa do card com a seccao
+   (senao a SECCAO inteira sobe e tapa o rodape do Sobre). */
+.sec-forma{background:var(--rosa-tinta);overflow:visible;padding:1px 0 88px}
 .forma-fotos{position:absolute;inset:0;display:flex;pointer-events:none;z-index:0}
 .forma-fotos img{width:50%;height:100%;object-fit:cover;object-position:center top}
 .forma-wrap{position:relative;z-index:2}
@@ -462,7 +468,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .sobre-split{grid-template-columns:1fr;gap:44px}
   .sobre-visual{order:-1;max-width:300px;grid-column:auto;grid-row:auto}
   .sobre-head,.sobre-body{grid-column:auto;grid-row:auto}
-  .sec-forma{padding:0 0 64px}
+  .sec-forma{padding:1px 0 64px}
   .sec-forma .form-box{margin:-44px auto 0;max-width:640px}
   .sec-forma .forma-cta{margin-top:30px}
 
@@ -485,7 +491,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .sec-preco{padding-top:80px}
   .plano .btn{padding:16px 18px;font-size:13.5px}
   .func-fecho{font-size:16px}
-  .sec-forma{padding-bottom:60px}
+  .sec-forma{padding:1px 0 60px}
   .sec-forma .form-box{margin-top:-34px;padding:26px 22px}
   .sec-forma .form-box::after{left:22px;width:60px}
   .sec-forma .form-box h3{font-size:21px}
