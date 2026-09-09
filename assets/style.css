@@ -433,8 +433,13 @@ section{position:relative}
    padding-top:1px impede o colapso da margem negativa do card com a seccao
    (senao a SECCAO inteira sobe e tapa o rodape do Sobre). */
 .sec-forma{background:var(--rosa-tinta);overflow:visible;padding:1px 0 88px}
-.forma-fotos{position:absolute;inset:0;display:flex;pointer-events:none;z-index:0}
+.forma-fotos{position:absolute;inset:0;display:flex;pointer-events:none;z-index:0;overflow:hidden}
 .forma-fotos img{width:50%;height:100%;object-fit:cover;object-position:center top}
+/* r4 item 6 (ref 37): MEIO CURVADAS de forma SUTIL — rotacao +/-3-4 graus
+   (a mesma "curvatura" dos covers), bordas externas fixas e scale a cobrir
+   os cantos; o container clipa para nao haver overflow */
+.forma-fotos img:first-child{transform:rotate(-3.4deg) scale(1.16);transform-origin:left center}
+.forma-fotos img:last-child{transform:rotate(3.4deg) scale(1.16);transform-origin:right center}
 .forma-wrap{position:relative;z-index:2}
 .form-box{position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:28px 30px;box-shadow:var(--sh-soft);overflow:hidden}
 /* r3 item 5 (ref 32): BARRA GROSSA com gradiente no LADO DIREITO do card (no
