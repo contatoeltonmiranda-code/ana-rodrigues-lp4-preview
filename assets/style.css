@@ -257,14 +257,16 @@ section{position:relative}
    encosta no texto). Card 2: texto na DIREITA, imagem na ESQUERDA com fade
    no lado DIREITO. Imagens em cor NATURAL (opacity 1, sem escurecer) —
    a transparencia lateral e FADE de borda (mask), nao opacidade geral.
-   (SOLUCAO PROVISORIA ate arte da cliente — data-pendente="arte-fundo-temporaria"). */
+   (SOLUCAO PROVISORIA ate arte da cliente — data-pendente="arte-fundo-temporaria").
+   r5 item 3: escalonamento EXTERNO desfeito — grelha de 1 coluna, os 2 cards
+   empilham em largura cheia (as 2 colunas INTERNAS de cada card mantem-se). */
 .func-mais{max-width:1080px;margin:64px auto 0}
 .func-mais h3{font-size:clamp(24px,3vw,34px);text-align:center;margin-bottom:8px}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
-.apoio{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.apoio{display:grid;grid-template-columns:1fr;gap:26px}
 .apoio-card{position:relative;--apoio-pt:44px;display:grid;grid-template-columns:1fr 1fr;gap:0 34px;align-items:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
-.apoio-card.bg-wa{grid-column:1;grid-row:1;--apoio-bg:url('test-8.webp')}
-.apoio-card.bg-curso{grid-column:2;grid-row:2;--apoio-bg:url('eb-1.webp')}
+.apoio-card.bg-wa{--apoio-bg:url('test-8.webp')}
+.apoio-card.bg-curso{--apoio-bg:url('eb-1.webp')}
 /* imagem em coluna propria: card 1 a DIREITA (fade na borda ESQUERDA),
    card 2 a ESQUERDA (fade na borda DIREITA) — cor natural, url relativa a
    style.css */
@@ -329,11 +331,9 @@ section{position:relative}
 }
 /* covers tablet: entre 601-960 (a regra de 600px tem de vencer no telemovel) */
 @media(min-width:601px) and (max-width:960px){.covers-pilha img{width:150px;margin-left:-44px}}
-/* r4 item 2: cards de apoio empilham abaixo de 900px (1 coluna) — imagem fica
-   sempre no fundo a DIREITA com fade a esvaziar no lado do texto */
+/* r4 item 2 / r5 item 3: abaixo de 900px o card vira 1 coluna interna — imagem
+   fica sempre no fundo a DIREITA com fade a esvaziar no lado do texto */
 @media(max-width:900px){
-  .apoio{grid-template-columns:1fr}
-  .apoio-card.bg-wa,.apoio-card.bg-curso{grid-column:auto}
   .apoio-card{grid-template-columns:1fr}
   .apoio-card.bg-curso .apoio-corpo{grid-column:auto;grid-row:auto}
   .apoio-card.bg-curso::before{left:auto;right:0;border-radius:0 20px 20px 0;
