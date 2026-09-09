@@ -340,22 +340,24 @@ section{position:relative}
   .planos{grid-template-columns:1fr;max-width:560px;gap:26px}
   .plano{padding:38px 26px 30px}
 }
-/* SEC 5 — TESTEMUNHOS (13 prints WhatsApp) — r1 item 7: carrossel em loop infinito (ref 12) */
+/* SEC 5 — TESTEMUNHOS (13 prints WhatsApp) — r1 item 7: loop infinito;
+   r2 item 7 (ref 24): carrossel quase ate as margens da seccao (full-bleed) e
+   imagens mais pequenas para ~2 cards a mais visiveis */
 .sec-test{background:var(--areia);overflow:hidden}
-.test-carousel{overflow:hidden;margin:46px auto 0;max-width:1160px;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
-  mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+.test-carousel{overflow:hidden;margin:46px 0 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3.5%,#000 96.5%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 3.5%,#000 96.5%,transparent 100%)}
 .test-track{display:flex;width:max-content;animation:test-roll 85s linear infinite}
 .test-carousel:hover .test-track{animation-play-state:paused}
-.test-track figure{flex:0 0 auto;background:var(--grad-card);border:1px solid var(--linha);border-radius:14px;padding:10px;box-shadow:var(--sh-soft);margin:0 18px 0 0;transition:box-shadow .3s ease}
+.test-track figure{flex:0 0 auto;background:var(--grad-card);border:1px solid var(--linha);border-radius:14px;padding:10px;box-shadow:var(--sh-soft);margin:0 16px 0 0;transition:box-shadow .3s ease}
 @media(hover:hover){.test-track figure:hover{box-shadow:var(--sh-mid)}}
-.test-track img{height:330px;width:auto;border-radius:8px}
+.test-track img{height:255px;width:auto;border-radius:8px}
 @keyframes test-roll{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){
   .test-carousel{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
   .test-track{animation:none}
 }
-@media(max-width:768px){.test-track img{height:260px}.test-track figure{margin:0 12px 0 0;border-radius:12px;padding:8px}}
+@media(max-width:768px){.test-track img{height:200px}.test-track figure{margin:0 12px 0 0;border-radius:12px;padding:8px}}
 /* SEC 6 — SOBRE A ANA */
 .sec-sobre{background:var(--rosa-tinta);overflow:visible;padding-bottom:75px}
 .sobre-split{display:grid;grid-template-columns:.86fr 1.14fr;gap:52px;align-items:center}
