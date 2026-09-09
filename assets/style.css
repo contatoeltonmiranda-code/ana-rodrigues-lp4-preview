@@ -207,6 +207,8 @@ section{position:relative}
 .sec-func{background:var(--paper);padding-top:46px}
 .func-head{max-width:860px;margin:0 auto 8px;text-align:center}
 .func-head .lead{margin-top:4px}
+/* r2 item 3 (ref 20): "Porque cada bebe e unico." com corpo e cor proprios */
+.func-head .lead-destaque{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(20px,2.4vw,27px);letter-spacing:-.3px;color:var(--coral-esc);margin-top:10px}
 .func-head .lead2{margin-top:10px}
 .timeline{position:relative;max-width:820px;margin:56px auto 0;padding-left:64px}
 .timeline::before{content:"";position:absolute;left:27px;top:8px;bottom:8px;width:2.5px;border-radius:2px;
@@ -463,6 +465,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .btn,.btn.lg{font-size:14px;padding:16px 22px}
   .tg-col p,.transform-fecho{font-size:15px}
   .func-head .lead,.func-head .lead2{font-size:15px}
+  .func-head .lead-destaque{font-size:18px}
   .sec-preco{padding-top:80px}
   .plano .btn{padding:16px 18px;font-size:13.5px}
   .func-fecho{font-size:16px}
