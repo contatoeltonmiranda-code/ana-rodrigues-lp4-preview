@@ -1,7 +1,7 @@
 {
   "index@1440": {
     "overflow": 0,
-    "altura": 12058,
+    "altura": 12017,
     "imgs": 43,
     "partidas": [],
     "semDestino": [],
@@ -15,18 +15,16 @@
       "lp02-curso",
       "checkout-essenza",
       "checkout-sapori",
-      "checkout",
       "lp02-curso",
       "checkout",
       "politica-privacidade"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
       "Escolher plano Sapori",
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)"
     ],
     "h1": 1,
@@ -35,7 +33,7 @@
   },
   "index@1024": {
     "overflow": 0,
-    "altura": 11802,
+    "altura": 11859,
     "imgs": 43,
     "partidas": [],
     "semDestino": [],
@@ -49,18 +47,16 @@
       "lp02-curso",
       "checkout-essenza",
       "checkout-sapori",
-      "checkout",
       "lp02-curso",
       "checkout",
       "politica-privacidade"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
       "Escolher plano Sapori",
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)"
     ],
     "h1": 1,
@@ -69,7 +65,7 @@
   },
   "index@768": {
     "overflow": 0,
-    "altura": 13537,
+    "altura": 13218,
     "imgs": 43,
     "partidas": [],
     "semDestino": [],
@@ -83,18 +79,16 @@
       "lp02-curso",
       "checkout-essenza",
       "checkout-sapori",
-      "checkout",
       "lp02-curso",
       "checkout",
       "politica-privacidade"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
       "Escolher plano Sapori",
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)"
     ],
     "h1": 1,
@@ -103,7 +97,7 @@
   },
   "index@390": {
     "overflow": 0,
-    "altura": 16128,
+    "altura": 15939,
     "imgs": 43,
     "partidas": [],
     "semDestino": [],
@@ -117,18 +111,16 @@
       "lp02-curso",
       "checkout-essenza",
       "checkout-sapori",
-      "checkout",
       "lp02-curso",
       "checkout",
       "politica-privacidade"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
       "Escolher plano Sapori",
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)"
     ],
     "h1": 1,
