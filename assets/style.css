@@ -615,11 +615,4 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .esc-item:nth-child(2n)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E"),var(--grad-rosa-forte)}
   .recebe-aba{padding-top:88px}
 }
-/* TESTE Elton (r7): cards da timeline alternando roxo/dourado conforme o icone — facil reverter (apagar este bloco) */
-.tl-item:nth-child(odd) .tl-dot{background:var(--rosa)}
-.tl-item:nth-child(odd) .tl-box{background:var(--rosa);color:#fff}
-.tl-item:nth-child(odd) .tl-box h3,.tl-item:nth-child(odd) .tl-box p{color:#fff}
-.tl-item:nth-child(odd) .tl-box a{color:#fff}
-.tl-item:nth-child(even) .tl-dot{background:var(--amarelo)}
-.tl-item:nth-child(even) .tl-box{background:var(--amarelo);color:#3F342E}
-.tl-item:nth-child(even) .tl-box h3,.tl-item:nth-child(even) .tl-box p{color:#3F342E}
+
