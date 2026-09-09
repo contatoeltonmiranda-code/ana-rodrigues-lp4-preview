@@ -47,14 +47,18 @@
 
 <!-- ============ SECÇÃO 2 — A TRANSFORMAÇÃO ============ -->
 <section class="sec sec-transform recebe-aba">
-  <!-- r4 item 1: divisoria de BORDA com CURVA CIRCULAR (padrao Ketox: arco
-       border-radius 0 0 50% 50%/0 0 100% 100%; fio na crista como o
-       wave-divider da LP 1). Fill = cor da seccao DE CIMA. -->
+  <!-- r5 item 1: divisoria CURVA CONCAVA + circulo com chevron (skill
+       curva-concava; ref 38 decodificada por pixel: faixa da cor da seccao de
+       cima com dip no centro, linha rosa na crista e circulo rosa com chevron
+       claro apontando pra baixo). Fill = cor da seccao DE CIMA (hero #F3EAE2). -->
   <div class="curva-div from-hero" aria-hidden="true">
-    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false">
-      <path class="cd-fill" d="M0,0 H1440 V10 A4809,4809 0 0 1 0,10 Z"/>
-      <path class="cd-crest" d="M0,10 A4809,4809 0 0 1 1440,10"/>
+    <svg viewBox="0 0 1440 84" preserveAspectRatio="none" focusable="false">
+      <path class="cd-fill" d="M0,0 H1440 V52 H836 C788,52 764,84 720,84 C676,84 652,52 604,52 H0 Z"/>
+      <path class="cd-crest" d="M0,52 H604 C652,52 676,84 720,84 C764,84 788,52 836,52 H1440"/>
     </svg>
+    <span class="cd-circle">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
   </div>
   <div class="wrap">
     <div class="transform-grid">

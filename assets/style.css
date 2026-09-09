@@ -128,19 +128,20 @@ section{position:relative}
 @media(max-width:768px){.aba{--aba-h:58px}}
 @media(max-width:600px){.aba{--aba-h:44px}}
 @media(max-width:420px){.aba{--aba-h:38px}}
-/* ===== r4 item 1 — DIVISORIA DE BORDA COM CURVA CIRCULAR (hero -> seguinte) ==
-   Padrao do acervo: arco circular do Ketox (`border-radius:0 0 50% 50% /
-   0 0 100% 100%` — o fill afunda no MEIO, curva de circulo de raio grande)
-   + fio na crista do wave-divider da LP 1 (stroke 1.6 na borda da curva).
-   SVG unico (viewBox 1440x64, preserveAspectRatio none): fill = cor da
-   seccao DE CIMA, crista = borda. Primeiro filho da seccao de baixo. */
-.curva-div{position:absolute;left:0;right:0;top:0;z-index:1;pointer-events:none;height:64px;line-height:0;filter:drop-shadow(0 3px 7px rgba(156,109,94,.10))}
+/* ===== r5 item 1 — DIVISORIA CURVA CONCAVA + CIRCULO CHEVRON (hero -> seguinte)
+   Skill curva-concava (ref 38 decodificada por pixel): faixa da cor da seccao
+   DE CIMA com dip concavo no centro (fill desce de 52 -> 84 no viewBox 1440x84),
+   fio rosa na crista (o mesmo do r4) e CIRCULO rosa-escuro centralizado sobre o
+   dip com chevron claro apontando pra baixo. Primeiro filho da seccao de baixo. */
+.curva-div{position:absolute;left:0;right:0;top:0;z-index:1;pointer-events:none;height:84px;line-height:0;filter:drop-shadow(0 3px 7px rgba(156,109,94,.10))}
 .curva-div svg{display:block;width:100%;height:100%}
 .curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
 .curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
 .curva-div.from-hero{--curva-cor:#F3EAE2}
-@media(max-width:768px){.curva-div{height:46px}}
-@media(max-width:420px){.curva-div{height:40px}}
+.curva-div .cd-circle{position:absolute;top:55px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--rosa-esc);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(147,76,89,.30);z-index:2}
+.curva-div .cd-circle svg{width:22px;height:22px;fill:none;stroke:var(--cream);stroke-width:2.5}
+@media(max-width:768px){.curva-div{height:58px}.curva-div .cd-circle{width:44px;height:44px;top:38px}.curva-div .cd-circle svg{width:18px;height:18px}}
+@media(max-width:420px){.curva-div{height:50px}.curva-div .cd-circle{width:38px;height:38px;top:33px}.curva-div .cd-circle svg{width:16px;height:16px}}
 /* folga de topo das seccoes que RECEBEM a aba */
 .recebe-aba{padding-top:140px}
 @media(max-width:1024px){.recebe-aba{padding-top:124px}}
