@@ -137,38 +137,51 @@ section{position:relative}
 @media(max-width:600px){.recebe-aba{padding-top:88px}}
 /* HERO — logo do programa + H1 + leads + CTA. Gradiente VERTICAL: a aresta
    inferior e uniforme (#F3EAE2), que e o que a aba from-hero pinta. */
-.hero{position:relative;padding:72px 0 104px;background:linear-gradient(180deg,#FAF7F5 0%,#F3EAE2 100%);overflow:hidden;isolation:isolate}
-.hero .wrap{max-width:900px;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
-.hero-logo{width:clamp(116px,12.5vw,152px);height:auto;margin:0 auto 24px;filter:drop-shadow(0 12px 26px rgba(156,109,94,.20))}
-/* prova social do hero (r1 item 1): rostos em circulos + contagem de familias */
-.hero-prova{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px}
+.hero{position:relative;padding:64px 0 96px;background:linear-gradient(180deg,#FAF7F5 0%,#F3EAE2 100%);overflow:hidden;isolation:isolate}
+/* r1 item 1 (retrabalho): hero em 2 COLUNAS como a ref 2 — conteudo a esquerda,
+   foto da expert a direita, prova social destacada abaixo do botao */
+.hero-grid{max-width:1060px;position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+.hero-txt{text-align:left}
+.hero-logo{width:clamp(88px,9vw,116px);height:auto;margin:0 0 22px;filter:drop-shadow(0 12px 26px rgba(156,109,94,.20))}
+.hero-visual{position:relative}
+.hero-foto{max-width:400px;margin:0 auto;aspect-ratio:720/960}
+.hero-foto img{width:100%;height:100%;object-fit:cover}
+/* prova social do hero (r1 item 1): rostos em circulos + contador destacado (ref 2) */
+.hero-prova{display:flex;align-items:center;justify-content:flex-start;gap:16px;margin-top:34px;padding:16px 22px 16px 18px;background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;box-shadow:var(--sh-soft);max-width:max-content}
 .prova-faces{display:flex}
 .prova-faces img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2.5px solid #fff;box-shadow:0 6px 14px rgba(156,109,94,.24);margin-left:-12px;background:var(--areia)}
 .prova-faces img:first-child{margin-left:0}
-.prova-txt{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--rosa-esc);letter-spacing:.1px}
-@media(max-width:600px){.hero-logo{width:104px}.hero-prova{margin-top:24px;gap:11px}.prova-faces img{width:38px;height:38px;border-width:2px;margin-left:-10px}.prova-txt{font-size:13.5px}}
+.prova-txt{display:flex;flex-direction:column;line-height:1.15}
+.prova-num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.3px;-webkit-text-fill-color:transparent}
+.prova-lab{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13.5px;color:var(--rosa-esc);letter-spacing:.1px}
+@media(max-width:960px){.hero{padding:56px 0 88px}.hero-grid{grid-template-columns:1fr;gap:40px}.hero-txt{text-align:center}.hero-logo{margin-left:auto;margin-right:auto}.hero .sub{margin-left:auto;margin-right:auto}.hero-prova{margin-left:auto;margin-right:auto}.hero-foto{max-width:340px}}
+@media(max-width:600px){.hero{padding:44px 0 76px}.hero-logo{width:96px;margin-bottom:18px}.hero-grid{gap:30px}.hero-prova{margin-top:26px;gap:12px;padding:13px 17px 13px 14px}.prova-faces img{width:38px;height:38px;border-width:2px;margin-left:-10px}.prova-num{font-size:22px}.prova-lab{font-size:12.5px}.hero-foto{max-width:290px}}
 .hero h1{font-size:clamp(29px,4.1vw,50px);line-height:1.08;letter-spacing:-.5px;text-transform:uppercase}
 .hero h1 .h1-l2{display:block;font-size:.62em;letter-spacing:.14em;margin-top:10px;color:var(--rosa-esc);-webkit-text-fill-color:currentColor}
 .hero .sub{font-size:clamp(15px,1.2vw,17.5px);color:var(--texto);line-height:1.66;margin:26px 0 0;max-width:680px}
 .hero .sub+.sub{margin-top:14px}
 .hero .sub strong{color:var(--ink);font-weight:600}
-.hero .cta-row{margin-top:36px}
+.hero .cta-row{margin-top:36px;justify-content:flex-start}
+@media(max-width:960px){.hero .cta-row{justify-content:center}}
 .hero .btn{min-width:320px}
 /* SEC 2 — A TRANSFORMACAO (8 cartoes, grelha 2 col) */
 /* sombreado no topo (areia-fim -> areia 190px): a aba from-hero precisa de
    contraste de fundo, o mesmo fix da LP 3 na .sec-duv */
 .sec-transform{background:linear-gradient(180deg,var(--areia-fim) 0,var(--areia) 190px);overflow:hidden}
-/* r1 item 2: introducao melhor distribuida (esq.) + cards minimalistas 2 col (ref 4) */
-.transform-intro{max-width:680px;margin:0 auto;text-align:left}
-.transform-intro p{font-size:16.4px;color:var(--texto);line-height:1.74;margin-bottom:16px}
-.transform-intro p strong{color:var(--ink);font-weight:600}
-.transform-intro .perguntas{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(18px,2.2vw,22px);color:var(--coral-esc);margin:30px 0 0}
-.ind-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 40px;max-width:920px;margin:34px auto 0}
+/* r1 item 2 (retrabalho): intro em 2 COLUNAS como a ref 4 + timeline numerada
+   minimalista (cards 2 col) */
+.transform-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px 64px;max-width:920px;margin:0 auto;text-align:left;align-items:start}
+.tg-col p{font-size:16.4px;color:var(--texto);line-height:1.74;margin-bottom:16px}
+.tg-col p:last-child{margin-bottom:0}
+.tg-col .tg-fecho{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(19px,2.4vw,24px);line-height:1.42;color:var(--ink);margin:0;border-left:3px solid var(--coral);padding-left:20px}
+.tg-col .tg-fecho strong{font-weight:800;background:linear-gradient(120deg,#E9684C 0%,#C4543A 52%,#B45764 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.perguntas{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(18px,2.2vw,22px);color:var(--coral-esc);margin:40px auto 0;text-align:center}
+.ind-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 40px;max-width:920px;margin:26px auto 0}
 .ind-card{position:relative;display:flex;flex-direction:row;align-items:flex-start;gap:15px;text-align:left;background:transparent;border:none;border-radius:0;padding:14px 6px;box-shadow:none;border-top:1px solid rgba(233,104,76,.18)}
 .ind-card p{font-size:14.8px;color:var(--texto);line-height:1.6;padding-top:6px}
-.ind-ico{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--grad-coral);box-shadow:0 5px 13px rgba(156,109,94,.26)}
-.ind-card:nth-child(2n) .ind-ico{background:var(--grad-rosa);box-shadow:0 5px 13px rgba(150,68,60,.26)}
-.ind-ico svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+/* timeline minimalista: numero em circulo vazado (ref 4), sem pill colorida */
+.ind-num{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(233,104,76,.55);color:var(--coral-esc);font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:14px;background:rgba(233,104,76,.07)}
+.ind-card:nth-child(2n) .ind-num{border-color:rgba(180,87,100,.55);color:var(--rosa-esc);background:rgba(180,87,100,.07)}
 @media(hover:hover){.ind-card:hover p{color:var(--ink)}}
 .transform-fecho{max-width:820px;margin:0 auto;text-align:center;font-size:16.4px;color:var(--texto);line-height:1.72}
 .transform-fecho strong{color:var(--ink);font-weight:600}
@@ -176,10 +189,15 @@ section{position:relative}
    arredondado ESQ+DIR (ref 6), sobre a areia da seccao de cima */
 .sec-preciso{background:var(--areia);padding:0}
 .preciso-painel{background:var(--paper);border-radius:52px 52px 0 0;padding:66px 0 78px;box-shadow:0 -14px 34px rgba(156,109,94,.10);position:relative}
-.preciso-painel .transform-fecho{font-size:17px}
-@media(max-width:600px){.preciso-painel{border-radius:30px 30px 0 0;padding:48px 0 58px}.preciso-painel .transform-fecho{font-size:15px}}
-@media(max-width:960px){.ind-cards{grid-template-columns:1fr;max-width:640px}}
-@media(max-width:600px){.ind-cards{gap:8px;margin-top:26px}.ind-card{padding:12px 2px;gap:12px}.ind-card p{font-size:14.4px;padding-top:5px}.ind-ico{width:36px;height:36px}.ind-ico svg{width:18px;height:18px}}
+/* r1 item 3 (retrabalho): 2 colunas como a ref 6 — texto esq., botao centrado
+   ao meio da altura na dir. */
+.preciso-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.preciso-grid .transform-fecho{margin:0;text-align:left;font-size:17px}
+.preciso-cta{display:flex;justify-content:center}
+@media(max-width:860px){.preciso-grid{grid-template-columns:1fr;gap:26px}.preciso-grid .transform-fecho{text-align:center;margin:0 auto}.preciso-cta{margin-top:2px}}
+@media(max-width:600px){.preciso-painel{border-radius:30px 30px 0 0;padding:48px 0 58px}.preciso-grid .transform-fecho{font-size:15px}}
+@media(max-width:960px){.transform-grid{grid-template-columns:1fr;gap:8px;max-width:680px}.tg-col .tg-fecho{border-left:none;padding-left:0}.ind-cards{grid-template-columns:1fr;max-width:640px}}
+@media(max-width:600px){.ind-cards{gap:8px;margin-top:22px}.ind-card{padding:12px 2px;gap:12px}.ind-card p{font-size:14.4px;padding-top:5px}.ind-num{width:30px;height:30px;font-size:12.5px}}
 /* SEC 3 — MODO DE FUNCIONAMENTO: TIMELINE VERTICAL COM PONTOS (pedido da cliente)
    r1 item 4: STACK SCROLL — cada card fica sticky e o seguinte cobre o anterior
    (so aparece um filete do topo do anterior); scrollar pra cima desfaz.
@@ -369,8 +387,7 @@ section{position:relative}
 /* SEC 7 — FAQ — r1 item 10: conteudo a esquerda, direita VAZIA (janela de arte) */
 .sec-faq{background:var(--paper);overflow:hidden}
 .faq-split{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:start}
-.faq-arte{min-height:260px;position:relative}
-.faq-arte::before{content:"";position:absolute;top:26px;right:-40px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(233,104,76,.14),rgba(180,87,100,.05) 45%,transparent 72%);filter:blur(22px)}
+.faq-arte{min-height:260px}
 .faq-list{max-width:820px;margin:0;display:grid;gap:12px}
 .faq-item{background:var(--grad-card);border:1px solid var(--linha);border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(156,109,94,.07)}
 .faq-item summary{list-style:none;cursor:pointer;padding:20px 24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -437,12 +454,12 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .wrap{padding:0 18px}
   .sec{padding:60px 0}
   .hero{padding:48px 0 80px}
-  .hero-logo{width:132px;margin-bottom:20px}
+  .hero-logo{width:96px;margin-bottom:18px}
   .hero h1{font-size:clamp(24px,6.6vw,32px)}
   .hero h1 .h1-l2{font-size:.6em;letter-spacing:.1em;margin-top:8px}
   .sec h2{font-size:clamp(25px,7vw,34px)}
   .btn,.btn.lg{font-size:14px;padding:16px 22px}
-  .transform-intro p,.transform-fecho{font-size:15px}
+  .tg-col p,.transform-fecho{font-size:15px}
   .func-head .lead,.func-head .lead2{font-size:15px}
   .sec-preco{padding-top:80px}
   .plano .btn{padding:16px 18px;font-size:13.5px}
