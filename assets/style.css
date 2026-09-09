@@ -311,6 +311,9 @@ section{position:relative}
 @media(hover:hover){.plano:hover{transform:translateY(-5px);box-shadow:0 28px 60px rgba(156,109,94,.24)}}
 .plano::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--angle),rgba(233,104,76,0) 0deg,rgba(233,104,76,0) 200deg,var(--coral) 260deg,var(--rosa) 310deg,#fff 330deg,var(--coral) 350deg,rgba(233,104,76,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:0}
 .plano>*{position:relative;z-index:1}
+/* r2 item 6 (ref 23): card da ESQUERDA (Essenza) sem borda animada — filete estatico */
+.plano.essenza::before{content:none}
+.plano.essenza{border:1px solid var(--linha)}
 @media(prefers-reduced-motion:reduce){.plano::before{animation:none}}
 /* r1 item 8: Sapori com background proprio, mais destaque (rosa da paleta) */
 .plano.destaque{background:linear-gradient(155deg,#FCF1EE 0%,#F4DCDC 58%,#EFD0D2 100%);box-shadow:0 30px 64px rgba(150,68,60,.30);border-radius:26px}
