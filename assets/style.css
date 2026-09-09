@@ -125,7 +125,6 @@ section{position:relative}
     calc(100% - 1.0139 * var(--aba-h)) 100%, 0 100%)}
 /* cor = a da seccao DE CIMA. O hero acaba num tom uniforme (gradiente 180deg),
    logo a aba le-o sem emenda. Reamostrar se o fundo do hero mudar. */
-.aba.from-hero{--aba-cor:#F3EAE2}
 .aba.from-areia{--aba-cor:var(--areia)}
 .aba.from-paper{--aba-cor:var(--paper)}
 .aba.from-rosa{--aba-cor:var(--rosa-tinta)}
@@ -133,6 +132,19 @@ section{position:relative}
 @media(max-width:768px){.aba{--aba-h:58px}}
 @media(max-width:600px){.aba{--aba-h:44px}}
 @media(max-width:420px){.aba{--aba-h:38px}}
+/* ===== r4 item 1 — DIVISORIA DE BORDA COM CURVA CIRCULAR (hero -> seguinte) ==
+   Padrao do acervo: arco circular do Ketox (`border-radius:0 0 50% 50% /
+   0 0 100% 100%` — o fill afunda no MEIO, curva de circulo de raio grande)
+   + fio na crista do wave-divider da LP 1 (stroke 1.6 na borda da curva).
+   SVG unico (viewBox 1440x64, preserveAspectRatio none): fill = cor da
+   seccao DE CIMA, crista = borda. Primeiro filho da seccao de baixo. */
+.curva-div{position:absolute;left:0;right:0;top:0;z-index:1;pointer-events:none;height:64px;line-height:0;filter:drop-shadow(0 3px 7px rgba(156,109,94,.10))}
+.curva-div svg{display:block;width:100%;height:100%}
+.curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
+.curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
+.curva-div.from-hero{--curva-cor:#F3EAE2}
+@media(max-width:768px){.curva-div{height:46px}}
+@media(max-width:420px){.curva-div{height:40px}}
 /* folga de topo das seccoes que RECEBEM a aba */
 .recebe-aba{padding-top:140px}
 @media(max-width:1024px){.recebe-aba{padding-top:124px}}

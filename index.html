@@ -47,7 +47,15 @@
 
 <!-- ============ SECÇÃO 2 — A TRANSFORMAÇÃO ============ -->
 <section class="sec sec-transform recebe-aba">
-  <div class="aba from-hero dir-l" aria-hidden="true"></div>
+  <!-- r4 item 1: divisoria de BORDA com CURVA CIRCULAR (padrao Ketox: arco
+       border-radius 0 0 50% 50%/0 0 100% 100%; fio na crista como o
+       wave-divider da LP 1). Fill = cor da seccao DE CIMA. -->
+  <div class="curva-div from-hero" aria-hidden="true">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false">
+      <path class="cd-fill" d="M0,0 H1440 V10 A4809,4809 0 0 1 0,10 Z"/>
+      <path class="cd-crest" d="M0,10 A4809,4809 0 0 1 1440,10"/>
+    </svg>
+  </div>
   <div class="wrap">
     <div class="transform-grid">
       <div class="tg-col sr-hidden">
