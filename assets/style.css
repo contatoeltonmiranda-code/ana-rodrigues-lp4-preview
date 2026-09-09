@@ -488,14 +488,12 @@ section{position:relative}
 .forma-fotos img:nth-child(even){transform:rotate(3.2deg) scale(1.18)}
 .forma-wrap{position:relative;z-index:2}
 .form-box{position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:28px 30px;box-shadow:var(--sh-soft);overflow:hidden}
-/* r3 item 5 (ref 32): BARRA GROSSA com gradiente no LADO DIREITO do card (no
-   lugar do filete fino do topo) — amarelo -> rosa, tokens da paleta */
-.form-box::after{content:"";position:absolute;top:0;bottom:0;right:0;width:7px;height:auto;border-radius:0 20px 20px 0;background:linear-gradient(180deg,var(--amarelo) 0%,var(--rosa) 100%);box-shadow:0 0 12px rgba(189,98,115,.35)}
+/* r6 item 5: barra com gradiente do lado direito do card REMOVIDA (a r3/r4
+   colocou; o Elton pediu remocao na r6) */
 .form-box h3{font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:11px}
 .form-box h3 .fh{width:34px;height:34px;border-radius:50%;background:var(--grad-amarelo);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .form-box h3 .fh svg{width:18px;height:18px;stroke:#572C35;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .sec-forma .form-box{max-width:900px;margin:-74px auto 0;padding:38px 44px 44px;box-shadow:0 34px 76px rgba(87,44,54,.38)}
-.sec-forma .form-box::after{width:8px}
 .sec-forma .form-box h3{font-size:24px;margin-bottom:0;position:relative;z-index:3}
 .sec-forma .form-box h3 .fh{width:40px;height:40px}
 .sec-forma .form-box h3 .fh svg{width:21px;height:21px;stroke:#572C35}
@@ -597,7 +595,6 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .func-fecho{font-size:16px}
   .sec-forma{padding:1px 0 60px}
   .sec-forma .form-box{margin-top:-34px;padding:26px 22px}
-  .sec-forma .form-box::after{width:6px}
   .sec-forma .form-box h3{font-size:21px}
   .forma-fotos{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr)}
   .escada{--esc-ds:.8}
