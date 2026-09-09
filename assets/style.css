@@ -250,27 +250,33 @@ section{position:relative}
 .tl-item a{color:var(--coral-esc);font-weight:700;text-decoration:underline;text-underline-offset:2px}
 .tl-item a:hover{color:var(--rosa-esc)}
 /* — Mas nao fica por aqui… —
-   r3 item 3 (ref 29): 2 COLUNAS restauradas (1o card col. esquerda com a direita
-   vazia; 2o card col. direita com a esquerda vazia; area reservada a largura
-   inteira). Imagem de fundo com opacidade em GRADIENTE (mask): visivel forte no
-   lado direito, a esvaziar ate zero no lado do texto. Icone sobre a borda
-   SUPERIOR alinhado a ESQUERDA do card, sem cobrir o titulo.
+   r4 item 2 (ref 34): CADA card com 2 COLUNAS INTERNAS. Card 1: texto na
+   ESQUERDA, imagem na DIREITA com FADE de borda no lado ESQUERDO (o que
+   encosta no texto). Card 2: texto na DIREITA, imagem na ESQUERDA com fade
+   no lado DIREITO. Imagens em cor NATURAL (opacity 1, sem escurecer) —
+   a transparencia lateral e FADE de borda (mask), nao opacidade geral.
    (SOLUCAO PROVISORIA ate arte da cliente — data-pendente="arte-fundo-temporaria"). */
 .func-mais{max-width:1080px;margin:64px auto 0}
 .func-mais h3{font-size:clamp(24px,3vw,34px);text-align:center;margin-bottom:8px}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
 .apoio{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
-.apoio-card{position:relative;--apoio-pt:44px;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
+.apoio-card{position:relative;--apoio-pt:44px;display:grid;grid-template-columns:1fr 1fr;gap:0 34px;align-items:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
 .apoio-card.bg-wa{grid-column:1;grid-row:1;--apoio-bg:url('test-8.webp')}
 .apoio-card.bg-curso{grid-column:2;grid-row:2;--apoio-bg:url('eb-1.webp')}
-/* fundo temporario: imagem forte no lado DIREITO (borda do card), gradiente
-   de opacidade a esvaziar no lado do texto — url relativa a style.css */
-.apoio-card::before{content:"";position:absolute;top:0;bottom:0;right:0;width:min(52%,300px);
+/* imagem em coluna propria: card 1 a DIREITA (fade na borda ESQUERDA),
+   card 2 a ESQUERDA (fade na borda DIREITA) — cor natural, url relativa a
+   style.css */
+.apoio-card::before{content:"";position:absolute;top:0;bottom:0;width:min(48%,300px);
   background-image:var(--apoio-bg,none);background-size:cover;background-position:center center;background-repeat:no-repeat;
-  opacity:.36;pointer-events:none;z-index:0;
-  -webkit-mask-image:linear-gradient(270deg,transparent 6%,#000 40%,#000 100%);
-  mask-image:linear-gradient(270deg,transparent 6%,#000 40%,#000 100%)}
+  opacity:1;pointer-events:none;z-index:0}
+.apoio-card.bg-wa::before{right:0;border-radius:0 20px 20px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent 2%,#000 55%);
+  mask-image:linear-gradient(90deg,transparent 2%,#000 55%)}
+.apoio-card.bg-curso::before{left:0;border-radius:20px 0 0 20px;
+  -webkit-mask-image:linear-gradient(270deg,transparent 2%,#000 55%);
+  mask-image:linear-gradient(270deg,transparent 2%,#000 55%)}
 .apoio-card .apoio-corpo{position:relative;z-index:1}
+.apoio-card.bg-curso .apoio-corpo{grid-column:2;grid-row:1}
 .apoio-card h4{font-size:19px;line-height:1.3;margin-bottom:12px;color:var(--ink);text-align:left;padding:0 6px 0 0}
 /* icone do titulo: metade para dentro, metade para fora da BORDA do card
    (top do .apoio-corpo - padding do card), alinhado a ESQUERDA */
@@ -318,10 +324,16 @@ section{position:relative}
 }
 /* covers tablet: entre 601-960 (a regra de 600px tem de vencer no telemovel) */
 @media(min-width:601px) and (max-width:960px){.covers-pilha img{width:150px;margin-left:-44px}}
-/* r3 item 3: cards de apoio empilham abaixo de 900px (1 coluna) */
+/* r4 item 2: cards de apoio empilham abaixo de 900px (1 coluna) — imagem fica
+   sempre no fundo a DIREITA com fade a esvaziar no lado do texto */
 @media(max-width:900px){
   .apoio{grid-template-columns:1fr}
   .apoio-card.bg-wa,.apoio-card.bg-curso{grid-column:auto}
+  .apoio-card{grid-template-columns:1fr}
+  .apoio-card.bg-curso .apoio-corpo{grid-column:auto;grid-row:auto}
+  .apoio-card.bg-curso::before{left:auto;right:0;border-radius:0 20px 20px 0;
+    -webkit-mask-image:linear-gradient(90deg,transparent 2%,#000 55%);
+    mask-image:linear-gradient(90deg,transparent 2%,#000 55%)}
 }
 @media(max-width:600px){
   .timeline{padding-left:46px;margin-top:40px}
@@ -333,7 +345,7 @@ section{position:relative}
   .tl-item p{font-size:14.5px}
   .apoio-card{--apoio-pt:38px;padding:38px 20px 22px}
   .apoio-card h4{font-size:17px}
-  .apoio-card::before{width:min(58%,220px);opacity:.24}
+  .apoio-card::before{width:min(58%,220px)}
   .apoio-card h4 .apoio-tag{width:38px;height:38px;left:-8px}
   .apoio-card h4 .apoio-tag svg{width:18px;height:18px}
   .covers img{width:104px}
