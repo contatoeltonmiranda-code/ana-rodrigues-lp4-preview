@@ -261,7 +261,10 @@ section{position:relative}
    (SOLUCAO PROVISORIA ate arte da cliente — data-pendente="arte-fundo-temporaria").
    r5 item 3: escalonamento EXTERNO desfeito — grelha de 1 coluna, os 2 cards
    empilham em largura cheia (as 2 colunas INTERNAS de cada card mantem-se). */
-.func-mais{max-width:1080px;margin:64px auto 0}
+/* r6: overflow-x:clip — a pilha de covers agora e full-bleed (largura do
+   viewport) e as rotacoes das pontas transbordam; clip SO AQUI porque o
+   .func-mais NAO e ancestral da .timeline (sticky nao e afetado) */
+.func-mais{max-width:1080px;margin:64px auto 0;overflow-x:clip}
 .func-mais h3{font-size:clamp(24px,3vw,34px);text-align:center;margin-bottom:8px}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
 .apoio{display:grid;grid-template-columns:1fr;gap:26px}
@@ -327,12 +330,14 @@ section{position:relative}
 .covers-pilha img:nth-child(odd){transform:rotate(3.2deg)}
 .covers-pilha img:nth-child(even){transform:rotate(-3.6deg)}
 .covers-pilha img:first-child{margin-left:0;transform:rotate(-2.4deg)}
-.covers-pilha img:last-child{margin-left:auto;margin-top:-30px}
+/* r6 item 3: a ementa alinha a DIREITA com a ULTIMA capa da linha de cima —
+   margin-right = metade da folga da linha centrada (a linha tem 3.6*cw) */
+.covers-pilha img:last-child{margin-left:auto;margin-right:calc((100% - 3.6 * var(--cw)) / 2);margin-top:-30px}
 @media(hover:hover){
   .covers-pilha img:hover{transform:rotate(0deg) translateY(-16px) scale(1.22);z-index:9;box-shadow:0 30px 60px rgba(156,109,94,.34);transition:transform .35s ease,box-shadow .35s ease}
   .covers-pilha img:hover~img{z-index:0}
 }
-@media(max-width:600px){.covers-pilha{--cw:44vw;--cm:-18vw;margin:30px calc(50% - 50vw) 0;padding-bottom:16px}.covers-pilha img{border-radius:10px}.covers-pilha img:nth-child(4){margin-left:0}.covers-pilha img:last-child{margin-left:auto;margin-top:-18px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
+@media(max-width:600px){.covers-pilha{--cw:44vw;--cm:-18vw;margin:30px calc(50% - 50vw) 0;padding-bottom:16px}.covers-pilha img{border-radius:10px}.covers-pilha img:nth-child(4){margin-left:0}.covers-pilha img:last-child{margin-left:auto;margin-right:15vw;margin-top:-18px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
 .func-fecho{max-width:860px;margin:52px auto 0;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(17px,2.1vw,21px);color:var(--ink);line-height:1.5}
 .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
 @media(max-width:960px){
