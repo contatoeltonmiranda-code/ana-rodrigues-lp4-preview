@@ -13,6 +13,10 @@
   --areia:#F1E3D8; --areia-fim:#ECD6C8;
   --rosa-tinta:#F7EEF1; --amarelo-tinta:#FBF5DE;
   --rosa:#BD6273; --rosa-esc:#934C59; --rosa-claro:#E6BECA; --rosa-medio:#A85565;
+  /* r5 item 2: gradiente rosa ESCURO para discos pequenos com glifo/texto
+     BRANCO (branco/#A85565 5,05:1 e branco/#934C59 6,14:1 = AA; o grad-rosa
+     com ponta clara #E6BECA dava 1,75:1 com branco e 3,4:1 com #BD6273) */
+  --grad-rosa-forte:linear-gradient(135deg,#A85565 0%,#934C59 100%);
   --amarelo:#F1B604; --amarelo-esc:#8A6A00;
   --marrom:#9C6D5E;
   --ink:#3F342E; --texto:#6E5A50; --texto2:#9C8378;
@@ -234,7 +238,8 @@ section{position:relative}
 .tl-dot{position:absolute;left:-64px;top:0;width:57px;height:57px;border-radius:50%;
   background:var(--grad-amarelo);color:#3F342E;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:21px;
   display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(156,109,94,.34),inset 0 0 0 2px rgba(255,255,255,.5);z-index:1}
-.tl-item:nth-child(2n) .tl-dot{background:var(--grad-rosa);box-shadow:0 8px 20px rgba(147,76,89,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
+/* r5 item 2: numero BRANCO sobre o fundo rosa (ref 39: digitos brancos) */
+.tl-item:nth-child(2n) .tl-dot{background:var(--grad-rosa-forte);color:#fff;box-shadow:0 8px 20px rgba(147,76,89,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
 .tl-box{background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;padding:24px 26px 22px;box-shadow:var(--sh-soft);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
 @media(hover:hover){.tl-box-hover .tl-box:hover{transform:translateY(-4px);border-color:rgba(189,98,115,.5);box-shadow:var(--sh-mid)}}
 .tl-item h3{font-size:19px;line-height:1.24;margin-bottom:8px}
@@ -279,7 +284,7 @@ section{position:relative}
    (top do .apoio-corpo - padding do card), alinhado a ESQUERDA */
 .apoio-card h4 .apoio-tag{position:absolute;top:calc(-1*var(--apoio-pt));left:-12px;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--grad-amarelo);box-shadow:0 6px 16px rgba(156,109,94,.34),inset 0 0 0 2px rgba(255,255,255,.5);z-index:2}
 .apoio-card h4 .apoio-tag svg{width:21px;height:21px}
-.apoio-card:nth-child(2n) h4 .apoio-tag{background:var(--grad-rosa)}
+.apoio-card:nth-child(2n) h4 .apoio-tag{background:var(--grad-rosa-forte)}
 .apoio-card h4 .apoio-tag svg{width:19px;height:19px;fill:none;stroke:#572C35;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .apoio-card:nth-child(2n) h4 .apoio-tag svg{stroke:#fff}
 .apoio-card h4 a{color:var(--rosa-esc);text-decoration:underline;text-underline-offset:2px}
@@ -290,7 +295,7 @@ section{position:relative}
 .apoio-card .ck-list{list-style:none;display:grid;gap:10px;margin:16px 0}
 .apoio-card .ck-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.6px;color:var(--ink);line-height:1.5}
 .apoio-card .ck-list li .ck{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--grad-amarelo);display:flex;align-items:center;justify-content:center;margin-top:1px;box-shadow:0 4px 10px rgba(156,109,94,.3)}
-.apoio-card:nth-child(2n) .ck-list li .ck{background:var(--grad-rosa)}
+.apoio-card:nth-child(2n) .ck-list li .ck{background:var(--grad-rosa-forte)}
 .apoio-card .ck-list li .ck svg{width:11px;height:11px;stroke:#572C35;stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .apoio-card:nth-child(2n) .ck-list li .ck svg{stroke:#fff}
 /* r2 item 5 (ref 22): texto da area reservada SAI do card — bloco proprio,
@@ -468,7 +473,8 @@ section{position:relative}
   font-weight:800;font-size:max(13px,calc(var(--nf,18px) * var(--esc-ds,1)));line-height:1;
   box-shadow:0 8px 20px rgba(156,109,94,.34),inset 0 0 0 2px rgba(255,255,255,.5);
   transition:transform .3s ease}
-.esc-item:nth-child(2n) .esc-no{background:var(--grad-rosa);box-shadow:0 8px 20px rgba(147,76,89,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
+/* r5 item 2: numero BRANCO sobre o fundo rosa da escada */
+.esc-item:nth-child(2n) .esc-no{background:var(--grad-rosa-forte);color:#fff;box-shadow:0 8px 20px rgba(147,76,89,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
 .esc-txt{font-size:14.6px;color:var(--texto);line-height:1.48}
 @media(hover:hover){.esc-item:hover .esc-no{transform:scale(1.08)}}
 /* SEC 7 — FAQ — r2 item 10 (ref 27): 10 perguntas em 2 COLUNAS, alternando
@@ -560,6 +566,6 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23572C35' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E"),var(--grad-amarelo);
     background-position:center,0 0;background-size:13px 13px,auto;background-repeat:no-repeat,no-repeat;
     box-shadow:0 6px 16px rgba(156,109,94,.30),inset 0 0 0 2px rgba(255,255,255,.5)}
-  .esc-item:nth-child(2n)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E"),var(--grad-rosa)}
+  .esc-item:nth-child(2n)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E"),var(--grad-rosa-forte)}
   .recebe-aba{padding-top:88px}
 }
