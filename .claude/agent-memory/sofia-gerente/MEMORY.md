@@ -1,0 +1,1 @@
+- [COMPARA por item](feedback_verificar_compara_por_item.md) — auditar antes/depois de cada item contra a ref antes de reportar
