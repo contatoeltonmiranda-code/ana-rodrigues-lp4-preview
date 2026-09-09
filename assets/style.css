@@ -286,6 +286,9 @@ section{position:relative}
 /* icone do titulo: metade para dentro, metade para fora da BORDA do card
    (top do .apoio-corpo - padding do card), alinhado a ESQUERDA */
 .apoio-card h4 .apoio-tag{position:absolute;top:calc(-1*var(--apoio-pt));left:-12px;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--grad-amarelo);box-shadow:0 6px 16px rgba(156,109,94,.34),inset 0 0 0 2px rgba(255,255,255,.5);z-index:2}
+/* r6 item 2: no 2o card (bg-curso) o texto fica a DIREITA — o icone acompanha,
+   na borda superior do lado DIREITO (metade fora, como no card 1 a esquerda) */
+.apoio-card.bg-curso h4 .apoio-tag{left:auto;right:-12px}
 .apoio-card h4 .apoio-tag svg{width:21px;height:21px}
 .apoio-card:nth-child(2n) h4 .apoio-tag{background:var(--grad-rosa-forte)}
 .apoio-card h4 .apoio-tag svg{width:19px;height:19px;fill:none;stroke:#572C35;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
@@ -357,6 +360,7 @@ section{position:relative}
   .apoio-card h4{font-size:17px}
   .apoio-card::before{width:min(58%,220px)}
   .apoio-card h4 .apoio-tag{width:38px;height:38px;left:-8px}
+  .apoio-card.bg-curso h4 .apoio-tag{left:auto;right:-8px}
   .apoio-card h4 .apoio-tag svg{width:18px;height:18px}
   .covers img{width:104px}
 }
