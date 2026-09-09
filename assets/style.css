@@ -310,12 +310,16 @@ section{position:relative}
 .area-reservada p{font-size:16.2px;color:var(--texto);line-height:1.7;max-width:780px;margin:0 auto}
 /* pilha de covers: r3 item 6 — LADO A LADO, topo alinhado, grupo centrado
    r4 item 3 (ref 35): MEIO CURVADAS de forma SUTIL de novo — rotacao +/-3-4
-   graus como estavam antes da r3 (odd +3.2 / even -3.6 / 1a -2.4) */
-.covers-pilha{display:flex;justify-content:center;align-items:flex-start;margin:40px auto 0;max-width:1080px;padding:6px 0 30px}
+   graus como estavam antes da r3 (odd +3.2 / even -3.6 / 1a -2.4)
+   r5 item 4: a 4a capa (ementa) fica EMBAIXO da ultima — linha com 5 capas
+   + quebra de flex + capa ementa sozinha na 2a linha, centrada */
+.covers-pilha{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:40px auto 0;max-width:1080px;padding:6px 0 30px}
+.covers-break{flex-basis:100%;height:18px}
 .covers-pilha img{width:200px;height:auto;border-radius:14px;border:1px solid rgba(156,109,94,.16);box-shadow:0 16px 34px rgba(156,109,94,.24);background:#fff;transition:transform .35s ease,box-shadow .35s ease,z-index 0s;margin-left:-60px;position:relative;z-index:1}
 .covers-pilha img:nth-child(odd){transform:rotate(3.2deg)}
 .covers-pilha img:nth-child(even){transform:rotate(-3.6deg)}
 .covers-pilha img:first-child{margin-left:0;transform:rotate(-2.4deg)}
+.covers-pilha img:last-child{margin-left:0}
 @media(hover:hover){
   .covers-pilha img:hover{transform:rotate(0deg) translateY(-16px) scale(1.22);z-index:9;box-shadow:0 30px 60px rgba(156,109,94,.34);transition:transform .35s ease,box-shadow .35s ease}
   .covers-pilha img:hover~img{z-index:0}
