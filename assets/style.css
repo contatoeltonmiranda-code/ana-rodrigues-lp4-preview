@@ -258,11 +258,11 @@ section{position:relative}
    titulo + descricao DENTRO de cada imagem. Swipe nativo + snap; autoplay
    DESLIGADO. */
 .sec-func{background:var(--paper);padding:0}
-.func-palco{background:#2B2320;padding:66px 0 64px}
+.func-palco{background:var(--paper);padding:66px 0 64px}
 .func-head{max-width:860px;margin:0 auto 8px;text-align:center}
 .func-head .lead{margin-top:4px}
-.func-palco h2{color:#F5F3F2}
-.func-palco .lead{color:rgba(245,243,242,.75)}
+.func-palco h2{color:var(--ink)}
+.func-palco .lead{color:var(--ink)}
 /* r2 item 3 (ref 20): "Porque cada bebe e unico." com corpo e cor proprios —
    no palco escuro entra em AMARELO (unico destaque da paleta legivel no escuro) */
 .func-head .lead-destaque{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(20px,2.4vw,27px);letter-spacing:-.3px;color:var(--amarelo);margin-top:10px}
@@ -277,13 +277,14 @@ section{position:relative}
 .fc-track{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%)}
 .fc-track::-webkit-scrollbar{display:none}
 .fc-foto{border-radius:16px;overflow:hidden;width:100%;height:100%;object-fit:cover}
-.fc-slide{--n:4;flex:0 0 calc((100% - (var(--n) - 1) * var(--fs-gap)) / var(--n));position:relative;aspect-ratio:1/1;scroll-snap-align:start;scroll-snap-stop:always;box-shadow:0 18px 40px rgba(0,0,0,.42);background:#1C1614}
+.fc-slide{--n:5;flex:0 0 calc((100% - (var(--n) - 1) * var(--fs-gap)) / var(--n));position:relative;aspect-ratio:1/1;scroll-snap-align:start;scroll-snap-stop:always;box-shadow:0 18px 40px rgba(0,0,0,.42);background:#1C1614}
 /* foto QUADRADA preenchendo o slide (imagens da expert, Fotos/Pessoais) */
 .fc-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%}
 /* card DENTRO da imagem, ancorado em baixo */
 .fs-card{position:absolute;left:10px;right:10px;bottom:10px;max-height:calc(100% - 24px);overflow-y:auto;scrollbar-width:none;background:linear-gradient(150deg,rgba(255,255,255,.98) 0%,rgba(253,248,245,.98) 100%);border-radius:14px;padding:25px 15px 13px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
 .fs-card::-webkit-scrollbar{display:none}
 /* numero em disco: metade fora da borda superior do card (padrao apoio-tag) */
+.fs-card{position:relative}
 .fs-num{position:absolute;top:0;left:14px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--grad-amarelo);color:#3F342E;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.4),inset 0 0 0 2px rgba(255,255,255,.5);z-index:3}
 /* r8: animacao sutil do slide */
 @keyframes fc-flutua{from{transform:translateY(0)}to{transform:translateY(-10px)}}
