@@ -249,7 +249,7 @@ section{position:relative}
 @media(max-width:960px){.transform-grid{grid-template-columns:1fr;gap:8px;max-width:680px}.tg-col .tg-fecho{border-left:none;padding-left:0}}
 /* r7C: o titulo acompanha a coluna unica <=960; a barra (grelha) tem as suas
    proprias regras por breakpoint acima */
-@media(max-width:960px){.perguntas{max-width:640px;margin-left:auto;margin-right:auto;text-align:center}}
+@media(max-width:960px){.perguntas{width:100%;max-width:none;margin:0 auto;text-align:center}}
 @media(max-width:600px){.perguntas{max-width:100%}.ind-bar-wrap{margin-top:22px}}
 /* SEC 3 — MODO DE FUNCIONAMENTO (r7C: carrossel FULL-BLEED, especificação
    literal) — palco ESCURO (#2B2320, neutro escuro da paleta, derivado do
