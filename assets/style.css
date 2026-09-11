@@ -143,6 +143,7 @@ section{position:relative}
 .curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
 .curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
 .curva-div.from-hero{margin-top:-140px;position:relative;z-index:1}
+.curva-div.from-hero{background:#FAF7F5 url("art-prancheta1.webp") 50% 78% / cover no-repeat}
 .curva-div.from-hero .cd-fill{fill:transparent}
 @media(max-width:1024px){.curva-div.from-hero{margin-top:-124px}}
 @media(max-width:768px){.curva-div.from-hero{margin-top:-106px}}
@@ -692,7 +693,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 /* C) HERO: imagem da direita sai; 2 colunas mantidas (direita = janela da arte);
    fundo = Prancheta 1 (regra de ouro: cover, top, sem overlay) */
 .hero{background:#FAF7F5;position:relative;z-index:1;padding-top:52px;padding-bottom:174px}
-.hero::after{content:"";position:absolute;left:0;right:0;top:0;bottom:-112px;background:#FAF7F5 url("art-prancheta1.webp") 50% 30% / 160% auto no-repeat;z-index:-1}
+.hero::after{content:"";position:absolute;left:0;right:0;top:0;bottom:-112px;background:#FAF7F5 url("art-prancheta1.webp") top center / cover no-repeat;z-index:-1}
 .hero-grid{grid-template-columns:1.15fr .85fr;gap:34px}
 .hero-visual{display:none}
 .hero-txt{padding:30px 0}
