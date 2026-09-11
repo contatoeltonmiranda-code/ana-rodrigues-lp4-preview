@@ -343,20 +343,20 @@ section{position:relative}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
 .apoio{display:grid;grid-template-columns:1fr;gap:26px}
 .apoio-card{position:relative;--apoio-pt:44px;display:grid;grid-template-columns:1fr 1.25fr;gap:0 14px;align-items:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
-.apoio-card.bg-wa{--apoio-bg:url('ana-p05.webp')}
+.apoio-card.bg-wa{--apoio-bg:url('ana-p05.webp');padding-top:70px;padding-bottom:60px;min-height:560px}
 .apoio-card.bg-curso{--apoio-bg:url('ana-p06.webp')}
 /* imagem em coluna propria: card 1 a DIREITA (fade na borda ESQUERDA),
    card 2 a ESQUERDA (fade na borda DIREITA) — cor natural, url relativa a
    style.css */
-.apoio-card::before{content:"";position:absolute;top:0;bottom:0;width:min(64%,420px);
+.apoio-card::before{content:"";position:absolute;top:0;bottom:0;width:min(74%,520px);
   background-image:var(--apoio-bg,none);background-size:cover;background-position:center center;background-repeat:no-repeat;
   opacity:1;pointer-events:none;z-index:0}
 .apoio-card.bg-wa::before{right:0;border-radius:0 20px 20px 0;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);
-  mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
+  -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 35%,#000 70%);
+  mask-image:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 35%,#000 70%)}
 .apoio-card.bg-curso::before{left:0;border-radius:20px 0 0 20px;
-  -webkit-mask-image:linear-gradient(270deg,transparent 0,#000 12%);
-  mask-image:linear-gradient(270deg,transparent 0,#000 12%)}
+  -webkit-mask-image:linear-gradient(270deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 35%,#000 70%);
+  mask-image:linear-gradient(270deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 35%,#000 70%)}
 .apoio-card .apoio-corpo{position:relative;z-index:1}
 .apoio-card.bg-curso .apoio-corpo{grid-column:2;grid-row:1}
 .apoio-card h4{font-size:19px;line-height:1.3;margin-bottom:12px;color:var(--ink);text-align:left;padding:0 6px 0 0}
@@ -422,8 +422,8 @@ section{position:relative}
   .apoio-card{grid-template-columns:1fr}
   .apoio-card.bg-curso .apoio-corpo{grid-column:auto;grid-row:auto}
   .apoio-card.bg-curso::before{left:auto;right:0;border-radius:0 20px 20px 0;
-    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);
-    mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
+    -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 35%,#000 70%);
+    mask-image:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 35%,#000 70%)}
 }
 @media(max-width:600px){
   /* r7C: carrossel 1 por view no telemovel (regra especifica em .func-carousel) */
