@@ -301,7 +301,7 @@ section{position:relative}
 .fs-card .tl-nota{font-size:11px;color:var(--texto2);font-style:italic}
 .fs-card a{color:var(--rosa-esc);font-weight:700;text-decoration:underline;text-underline-offset:2px}
 .fc-dots{display:flex;justify-content:center;gap:9px;margin-top:22px}
-.fc-dot{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:rgba(245,243,242,.28);cursor:pointer;transition:transform .25s,background .25s}
+.fc-dot{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:rgba(87,44,53,.32);cursor:pointer;transition:transform .25s,background .25s}
 .fc-dot[aria-current="true"]{background:var(--amarelo);transform:scale(1.3)}
 @media(prefers-reduced-motion:reduce){.fc-track{scroll-behavior:auto}}
 /* views por breakpoint (4 desktop -> 1 telemovel; slide SEMPRE do mesmo tamanho dentro de cada view) */
