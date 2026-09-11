@@ -277,7 +277,7 @@ section{position:relative}
 .fc-track{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%)}
 .fc-track::-webkit-scrollbar{display:none}
 .fc-foto{border-radius:16px;overflow:hidden;width:100%;height:100%;object-fit:cover}
-.fc-slide{--n:5;flex:0 0 calc((100% - (var(--n) - 1) * var(--fs-gap)) / var(--n));position:relative;height:clamp(280px,23vw,332px);scroll-snap-align:start;scroll-snap-stop:always;box-shadow:0 16px 34px rgba(156,109,94,.18);background:#1C1614}
+.fc-slide{--n:5;flex:0 0 calc((100% - (var(--n) - 1) * var(--fs-gap)) / var(--n));position:relative;height:clamp(300px,26vw,376px);scroll-snap-align:start;scroll-snap-stop:always;box-shadow:0 16px 34px rgba(156,109,94,.18);border-radius:16px}
 /* foto QUADRADA preenchendo o slide (imagens da expert, Fotos/Pessoais) */
 .fc-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;border-radius:16px}
 /* card DENTRO da imagem, ancorado em baixo */
