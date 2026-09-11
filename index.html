@@ -651,7 +651,7 @@ window.addEventListener('load',function(){
     Array.prototype.forEach.call(track.querySelectorAll('.fc-slide'),function(s){
       var num=s.querySelector('.fs-num'),card=s.querySelector('.fs-card');
       if(!num||!card)return;
-      num.style.top=(card.offsetTop-num.offsetHeight/2)+'px';
+      num.style.top=card.offsetTop+'px';
     });
   }
   posNums();
