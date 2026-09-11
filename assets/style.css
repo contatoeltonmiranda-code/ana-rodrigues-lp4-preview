@@ -699,3 +699,9 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 .sobre-fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;height:620px}
 .sobre-fotos img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:18px}
 .fin-f{height:26%}}
+
+/* r9w: circulo do chevron animado — pulso suave + seta a descer em loop */
+@keyframes circPulsa{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 6px 18px rgba(147,76,89,.30)}50%{transform:translate(-50%,-50%) scale(1.12);box-shadow:0 10px 26px rgba(147,76,89,.42)}}
+.curva-div .cd-circle{animation:circPulsa 2.2s ease-in-out infinite}
+@keyframes setaDesce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+.curva-div .cd-circle svg{animation:setaDesce 2.2s ease-in-out infinite}
