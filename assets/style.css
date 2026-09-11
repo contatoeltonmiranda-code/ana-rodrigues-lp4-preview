@@ -412,7 +412,7 @@ section{position:relative}
   .covers-pilha img:hover~img{z-index:0}
 }
 @media(max-width:600px){.covers-pilha{--cw:44vw;--cm:-18vw;margin:30px calc(50% - 50vw) 0;padding-bottom:16px}.covers-pilha img{border-radius:10px}.covers-pilha img:nth-child(4){margin-left:0}.covers-pilha img:last-child{margin-left:auto;margin-right:15vw;margin-top:-18px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
-.func-fecho{max-width:860px;margin:52px auto 0;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(17px,2.1vw,21px);color:var(--ink);line-height:1.5}
+.func-fecho{max-width:860px;margin:52px auto 50px;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(17px,2.1vw,21px);color:var(--ink);line-height:1.5}
 .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
 /* covers tablet: entre 601-960 o --cw proporcional (27.5vw) ja resolve —
    regra fixa de 150px removida na r6 (item 3) */
@@ -443,7 +443,7 @@ section{position:relative}
    dany-metodo-espere .sec-quem::before): 50% de largura, gradiente da paleta
    a esvaziar ate o MEIO da seccao no sentido horizontal */
 .sec-preco{background:var(--paper);overflow:hidden;padding-top:54px}
-.sec-preco::before{content:"";position:absolute;top:0;right:0;width:50%;height:10px;background:linear-gradient(270deg,var(--amarelo) 0%,var(--rosa) 46%,transparent 100%);pointer-events:none;z-index:2;filter:drop-shadow(0 0 10px rgba(189,98,115,.28))}
+.sec-preco::before{content:"";position:absolute;top:0;right:0;width:50%;height:30px;background:linear-gradient(270deg,var(--amarelo) 0%,var(--rosa) 46%,transparent 100%);pointer-events:none;z-index:2;filter:drop-shadow(0 0 10px rgba(189,98,115,.28))}
 .planos{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:940px;margin:34px auto 0;align-items:stretch}
 .plano{position:relative;z-index:1;background:linear-gradient(150deg,#FFFFFF 0%,#FDF8F5 100%);border-radius:26px;padding:44px 36px 36px;text-align:center;box-shadow:0 22px 52px rgba(156,109,94,.18);display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease}
 @media(hover:hover){.plano:hover{transform:translateY(-5px);box-shadow:0 28px 60px rgba(156,109,94,.24)}}
