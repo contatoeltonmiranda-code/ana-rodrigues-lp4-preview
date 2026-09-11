@@ -142,11 +142,11 @@ section{position:relative}
 .curva-div svg{display:block;width:100%;height:100%}
 .curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
 .curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
-.hero .curva-div.from-hero{position:absolute;top:auto;bottom:0;left:0;right:0;height:78px;z-index:2;margin-top:0}
-@media(max-width:1024px){.hero .curva-div.from-hero{height:70px}}
-@media(max-width:768px){.hero .curva-div.from-hero{height:62px}}
-@media(max-width:600px){.hero .curva-div.from-hero{height:56px}}
+.curva-div.from-hero{margin-top:-140px;position:relative;z-index:1}
 .curva-div.from-hero .cd-fill{fill:transparent}
+@media(max-width:1024px){.curva-div.from-hero{margin-top:-124px}}
+@media(max-width:768px){.curva-div.from-hero{margin-top:-106px}}
+@media(max-width:600px){.curva-div.from-hero{margin-top:-88px}}
 .curva-div .cd-circle{position:absolute;top:56px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--rosa-esc);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(147,76,89,.30);z-index:2}
 .curva-div .cd-circle svg{width:22px;height:22px;fill:none;stroke:var(--cream);stroke-width:2.5}
 @media(max-width:768px){.curva-div{height:78px}.curva-div .cd-circle{width:44px;height:44px;top:58px}.curva-div .cd-circle svg{width:18px;height:18px}}
@@ -192,7 +192,10 @@ section{position:relative}
 /* SEC 2 — A TRANSFORMACAO (8 cartoes, grelha 2 col) */
 /* sombreado no topo (areia-fim -> areia 190px): a aba from-hero precisa de
    contraste de fundo, o mesmo fix da LP 3 na .sec-duv */
-.sec-transform{background:linear-gradient(180deg,var(--areia-fim) 0,var(--areia) 190px);overflow:hidden}
+.sec-transform{background:linear-gradient(180deg,transparent 0,transparent 78px,var(--areia-fim) 78px,var(--areia) 268px);overflow:hidden}
+@media(max-width:1024px){.sec-transform{background:linear-gradient(180deg,transparent 0,transparent 70px,var(--areia-fim) 70px,var(--areia) 240px)}}
+@media(max-width:768px){.sec-transform{background:linear-gradient(180deg,transparent 0,transparent 62px,var(--areia-fim) 62px,var(--areia) 190px)}}
+@media(max-width:600px){.sec-transform{background:linear-gradient(180deg,transparent 0,transparent 56px,var(--areia-fim) 56px,var(--areia) 170px)}}
 /* r1 item 2 (retrabalho): intro em 2 COLUNAS como a ref 4
    r7C item 2: barra grossa dividida em 8 segmentos (roxo/dourado) */
 .transform-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px 64px;max-width:920px;margin:0 auto;text-align:left;align-items:start}
