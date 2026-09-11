@@ -14,22 +14,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>.hero-logo{content-visibility:auto}</style>
-<style>
-/* r10f: texto da promessa em branco sobre o gradiente (imune a cache) */
-.hero-txt, .hero-txt h1, .hero-txt .sub, .hero-txt .lead, .hero-txt p{color:#fff !important}
-.hero-txt .txt-grad{-webkit-text-fill-color:#fff !important;background:none !important}
-</style>
+
 </head>
 <body>
 
 <!-- ============ SECÇÃO 1 — HERO ============ -->
-<section class="hero" style="background:linear-gradient(180deg,#F1B604 0%,#BD6273 100%)">
+<section class="hero" >
   <div class="orb tl" aria-hidden="true"></div>
   <div class="orb rosa br" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-txt">
       <img class="hero-logo sr-hidden" src="assets/logo-primeiras-comidinhas.webp" width="620" height="786" fetchpriority="high" alt="Logótipo do programa As Primeiras Comidinhas, de Ana Rodrigues Lopes">
-      <h1 class="sr-hidden"><span class="txt-grad">Programa de Acompanhamento</span><span class="h1-l2">de Introdução Alimentar</span></h1>
+      <h1 class="sr-hidden" style="background:linear-gradient(90deg,#F1B604 0%,#BD6273 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent"<span class="txt-grad">Programa de Acompanhamento</span><span class="h1-l2">de Introdução Alimentar</span></h1>
       <p class="sub sr-hidden">Para famílias que querem viver a introdução alimentar com a tranquilidade de saber que têm uma <strong>nutricionista pediátrica ao seu lado sempre que precisam</strong>.</p>
       <p class="sub sr-hidden">Um acompanhamento personalizado que combina conhecimento, consultas de introdução alimentar individuais e apoio diário próximo para que nunca tenhas de tomar decisões sobre a alimentação do teu bebé sem orientação.</p>
       <div class="cta-row sr-hidden"><a href="#preco" class="btn lg" data-pendente="checkout">Quero ser acompanhada(o)</a></div>
@@ -57,7 +53,7 @@
        chevron claro apontando pra baixo). r6: dip mais profundo (52 -> 112 no
        viewBox 1440x112; era 84). Fill = cor da seccao DE CIMA (hero #F3EAE2). -->
   
-  <div class="curva-div from-hero" style="--curva-cor:#BD6273" aria-hidden="true">
+  <div class="curva-div from-hero" aria-hidden="true">
     <svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false">
       <defs><linearGradient id="curvaGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#A85565"/><stop offset="45%" stop-color="#934C59"/><stop offset="100%" stop-color="#7C414B"/></linearGradient></defs>
       <path class="cd-fill" d="M0,0 H1440 V52 H836 C788,52 764,112 720,112 C676,112 652,52 604,52 H0 Z"/>
