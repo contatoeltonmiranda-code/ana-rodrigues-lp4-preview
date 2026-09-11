@@ -705,3 +705,6 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 .curva-div .cd-circle{animation:circPulsa 2.2s ease-in-out infinite}
 @keyframes setaDesce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
 .curva-div .cd-circle svg{animation:setaDesce 2.2s ease-in-out infinite}
+
+/* r9y: sem sombreamento na divisoria entre depoimentos e sobre */
+.aba.from-areia{filter:none}
