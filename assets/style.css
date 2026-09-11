@@ -412,7 +412,7 @@ section{position:relative}
   .covers-pilha img:hover~img{z-index:0}
 }
 @media(max-width:600px){.covers-pilha{--cw:44vw;--cm:-18vw;margin:30px calc(50% - 50vw) 0;padding-bottom:16px}.covers-pilha img{border-radius:10px}.covers-pilha img:nth-child(4){margin-left:0}.covers-pilha img:last-child{margin-left:auto;margin-right:15vw;margin-top:-18px}.covers-pilha img:hover{transform:rotate(0deg) translateY(-8px) scale(1.1)}}
-.func-fecho{max-width:860px;margin:52px auto 50px;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(17px,2.1vw,21px);color:var(--ink);line-height:1.5}
+.func-fecho{max-width:860px;margin:52px auto 0;text-align:center;padding-bottom:50px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(17px,2.1vw,21px);color:var(--ink);line-height:1.5}
 .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
 /* covers tablet: entre 601-960 o --cw proporcional (27.5vw) ja resolve —
    regra fixa de 150px removida na r6 (item 3) */
