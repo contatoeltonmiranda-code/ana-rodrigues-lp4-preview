@@ -259,7 +259,7 @@ section{position:relative}
    DESLIGADO. */
 .sec-func{background:var(--paper);padding:0}
 .func-palco{background:var(--paper);padding:66px 0 64px}
-.func-head{max-width:860px;margin:0 auto 8px;text-align:center}
+.func-head{max-width:640px;margin:0 auto 8px;text-align:center}
 .func-head .lead{margin-top:4px}
 .func-palco h2{color:var(--ink)}
 .func-palco .lead{color:var(--ink)}
