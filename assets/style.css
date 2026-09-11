@@ -343,8 +343,8 @@ section{position:relative}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
 .apoio{display:grid;grid-template-columns:1fr;gap:26px}
 .apoio-card{position:relative;--apoio-pt:44px;display:grid;grid-template-columns:1fr 1fr;gap:0 34px;align-items:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
-.apoio-card.bg-wa{--apoio-bg:url('test-8.webp')}
-.apoio-card.bg-curso{--apoio-bg:url('eb-1.webp')}
+.apoio-card.bg-wa{--apoio-bg:url('ana-p05.webp')}
+.apoio-card.bg-curso{--apoio-bg:url('ana-p06.webp')}
 /* imagem em coluna propria: card 1 a DIREITA (fade na borda ESQUERDA),
    card 2 a ESQUERDA (fade na borda DIREITA) — cor natural, url relativa a
    style.css */
@@ -398,7 +398,7 @@ section{position:relative}
    continuar a caber: 3.6*cw <= 100vw) — a pilha sai do .wrap (full-bleed,
    mesmo truque do carrossel) e a capa ementa alinha a DIREITA, EMBAIXO da
    ultima capa da direita (viajar com um bebe), nao centrada na largura toda */
-.covers-pilha{--cw:clamp(130px,18vw,260px);--cm:calc(var(--cw) * -.35);display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:40px calc(50% - 50vw) 0;padding:6px 0 30px}
+.covers-pilha{--cw:clamp(160px,22vw,320px);--cm:calc(var(--cw) * -.35);display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:40px calc(50% - 50vw) 0;padding:6px 0 30px}
 .covers-break{flex-basis:100%;height:18px}
 .covers-pilha img{width:var(--cw);height:auto;border-radius:14px;border:1px solid rgba(156,109,94,.16);box-shadow:0 16px 34px rgba(156,109,94,.24);background:#fff;transition:transform .35s ease,box-shadow .35s ease,z-index 0s;margin-left:var(--cm);position:relative;z-index:1}
 .covers-pilha img:nth-child(odd){transform:rotate(3.2deg)}
