@@ -142,7 +142,7 @@ section{position:relative}
 .curva-div svg{display:block;width:100%;height:100%}
 .curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
 .curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
-.hero .curva-div.from-hero{position:absolute;bottom:0;left:0;right:0;height:78px;z-index:2;margin-top:0}
+.hero .curva-div.from-hero{position:absolute;top:auto;bottom:0;left:0;right:0;height:78px;z-index:2;margin-top:0}
 @media(max-width:1024px){.hero .curva-div.from-hero{height:70px}}
 @media(max-width:768px){.hero .curva-div.from-hero{height:62px}}
 @media(max-width:600px){.hero .curva-div.from-hero{height:56px}}
