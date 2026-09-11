@@ -143,9 +143,9 @@ section{position:relative}
 .curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
 .curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
 .curva-div.from-hero{--curva-cor:url(#curvaGrad)}
-.curva-div .cd-circle{position:absolute;top:48px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#A85565 0%,#934C59 45%,#7C414B 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(147,76,89,.30);z-index:2}
-.curva-div .cd-circle svg{width:22px;height:22px;fill:none;stroke:var(--cream);stroke-width:2.5}
-@media(max-width:768px){.curva-div{height:64px}.curva-div .cd-circle{width:44px;height:44px;top:58px}.curva-div .cd-circle svg{width:18px;height:18px}}
+.curva-div .cd-circle{position:absolute;top:48px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--areia-fim);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(147,76,89,.30);z-index:2}
+.curva-div .cd-circle svg{width:22px;height:22px;fill:none;stroke:#934C59;stroke-width:2.5}
+@media(max-width:768px){.curva-div{height:64px}.curva-div .cd-circle{width:44px;height:44px;top:58px}.curva-div .cd-circle svg{width:18px;height:18px;stroke:#934C59}}
 @media(max-width:420px){.curva-div{height:56px}.curva-div .cd-circle{width:38px;height:38px;top:50px}.curva-div .cd-circle svg{width:16px;height:16px}}
 /* folga de topo das seccoes que RECEBEM a aba */
 .recebe-aba{padding-top:140px}
