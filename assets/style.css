@@ -683,10 +683,10 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 /* ===== r8p — pedidos do Elton (2026-09-10 22h) ===== */
 /* C) HERO: imagem da direita sai; 2 colunas mantidas (direita = janela da arte);
    fundo = Prancheta 1 (regra de ouro: cover, top, sem overlay) */
-.hero{background:#FAF7F5 url("assets/art-prancheta1.webp") top center / 100% auto no-repeat;padding-top:52px}
+.hero{background:#FAF7F5 url("assets/art-prancheta1.webp") top center / cover no-repeat;padding-top:52px}
 .hero-grid{grid-template-columns:1.15fr .85fr;gap:34px}
 .hero-visual{display:none}
-.hero-txt{background:rgba(255,255,255,.72);border-radius:22px;padding:30px 34px;backdrop-filter:blur(3px)}
+.hero-txt{padding:30px 0}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-txt{background:rgba(255,255,255,.82)}}
 /* A) SOBRE: 4 fotos lado a lado, altura grande, borda arredondada, sem borda animada */
 .sobre-visual{display:block}
