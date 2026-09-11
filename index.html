@@ -14,6 +14,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>.hero-logo{content-visibility:auto}</style>
+<style>
+.balao-nota{position:absolute;z-index:5;left:50%;transform:translateX(-50%);bottom:calc(100% + 14px);max-width:420px;background:#fff;border:1.5px dashed #934C59;border-radius:14px;padding:10px 14px;font-family:'Inter',sans-serif;font-size:12.5px;line-height:1.5;color:#572C35;box-shadow:0 10px 28px rgba(87,44,54,.18)}
+.balao-nota::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#934C59}
+.hero-prova{position:relative}
+</style>
 
 </head>
 <body>
@@ -29,7 +34,8 @@
       <p class="sub sr-hidden">Para famílias que querem viver a introdução alimentar com a tranquilidade de saber que têm uma <strong>nutricionista pediátrica ao seu lado sempre que precisam</strong>.</p>
       <p class="sub sr-hidden">Um acompanhamento personalizado que combina conhecimento, consultas de introdução alimentar individuais e apoio diário próximo para que nunca tenhas de tomar decisões sobre a alimentação do teu bebé sem orientação.</p>
       <div class="cta-row sr-hidden"><a href="#preco" class="btn lg" data-pendente="checkout">Quero ser acompanhada(o)</a></div>
-      <div class="hero-prova sr-hidden">
+      <span class="balao-nota" aria-hidden="true">Fotos de preenchimento — o texto e os retratos ser&atilde;o trocados por informa&ccedil;&atilde;o real, caso ela queira deixar esta parte dispon&iacute;vel</span>
+    <div class="hero-prova sr-hidden">
         <div class="prova-faces" aria-hidden="true">
           <img src="assets/ava-1.webp" width="200" height="200" alt="" loading="lazy">
           <img src="assets/ava-2.webp" width="200" height="200" alt="" loading="lazy">
