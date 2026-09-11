@@ -708,3 +708,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 
 /* r9y: sem sombreamento na divisoria entre depoimentos e sobre */
 .aba.from-areia{filter:none}
+
+/* r10c: icones Phosphor — cor conforme o disco (branco no vinho, escuro no dourado) */
+.ind-item:nth-child(odd) .ind-ico{color:#fff}
+.ind-item:nth-child(even) .ind-ico{color:#572C35}
