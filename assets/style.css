@@ -812,6 +812,10 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .caminho-svg{display:none}
   .caminho-wrap{margin-top:46px;padding:0 20px}
   .caminho{grid-template-columns:1fr;gap:30px;padding-left:4px}
+  /* os grid-area serpentes do desktop (0,2,0) vencem .no (0,1,0) — anular
+     com especificidade maior */
+  .caminho .no:nth-child(n){grid-area:auto}
+  .no-fim{justify-self:auto}
   .caminho::before{content:"";position:absolute;left:34px;top:30px;bottom:30px;width:2px;border-radius:2px;background:rgba(189,98,115,.4)}
   .no,.no-fim{grid-area:auto;flex-direction:row;align-items:flex-start;gap:16px;background:none;border:none;border-radius:0;padding:0;box-shadow:none;min-width:0}
   .no-ico{position:relative;top:auto;left:auto;transform:none;flex:0 0 60px}
