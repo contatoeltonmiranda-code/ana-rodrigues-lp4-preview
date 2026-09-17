@@ -1,8 +1,8 @@
 {
   "index@1440": {
     "overflow": 0,
-    "altura": 10787,
-    "imgs": 62,
+    "altura": 11700,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -13,14 +13,12 @@
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
       "lp02-curso",
-      "checkout-essenza",
-      "checkout-sapori",
       "lp02-curso",
-      "checkout",
-      "politica-privacidade"
+      "checkout"
     ],
-    "ctas": 5,
+    "ctas": 6,
     "ctaTexto": [
+      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
@@ -33,8 +31,8 @@
   },
   "index@1024": {
     "overflow": 0,
-    "altura": 10669,
-    "imgs": 62,
+    "altura": 12031,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -45,14 +43,12 @@
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
       "lp02-curso",
-      "checkout-essenza",
-      "checkout-sapori",
       "lp02-curso",
-      "checkout",
-      "politica-privacidade"
+      "checkout"
     ],
-    "ctas": 5,
+    "ctas": 6,
     "ctaTexto": [
+      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
@@ -65,8 +61,8 @@
   },
   "index@768": {
     "overflow": 0,
-    "altura": 11726,
-    "imgs": 62,
+    "altura": 14636,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -77,14 +73,12 @@
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
       "lp02-curso",
-      "checkout-essenza",
-      "checkout-sapori",
       "lp02-curso",
-      "checkout",
-      "politica-privacidade"
+      "checkout"
     ],
-    "ctas": 5,
+    "ctas": 6,
     "ctaTexto": [
+      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
@@ -97,8 +91,8 @@
   },
   "index@390": {
     "overflow": 0,
-    "altura": 13794,
-    "imgs": 62,
+    "altura": 20681,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -109,14 +103,12 @@
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
       "lp02-curso",
-      "checkout-essenza",
-      "checkout-sapori",
       "lp02-curso",
-      "checkout",
-      "politica-privacidade"
+      "checkout"
     ],
-    "ctas": 5,
+    "ctas": 6,
     "ctaTexto": [
+      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
