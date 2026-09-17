@@ -820,3 +820,61 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .no-corpo h3{font-size:15px}
   .no-corpo p{font-size:13.6px}
 }
+
+/* --- r11i itens 5+11: IDENTIDADE = LP 2 v2 + laranja da LP 3 + amarelo
+   suave #FADB9B como cor de apoio. Tokens extraidos do CSS live:
+   LP2v2  cream #FAFAF8 · cream2 #F5EEE7 · ink #3B3330 · texto #6B605C ·
+          texto2 #9A8F8A · coral #BD6273 · coral-esc #9A4557 · coral-claro
+          #DDA0AC · linha rgba(236,135,91,.30) · sombras rgba(176,92,56,..)
+          grad-coral #DDA0AC->#BD6273 · botoes r14 outline-offset 4
+   LP3    laranja (sage) #E58960 · esc #B96136 · claro #EDB393 ·
+          grad-sage #EDB393->#CB7244 · txt-grad #E58960->#C0643F->#B96A75
+   AMARELO SUAVE #FADB9B = cor de APOIO (discos de check, badges, filete do
+   bloco-pivo) — nunca recebe branco; glifo #572C35 (6,0:1) / #6E5400.
+   Contraste mantido: #B96136 sobre branco 4,4:1 (so em texto >=19px bold/3:1);
+   laranja #E58960 NUNCA recebe branco nem texto pequeno. --- */
+:root{
+  --cream:#FAFAF8;
+  --areia:#F5EEE7; --areia-fim:#EDE0D2;
+  --rosa-tinta:#F7EEF1; --amarelo-tinta:#FDF3E0;
+  --rosa:#BD6273; --rosa-esc:#9A4557; --rosa-claro:#DDA0AC; --rosa-medio:#A85565;
+  --amarelo:#FADB9B; --amarelo-esc:#6E5400;
+  --laranja:#E58960; --laranja-esc:#B96136; --laranja-claro:#EDB393;
+  --grad-laranja:linear-gradient(135deg,#EDB393 0%,#CB7244 100%);
+  --grad-laranja-claro:linear-gradient(135deg,#F9D3BE 0%,#EDB393 100%);
+  --grad-amarelo:linear-gradient(135deg,#FADB9B 0%,#F3C478 100%);
+  --grad-rosa:linear-gradient(135deg,#DDA0AC 0%,#BD6273 45%,#9A4557 100%);
+  --ink:#3B3330; --texto:#6B605C; --texto2:#9A8F8A;
+  --linha:rgba(189,98,115,.30);
+  --sh-soft:0 10px 30px rgba(176,92,56,.14); --sh-mid:0 16px 40px rgba(176,92,56,.18);
+}
+html{background:#F5EEE7}
+.txt-grad{background:linear-gradient(120deg,#E58960 0%,#C0643F 52%,#B96A75 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#B96136}
+/* botoes principais: familia coral-esc da LP2v2 (branco/#9A4557 7,2:1 · branco/#A85565 5,1:1) */
+.btn{background:linear-gradient(135deg,#A85565 0%,#9A4557 45%,#823A48 100%);outline-color:rgba(154,69,87,.30);box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(189,98,115,.55)}
+.btn:hover{background:linear-gradient(135deg,#B16173 0%,#9A4557 45%,#8E404F 100%);box-shadow:0 16px 40px rgba(176,92,56,.42)}
+@keyframes btn-glow{0%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(189,98,115,.5)}60%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 12px rgba(189,98,115,0)}100%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(189,98,115,0)}}
+/* orbes: amarelo -> laranja */
+.orb{background:radial-gradient(circle,rgba(229,137,96,.16),rgba(189,98,115,.08) 42%,transparent 70%)}
+.orb.rosa{background:radial-gradient(circle,rgba(189,98,115,.22),rgba(229,137,96,.06) 44%,transparent 70%)}
+/* eyebrows e badges pequenos: laranja CLARO com texto escuro (6,3:1) */
+.eyebrow{background:var(--grad-laranja-claro);color:#572C35;box-shadow:0 4px 16px rgba(229,137,96,.24)}
+.eyebrow.outline{border-color:var(--laranja-esc);color:#8A4A22}
+.tl-quando{color:#8A4A22;background:rgba(229,137,96,.16);border-color:rgba(185,97,54,.40)}
+.plano .pm{color:#8A4A22;background:rgba(229,137,96,.16);border-color:rgba(185,97,54,.40)}
+.plano.sapori .pm{color:var(--rosa-esc);background:#fff;border-color:#fff}
+/* barra de indicados: segmento alternante dourado -> LARANJA LP3 (icones
+   escuros #572C35 sobre laranja claro->forte, 3:1+ em todos os stops) */
+.ind-item:nth-child(even) .ind-ico{background:var(--grad-laranja);color:#572C35}
+.ind-item:nth-child(even) .ind-seg{background:#E58960}
+/* destaque "Porque cada bebe e unico" no palco: laranja-esc (4,4:1, texto 20px+ bold) */
+.func-head .lead-destaque{color:var(--laranja-esc)}
+/* fio do caminho e barras decorativas: laranja */
+.caminho-svg .cs-linha{stroke:var(--laranja-esc)}
+.sec-preco::before{background:linear-gradient(270deg,var(--laranja) 0%,var(--rosa) 46%,transparent 100%)}
+/* filete do bloco-pivo / discos de check: AMARELO SUAVE (apoio) */
+.cd-pivot::after{background:var(--grad-amarelo)}
+footer{background:#F5EEE7}
+.hero::after{background:#FAFAF8 url("hero-bg.webp") top center / cover no-repeat}
+.hero{background:linear-gradient(180deg,#EDB393 0%,#BD6273 100%)}
+@media(max-width:900px){.hero-txt{background:rgba(255,255,255,.9)}}
