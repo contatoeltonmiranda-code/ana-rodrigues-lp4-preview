@@ -738,3 +738,12 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .cd-lig{flex:0 0 auto;height:30px;transform:rotate(90deg)}
   .cd-bloco{font-size:14.6px;padding:18px 20px}
 }
+
+/* --- r11d itens 7+13: IVA incluido + euro nas parcelas; BOTOES DOS PLANOS
+   VERDES (familia do verde-sage da LP 2 v2, escurecido para AA com branco:
+   branco/#4E7A61 4,9:1 · branco/#3F6B54 6,1:1 · branco/#35584A 7,9:1) --- */
+.plano .iva{font-size:12.5px;color:var(--texto2);margin-top:3px;letter-spacing:.2px}
+.plano.sapori .iva{color:rgba(255,255,255,.85)}
+.plano .btn{margin-top:26px;width:100%;background:linear-gradient(135deg,#4E7A61 0%,#3F6B54 45%,#35584A 100%);color:#fff;outline-color:rgba(111,164,136,.35);animation:none;box-shadow:0 10px 24px rgba(63,107,84,.32)}
+.plano .btn::before{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.55) 50%,transparent 100%)}
+.plano .btn:hover{background:linear-gradient(135deg,#5A8E72 0%,#3F6B54 45%,#3F6B54 100%);box-shadow:0 14px 32px rgba(63,107,84,.4)}
