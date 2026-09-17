@@ -775,3 +775,48 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 .forma-ck li:nth-child(2n) .ck svg{stroke:#fff}
 .sec-forma .form-box{padding-bottom:44px}
 @media(max-width:600px){.forma-ck{gap:11px}.forma-ck li{font-size:14.4px}}
+
+/* --- r11h item 12: FUNCIONAMENTO = CAMINHO/JORNADA --- */
+/* desktop: grelha 3x3 SERPENTINA (L->R / R->L / L->R) + no final centrado;
+   fio conector (SVG) passa pelos centros dos icones */
+.caminho-wrap{position:relative;max-width:1180px;margin:64px auto 0;padding:0 24px}
+.caminho-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible}
+.caminho-svg .cs-linha{stroke:#BD6273;stroke-width:2.5;opacity:.55;stroke-linecap:round}
+.caminho{list-style:none;position:relative;z-index:1;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 110px}
+.no:nth-child(1){grid-area:1/1}
+.no:nth-child(2){grid-area:1/2}
+.no:nth-child(3){grid-area:1/3}
+.no:nth-child(4){grid-area:2/3}
+.no:nth-child(5){grid-area:2/2}
+.no:nth-child(6){grid-area:2/1}
+.no:nth-child(7){grid-area:3/1}
+.no:nth-child(8){grid-area:3/2}
+.no:nth-child(9){grid-area:3/3}
+.no-fim{grid-area:4/2;justify-self:center;min-width:320px}
+.no{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 22px 22px;box-shadow:var(--sh-soft)}
+.no-ico{position:absolute;top:-30px;left:50%;transform:translateX(-50%);width:60px;height:60px;border-radius:50%;background:var(--grad-amarelo);color:#572C35;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(156,109,94,.32),inset 0 0 0 2px rgba(255,255,255,.5);z-index:2}
+.no:nth-child(2n) .no-ico{background:var(--grad-rosa-forte);color:#fff;box-shadow:0 8px 20px rgba(147,76,89,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
+.no-ico svg{width:27px;height:27px}
+.no-num{position:absolute;top:-36px;left:calc(50% + 18px);width:23px;height:23px;border-radius:50%;background:var(--ink);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:11.5px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.22);z-index:3}
+.no-fim .no-num{display:none}
+.no-corpo h3{font-size:15.6px;line-height:1.3;margin-bottom:9px}
+.no-corpo p{font-size:13.2px;color:var(--texto);line-height:1.52;margin-bottom:8px;text-align:left}
+.no-corpo p:last-child{margin-bottom:0}
+.no-corpo p strong{color:var(--ink);font-weight:600}
+.no-corpo p a{color:var(--rosa-esc);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.no-corpo .tl-nota{font-size:12px;color:var(--texto2);font-style:italic;text-align:center}
+.no-fim .no-corpo{text-align:center}
+.no-fim .btn{min-width:0;padding:15px 30px;font-size:13.5px}
+/* telemovel/tablet: caminho VERTICAL (linha a esquerda, icones sobre a linha) */
+@media(max-width:860px){
+  .caminho-svg{display:none}
+  .caminho-wrap{margin-top:46px;padding:0 20px}
+  .caminho{grid-template-columns:1fr;gap:30px;padding-left:4px}
+  .caminho::before{content:"";position:absolute;left:34px;top:30px;bottom:30px;width:2px;border-radius:2px;background:rgba(189,98,115,.4)}
+  .no,.no-fim{grid-area:auto;flex-direction:row;align-items:flex-start;gap:16px;background:none;border:none;border-radius:0;padding:0;box-shadow:none;min-width:0}
+  .no-ico{position:relative;top:auto;left:auto;transform:none;flex:0 0 60px}
+  .no-num{top:-5px;left:auto;right:-5px}
+  .no-corpo{flex:1;background:var(--grad-card);border:1px solid var(--linha);border-radius:16px;padding:18px 16px 14px;box-shadow:var(--sh-soft)}
+  .no-corpo h3{font-size:15px}
+  .no-corpo p{font-size:13.6px}
+}
