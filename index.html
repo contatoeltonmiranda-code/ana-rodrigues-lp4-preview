@@ -394,25 +394,18 @@
   <div class="wrap forma-wrap">
     <div class="form-box sr-hidden">
       <h3><span class="fh"><svg viewBox="0 0 24 24"><path d="M12 3.5 21.5 8 12 12.5 2.5 8 12 3.5Z"/><path d="M6.5 10.2V15c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.8"/><path d="M21.5 8v5"/></svg></span>Formação</h3>
-      <div class="escada">
-        <svg class="esc-svg" aria-hidden="true" focusable="false">
-          <defs><linearGradient id="escG" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="0">
-            <stop offset="0%" stop-color="#F8E39E"/><stop offset="52%" stop-color="#F1B604"/>
-            <stop offset="100%" stop-color="#BD6273"/></linearGradient></defs>
-          <path class="esc-linha" fill="none" stroke="url(#escG)"/>
-          <path class="esc-seta" fill="none" stroke="url(#escG)"/>
-        </svg>
-        <ol class="esc-lista">
-          <li class="esc-item sr-hidden" style="--i:0;--dx:0px;--d:56px;--nf:21px"><span class="esc-no">1</span><span class="esc-txt">Nutricionista, membro efetivo da Ordem dos Nutricionistas (C.P. 2069N)</span></li>
-          <li class="esc-item sr-hidden" style="--i:1;--dx:106px;--d:52px;--nf:19.5px"><span class="esc-no">2</span><span class="esc-txt">Pós-Graduação em Nutrição Pediátrica e Escolar</span></li>
-          <li class="esc-item sr-hidden" style="--i:2;--dx:188px;--d:48px;--nf:18px"><span class="esc-no">3</span><span class="esc-txt">Pós-Graduação em Higiene e Segurança Alimentar</span></li>
-          <li class="esc-item sr-hidden" style="--i:3;--dx:250px;--d:44px;--nf:16.8px"><span class="esc-no">4</span><span class="esc-txt">Formação avançada em Introdução Alimentar &ndash; um método individualizado</span></li>
-          <li class="esc-item sr-hidden" style="--i:4;--dx:294px;--d:40px;--nf:15.6px"><span class="esc-no">5</span><span class="esc-txt">Curso de Suporte Básico de Vida Pediátrico</span></li>
-          <li class="esc-item sr-hidden" style="--i:5;--dx:326px;--d:37px;--nf:14.6px"><span class="esc-no">6</span><span class="esc-txt">Curso de Primeiros Socorros Pediátricos</span></li>
-          <li class="esc-item sr-hidden" style="--i:6;--dx:348px;--d:34px;--nf:13.6px"><span class="esc-no">7</span><span class="esc-txt">Certificação em Get Permission Approach&reg;</span></li>
-          <li class="esc-item sr-hidden" style="--i:7;--dx:364px;--d:31px;--nf:13px"><span class="esc-no">8</span><span class="esc-txt">Certificação de Profissionais de Saúde Neurocompatíveis&reg;</span></li>
-        </ol>
-      </div>
+      <!-- r11f item 9: numeracao trocada por CHECKLIST com check antes de cada
+           item (ordem e texto verbatim do copy-lp4-cliente.md) -->
+      <ul class="forma-ck">
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Nutricionista, membro efetivo da Ordem dos Nutricionistas (C.P. 2069N)</li>
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Pós-Graduação em Nutrição Pediátrica e Escolar</li>
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Pós-Graduação em Higiene e Segurança Alimentar</li>
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Formação avançada em Introdução Alimentar &ndash; um método individualizado</li>
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Curso de Suporte Básico de Vida Pediátrico</li>
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Curso de Primeiros Socorros Pediátricos</li>
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Certificação em Get Permission Approach&reg;</li>
+        <li class="sr-hidden"><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"/></svg></span>Certificação de Profissionais de Saúde Neurocompatíveis&reg;</li>
+      </ul>
     </div>
     <!-- r3 item 6 (ref 32): botao "Quero ser acompanhada(o)" abaixo do card
          REMOVIDO (pedido do Elton — unico CTA a sair nesta rodada) -->
@@ -689,62 +682,6 @@ window.addEventListener('load',function(){
   document.addEventListener('keydown',function(e){if(e.key==='Escape')fecha();});
 })();
 
-/* ===== Escada da Formacao — linha ascendente desenhada pelos centros reais
-   (portado da LP 3, r2 item 10; Catmull-Rom centripeto) ===== */
-(function(){
-  var esc=document.querySelector('.escada');
-  if(!esc)return;
-  var svg=esc.querySelector('.esc-svg'),linha=esc.querySelector('.esc-linha'),seta=esc.querySelector('.esc-seta');
-  if(!svg||!linha||!seta)return;
-  var reduz=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  function centro(el){
-    var x=0,y=0,n=el;
-    while(n&&n!==esc){x+=n.offsetLeft;y+=n.offsetTop;n=n.offsetParent;}
-    return {x:x+el.offsetWidth/2,y:y+el.offsetHeight/2};
-  }
-  function desenha(){
-    if(getComputedStyle(svg).display==='none'){linha.removeAttribute('d');seta.removeAttribute('d');return;}
-    var p=Array.prototype.map.call(esc.querySelectorAll('.esc-no'),centro);
-    if(p.length<2)return;
-    p.sort(function(a,b){return a.x-b.x});
-    var W=esc.offsetWidth,H=esc.offsetHeight;
-    svg.setAttribute('viewBox','0 0 '+W+' '+H);
-    var d='M '+p[0].x+' '+p[0].y;
-    function dist(a,b){return Math.sqrt(Math.pow(b.x-a.x,2)+Math.pow(b.y-a.y,2));}
-    for(var i=0;i<p.length-1;i++){
-      var p0=p[i-1]||p[i],p1=p[i],p2=p[i+1],p3=p[i+2]||p[i+1];
-      var d1=Math.pow(dist(p0,p1),.5)||1e-4,d2=Math.pow(dist(p1,p2),.5)||1e-4,d3=Math.pow(dist(p2,p3),.5)||1e-4;
-      var b1x=(d1*d1*p2.x-d2*d2*p0.x+(2*d1*d1+3*d1*d2+d2*d2)*p1.x)/(3*d1*(d1+d2));
-      var b1y=(d1*d1*p2.y-d2*d2*p0.y+(2*d1*d1+3*d1*d2+d2*d2)*p1.y)/(3*d1*(d1+d2));
-      var b2x=(d3*d3*p1.x-d2*d2*p3.x+(2*d3*d3+3*d3*d2+d2*d2)*p2.x)/(3*d3*(d3+d2));
-      var b2y=(d3*d3*p1.y-d2*d2*p3.y+(2*d3*d3+3*d3*d2+d2*d2)*p2.y)/(3*d3*(d3+d2));
-      d+=' C '+b1x+' '+b1y+' '+b2x+' '+b2y+' '+p2.x+' '+p2.y;
-    }
-    linha.setAttribute('d',d);
-    var u=p[p.length-1],v=p[p.length-2];
-    var dx=u.x-v.x,dy=u.y-v.y,m=Math.sqrt(dx*dx+dy*dy)||1;
-    dx/=m;dy/=m;
-    var ex=u.x+dx*44,ey=u.y+dy*44;
-    var a=Math.atan2(dy,dx);
-    seta.setAttribute('d','M '+u.x+' '+u.y+' L '+ex+' '+ey
-      +' M '+ex+' '+ey+' L '+(ex-14*Math.cos(a-0.42))+' '+(ey-14*Math.sin(a-0.42))
-      +' M '+ex+' '+ey+' L '+(ex-14*Math.cos(a+0.42))+' '+(ey-14*Math.sin(a+0.42)));
-    var g=esc.querySelector('#escG');
-    g.setAttribute('x1',p[0].x);g.setAttribute('y1',p[0].y);g.setAttribute('x2',ex);g.setAttribute('y2',ey);
-    esc.style.setProperty('--esc-len',Math.ceil(linha.getTotalLength()+80));
-    if(reduz)esc.classList.add('drawn');
-  }
-  desenha();
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(desenha);
-  window.addEventListener('load',desenha);
-  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){esc.classList.remove('drawn');desenha();esc.classList.add('drawn');},160);});
-  if(!reduz&&'IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(e){
-      if(e[0].isIntersecting){desenha();esc.classList.add('drawn');io.disconnect();}
-    },{threshold:.12});
-    io.observe(esc);
-  }else{esc.classList.add('drawn');}
-})();
 </script>
 <noscript><style>.sr-hidden{opacity:1;transform:none}</style></noscript>
 </body>

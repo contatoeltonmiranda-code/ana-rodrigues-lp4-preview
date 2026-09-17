@@ -765,3 +765,13 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   .lb-img{width:100%;max-width:100%;max-height:none;height:auto;margin:0 auto;border-radius:8px}
   .lb-x{position:absolute;top:10px;right:10px}
 }
+
+/* --- r11f item 9: Formacao = CHECKLIST (check antes de cada item) --- */
+.forma-ck{list-style:none;display:grid;gap:13px;margin-top:20px}
+.forma-ck li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--texto);line-height:1.5}
+.forma-ck li .ck{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--grad-amarelo);display:flex;align-items:center;justify-content:center;margin-top:1px;box-shadow:0 4px 10px rgba(156,109,94,.3)}
+.forma-ck li:nth-child(2n) .ck{background:var(--grad-rosa-forte)}
+.forma-ck li .ck svg{width:12px;height:12px;stroke:#572C35;stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.forma-ck li:nth-child(2n) .ck svg{stroke:#fff}
+.sec-forma .form-box{padding-bottom:44px}
+@media(max-width:600px){.forma-ck{gap:11px}.forma-ck li{font-size:14.4px}}
