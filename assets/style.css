@@ -346,7 +346,7 @@ section{position:relative}
 .func-mais .mais-lead{text-align:center;font-size:16.4px;color:var(--texto);margin-bottom:34px}
 .apoio{display:grid;grid-template-columns:1fr;gap:26px}
 .apoio-card{position:relative;--apoio-pt:44px;display:grid;grid-template-columns:1fr 1.25fr;gap:0 14px;align-items:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 38px 30px;box-shadow:var(--sh-soft)}
-.apoio-card.bg-wa{--apoio-bg:url('ana-p05.webp');padding-top:70px;padding-bottom:60px;min-height:560px}
+.apoio-card.bg-wa{--apoio-bg:url('media/apoio-whatsapp.webp');padding-top:70px;padding-bottom:60px;min-height:560px}
 .apoio-card.bg-curso{--apoio-bg:url('ana-p06.webp')}
 /* imagem em coluna propria: card 1 a DIREITA (fade na borda ESQUERDA),
    card 2 a ESQUERDA (fade na borda DIREITA) — cor natural, url relativa a
