@@ -712,3 +712,14 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 /* r10c: icones Phosphor — cor conforme o disco (branco no vinho, escuro no dourado) */
 .ind-item:nth-child(odd) .ind-ico{color:#fff}
 .ind-item:nth-child(even) .ind-ico{color:#572C35}
+
+/* =====================================================================
+   RODADA 11 (2026-09-17) — refs em _ajustes/rodada-11/refs/
+   ===================================================================== */
+/* --- r11a itens 1-3: banner de prova social removido; bg do hero = arte nova
+   da cliente (refs/3.png, cover, top, zero overlay — regra de ouro do combo);
+   LOGO removida de todo o documento (hero + rodape, refs/1.png e pedido r11) --- */
+.hero::after{background:#FAF7F5 url("hero-bg.webp") top center / cover no-repeat}
+.hero-logo,.foot-brand{display:none}
+.hero-txt{padding-top:0}
+@media(max-width:900px){.hero-txt{background:rgba(255,255,255,.88)}}
