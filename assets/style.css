@@ -747,3 +747,21 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 .plano .btn{margin-top:26px;width:100%;background:linear-gradient(135deg,#4E7A61 0%,#3F6B54 45%,#35584A 100%);color:#fff;outline-color:rgba(111,164,136,.35);animation:none;box-shadow:0 10px 24px rgba(63,107,84,.32)}
 .plano .btn::before{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.55) 50%,transparent 100%)}
 .plano .btn:hover{background:linear-gradient(135deg,#5A8E72 0%,#3F6B54 45%,#3F6B54 100%);box-shadow:0 14px 32px rgba(63,107,84,.4)}
+
+/* --- r11e item 8: testemunhos = GRELHA ESTATICA + LIGHTBOX --- */
+.test-grid{columns:4 230px;column-gap:16px;margin-top:44px}
+.test-grid figure{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;margin:0 0 16px;background:var(--grad-card);border:1px solid var(--linha);border-radius:14px;padding:10px;box-shadow:var(--sh-soft);cursor:zoom-in;transition:transform .3s ease,box-shadow .3s ease}
+@media(hover:hover){.test-grid figure:hover{transform:translateY(-3px);box-shadow:var(--sh-mid)}}
+.test-grid figure:focus-visible{outline:2.5px solid var(--rosa);outline-offset:3px}
+.test-grid img{width:100%;height:auto;border-radius:8px}
+.lb{position:fixed;inset:0;z-index:99;background:rgba(43,35,32,.92);display:flex;align-items:center;justify-content:center;padding:18px}
+.lb[hidden]{display:none}
+.lb-img{max-width:min(94vw,780px);max-height:88vh;width:auto;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.55);touch-action:pinch-zoom}
+.lb-x{position:fixed;top:16px;right:16px;width:46px;height:46px;border-radius:50%;background:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.4);z-index:2}
+.lb-x svg{width:20px;height:20px;fill:none;stroke:#3B3330;stroke-width:2.4;stroke-linecap:round}
+.lb-x:hover{background:var(--areia)}
+@media(max-width:600px){
+  .lb{display:block;overflow:auto;padding:60px 12px 24px}
+  .lb-img{width:100%;max-width:100%;max-height:none;height:auto;margin:0 auto;border-radius:8px}
+  .lb-x{position:absolute;top:10px;right:10px}
+}
