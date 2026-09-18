@@ -918,7 +918,7 @@ footer{background:#F5EEE7}
    . hero-bg-mobile.webp 1045x1510 (ratio 0.692 = hero 390x563 exato),
      janela centrada na expert (x 1177-2222): ela inteira em contexto;
    troca por media query em 600px; cover fica sem zoom em 1440/390 --- */
-.hero::after{background:#FAFAF8 url("hero-bg-desktop.webp") center top / cover no-repeat}
+.hero::after{background:#FAFAF8 url("hero-bg-desktop.webp") center bottom / cover no-repeat}
 @media(max-width:600px){.hero::after{background-image:url("hero-bg-mobile.webp")}}
 
 /* --- r12d item 8 (ref 24): Formacao — checklist de 8 itens em 2 COLUNAS
