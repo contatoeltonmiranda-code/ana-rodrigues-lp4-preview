@@ -896,3 +896,11 @@ footer{background:#F5EEE7}
 .hero::after{background:#FAFAF8 url("hero-bg.webp") top center / cover no-repeat}
 .hero{background:linear-gradient(180deg,#EDB393 0%,#BD6273 100%)}
 @media(max-width:900px){.hero-txt{background:rgba(255,255,255,.9)}}
+
+/* --- r12c item 1 (ref 16): HERO — imagem do fundo centrada ao meio (era top
+   center) + padding da seccao simetrico (era top 52 / bottom 96 no desktop;
+   breakpoints iguais tambem) --- */
+.hero{padding:64px 0}
+.hero::after{background-position:center center}
+@media(max-width:960px){.hero{padding:56px 0}}
+@media(max-width:600px){.hero{padding:44px 0}}
