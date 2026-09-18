@@ -927,6 +927,10 @@ footer{background:#F5EEE7}
 .pivot::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:96px;height:4px;border-radius:0 0 4px 4px;background:var(--grad-amarelo)}
 .pivot h3{font-size:clamp(20px,2.6vw,28px);line-height:1.25;margin-bottom:0}
 .pivot h3 .txt-grad{-webkit-text-fill-color:transparent}
+/* r13b item 2 (ref 26): hierarquia ANCOREA > PIVO > APOYO — frase-ancora em
+   Jakarta 800 maior que o pivo (31px vs 28px @1440); "Porque..." em negrito */
+.duv-ancora{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(23px,3vw,31px);line-height:1.25;letter-spacing:-.3px;color:var(--ink);margin-bottom:16px}
+.duv-body b{font-weight:700}
 @media(max-width:960px){.duv-body,.pivot{max-width:640px}.pivot{padding:30px 26px}}
 @media(max-width:600px){.duv-body{font-size:15px;margin-top:34px}.pivot{margin-top:34px}}
 
