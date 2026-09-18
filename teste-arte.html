@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Opcoes divisoria</title>
+<style>
+body{font-family:Arial;margin:0;background:#fff;padding:20px}
+.demo{border:2px solid #ccc;margin-bottom:24px;position:relative;height:520px;overflow:hidden}
+.demo .arte{position:absolute;left:0;right:0;top:0;bottom:-112px;background:#FAF7F5 url("art-prancheta1.webp") no-repeat;z-index:0}
+.demo .txt{position:relative;z-index:2;padding:30px;text-align:center}
+.demo h1{color:#572C35;margin:0}
+.demo .fim{position:relative;z-index:2;height:112px;background:transparent;border-top:1px dashed #b45764}
+.v1 .arte{background-size:cover;background-position:50% 0%}
+.v2 .arte{background-size:160% auto;background-position:50% 30%}
+.v3 .arte{background-size:220% auto;background-position:50% 55%}
+.v4 .arte{background-size:300% auto;background-position:62% 60%}
+label{display:block;background:#572C35;color:#fff;padding:6px 10px;font-size:14px}
+</style></head><body>
+<div class="demo v1"><div class="arte"></div><div class="txt"><h1>OPCAO A — zoom atual (cover)</h1></div><div class="fim"></div></div>
+<div class="demo v2"><div class="arte"></div><div class="txt"><h1>OPCAO B — zoom 160%</h1></div><div class="fim"></div></div>
+<div class="demo v3"><div class="arte"></div><div class="txt"><h1>OPCAO C — zoom 220%</h1></div><div class="fim"></div></div>
+<div class="demo v4"><div class="arte"></div><div class="txt"><h1>OPCAO D — zoom 300% (foco no padrao)</h1></div><div class="fim"></div></div>
+</body></html>
