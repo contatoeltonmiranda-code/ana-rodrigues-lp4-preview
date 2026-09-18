@@ -909,3 +909,10 @@ footer{background:#F5EEE7}
    (4+4, fluxo por coluna) no desktop; 1 coluna no telemovel --- */
 .forma-ck{grid-template-columns:repeat(2,1fr);grid-auto-flow:column;grid-template-rows:repeat(4,auto);gap:13px 36px}
 @media(max-width:768px){.forma-ck{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none;gap:13px}}
+
+/* --- r12e item 6 (ref 22): card Sapori — botao volta ao AMARELO (gradiente
+   anterior a r11, texto escuro #572C35 = 5,84:1 sobre #F1B604). O Essenza
+   MANTEM o botao verde da r11d. Estado final: Essenza = verde
+   #4E7A61->#35584A branco · Sapori = amarelo #FADB9B->#F3C478 escuro --- */
+.plano.sapori .btn{background:var(--grad-amarelo);color:#572C35;outline-color:rgba(138,106,0,.35);box-shadow:0 10px 24px rgba(138,106,0,.28)}
+.plano.sapori .btn:hover{background:linear-gradient(135deg,#E8AD03 0%,#C89303 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
