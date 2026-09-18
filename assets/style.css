@@ -857,11 +857,6 @@ html{background:#F5EEE7}
 /* =====================================================================
    RODADA 12 (2026-09-18) — refs em _ajustes/rodada-12/refs/
    ===================================================================== */
-/* --- r12a item 3 (ref 19): TODOS os icones da barra "indicado para ti" BRANCOS.
-   O disco par continua na familia laranja mas escurecido (#CB7244->#B96136)
-   para o glifo branco manter 3:1+ (grafico decorativo, aria-hidden) --- */
-.ind-item:nth-child(even) .ind-ico{background:linear-gradient(135deg,#CB7244 0%,#B96136 100%);color:#fff}
-.ind-item:nth-child(even) .ind-ico svg{stroke:#fff}
 
 /* --- r12b item 5 (ref 21): Sobre a Ana — espaco acima da cabeca removido:
    as 4 fotos (ana-p07/09/10/11) regeneradas com corte de topo (13-33% de
@@ -966,3 +961,10 @@ footer{background:#F5EEE7}
   .caminho .no-fim .no-ico{transform:none}
   .no-fim .no-corpo{grid-column:1;grid-row:2;text-align:center}
 }
+
+/* --- r12a item 3 (ref 19): TODOS os icones da barra "indicado para ti"
+   BRANCOS. O disco par sai do grad-laranja claro (branco/peach falhava) e
+   passa ao laranja escurecido #CB7244->#B96136 — glifo branco 3:1+ (grafico
+   decorativo, aria-hidden). Segue DEPOIS do bloco r11i que o anulava. --- */
+.ind-item:nth-child(even) .ind-ico{background:linear-gradient(135deg,#CB7244 0%,#B96136 100%);color:#fff}
+.ind-item:nth-child(even) .ind-ico svg{stroke:#fff}
