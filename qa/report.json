@@ -1,8 +1,8 @@
 {
   "index@1440": {
     "overflow": 0,
-    "altura": 12313,
-    "imgs": 36,
+    "altura": 12027,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -16,9 +16,8 @@
       "lp02-curso",
       "checkout"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
@@ -31,8 +30,8 @@
   },
   "index@1024": {
     "overflow": 0,
-    "altura": 12338,
-    "imgs": 36,
+    "altura": 12082,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -46,9 +45,8 @@
       "lp02-curso",
       "checkout"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
@@ -61,8 +59,8 @@
   },
   "index@768": {
     "overflow": 0,
-    "altura": 14698,
-    "imgs": 36,
+    "altura": 14460,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -76,9 +74,8 @@
       "lp02-curso",
       "checkout"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
@@ -91,8 +88,8 @@
   },
   "index@390": {
     "overflow": 0,
-    "altura": 20668,
-    "imgs": 36,
+    "altura": 20310,
+    "imgs": 35,
     "partidas": [],
     "semDestino": [],
     "ancoras": [],
@@ -106,9 +103,8 @@
       "lp02-curso",
       "checkout"
     ],
-    "ctas": 6,
+    "ctas": 5,
     "ctaTexto": [
-      "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Quero ser acompanhada(o)",
       "Escolher plano Essenza",
