@@ -905,9 +905,9 @@ footer{background:#F5EEE7}
 /* --- r12c item 1 (ref 16): HERO — imagem do fundo centrada ao meio (era top
    center) + padding da seccao simetrico (era top 52 / bottom 96 no desktop;
    breakpoints iguais tambem) --- */
-.hero{padding:150px 0}
+.hero{padding:100px 0}
 .hero::after{background-position:center center}
-@media(max-width:960px){.hero{padding:150px 0}}
+@media(max-width:960px){.hero{padding:100px 0}}
 @media(max-width:600px){.hero{padding:150px 0}}
 
 /* --- r15a item 1 (ref 34): fundo do hero em DOIS crops da foto origem
