@@ -947,9 +947,12 @@ footer{background:#F5EEE7}
   .no-ico{position:relative;top:auto;left:auto;transform:none;grid-column:2;grid-row:1;justify-self:center;margin-left:-70px}
   .caminho .no:nth-child(2n) .no-ico{margin-left:70px}
   .no .no-num{top:-6px;left:auto;right:-9px;bottom:auto;transform:none}
-  .no .no-corpo{grid-column:3;grid-row:1;justify-self:start;max-width:460px;background:none;border:none;border-radius:0;padding:0;box-shadow:none}
-  .caminho .no:nth-child(2n) .no-corpo{grid-column:1;grid-row:1;justify-self:end;text-align:right}
-  .caminho .no:nth-child(2n) .no-corpo p{text-align:right}
+  /* r13c item 3 (refs/27+28): TODOS os titulos (e paragrafos) alinhados a
+     ESQUERDA — os impar (lado direito da linha) herdavam center do .no e os
+     pares estavam right; agora corpo inteiro left nos dois lados */
+  .no .no-corpo{grid-column:3;grid-row:1;justify-self:start;max-width:460px;background:none;border:none;border-radius:0;padding:0;box-shadow:none;text-align:left}
+  .caminho .no:nth-child(2n) .no-corpo{grid-column:1;grid-row:1;justify-self:end;text-align:left}
+  .caminho .no:nth-child(2n) .no-corpo p{text-align:left}
   .caminho .no-fim{grid-area:auto;grid-template-columns:1fr;justify-items:center;text-align:center;min-height:0;margin-top:10px}
   .no-fim .no-ico{margin-left:0}
 }
