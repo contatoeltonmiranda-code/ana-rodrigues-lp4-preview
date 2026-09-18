@@ -910,6 +910,17 @@ footer{background:#F5EEE7}
 @media(max-width:960px){.hero{padding:56px 0}}
 @media(max-width:600px){.hero{padding:44px 0}}
 
+/* --- r15a item 1 (ref 34): fundo do hero em DOIS crops da foto origem
+   (refs/3.png 2800x1510) — fim do zoom do cover, que em viewport estreita
+   cortava ~63% da largura e mostrava a expert como close no rosto:
+   . hero-bg-desktop.webp 1920x885 (crop 2800x1290, ratio 2.17 = hero 1440x663
+     exato): cenario inteiro, expert a 61% da largura (ao lado do texto);
+   . hero-bg-mobile.webp 1045x1510 (ratio 0.692 = hero 390x563 exato),
+     janela centrada na expert (x 1177-2222): ela inteira em contexto;
+   troca por media query em 600px; cover fica sem zoom em 1440/390 --- */
+.hero::after{background:#FAFAF8 url("hero-bg-desktop.webp") center / cover no-repeat}
+@media(max-width:600px){.hero::after{background-image:url("hero-bg-mobile.webp")}}
+
 /* --- r12d item 8 (ref 24): Formacao — checklist de 8 itens em 2 COLUNAS
    (4+4, fluxo por coluna) no desktop; 1 coluna no telemovel --- */
 .forma-ck{grid-template-columns:repeat(2,1fr);grid-auto-flow:column;grid-template-rows:repeat(4,auto);gap:13px 36px}
