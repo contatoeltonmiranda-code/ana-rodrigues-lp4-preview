@@ -930,3 +930,39 @@ footer{background:#F5EEE7}
 .pivot h3 .txt-grad{-webkit-text-fill-color:transparent}
 @media(max-width:960px){.duv-body,.pivot{max-width:640px}.pivot{padding:30px 26px}}
 @media(max-width:600px){.duv-body{font-size:15px;margin-top:34px}.pivot{margin-top:34px}}
+
+/* --- r12g item 4 (ref 20): CAMINHO refeito — SEM cards/caixas; os 9 passos
+   (icone + numero + titulo + descricao) ao longo de UMA LINHA ONDULADA
+   continua (o fio SVG passa pelos centros reais dos icones — JS r11h com
+   centro agora via getBoundingClientRect); icone ancorado na linha com offset
+   alternado (serpentina), texto no lado oposto da curva; CTA no fim;
+   mobile: vertical, linha ondulada a descer --- */
+@media(min-width:861px){
+  .caminho{display:flex;flex-direction:column;gap:30px;max-width:1120px;margin:64px auto 0;padding:30px 24px 0}
+  .caminho .no:nth-child(n){grid-area:auto}
+  .no,.no-fim{display:grid;grid-template-columns:1fr 170px 1fr;align-items:center;background:none;border:none;border-radius:0;padding:0;box-shadow:none;min-height:158px}
+  .no-ico{position:relative;top:auto;left:auto;transform:none;grid-column:2;grid-row:1;justify-self:center;margin-left:-70px}
+  .caminho .no:nth-child(2n) .no-ico{margin-left:70px}
+  .no .no-num{top:-6px;left:auto;right:-9px;bottom:auto;transform:none}
+  .no .no-corpo{grid-column:3;grid-row:1;justify-self:start;max-width:460px;background:none;border:none;border-radius:0;padding:0;box-shadow:none}
+  .caminho .no:nth-child(2n) .no-corpo{grid-column:1;grid-row:1;justify-self:end;text-align:right}
+  .caminho .no:nth-child(2n) .no-corpo p{text-align:right}
+  .caminho .no-fim{grid-area:auto;grid-template-columns:1fr;justify-items:center;text-align:center;min-height:0;margin-top:10px}
+  .no-fim .no-ico{margin-left:0}
+}
+@media(max-width:860px){
+  .caminho-svg{display:block}
+  .caminho::before{content:none}
+  .caminho{display:flex;flex-direction:column;gap:30px;max-width:620px;margin:46px auto 0;padding:20px 20px 0}
+  .caminho .no:nth-child(n){grid-area:auto}
+  .no,.no-fim{display:grid;grid-template-columns:64px 1fr;gap:0 20px;align-items:flex-start;background:none;border:none;border-radius:0;padding:0;box-shadow:none;min-height:0}
+  .no-ico{position:relative;top:auto;left:auto;transform:none;grid-column:1;grid-row:1;justify-self:center;flex:none}
+  .caminho .no:nth-child(2n) .no-ico{transform:translateX(24px)}
+  .no .no-num{top:-6px;left:auto;right:-9px;transform:none}
+  .no .no-corpo,.caminho .no:nth-child(2n) .no-corpo{grid-column:2;grid-row:1;text-align:left;background:none;border:none;border-radius:0;padding:0;box-shadow:none}
+  .caminho .no:nth-child(2n) .no-corpo p{text-align:left}
+  .no-corpo h3{margin-top:14px}
+  .caminho .no-fim{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .caminho .no-fim .no-ico{transform:none}
+  .no-fim .no-corpo{grid-column:1;grid-row:2;text-align:center}
+}
