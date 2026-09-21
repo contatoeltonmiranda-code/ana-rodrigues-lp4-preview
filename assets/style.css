@@ -1134,3 +1134,91 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .area-faixa .func-fecho{color:var(--claro)}
 .area-faixa .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
 @media(max-width:600px){.area-faixa{margin-top:40px;padding:44px 16px 0}}
+
+
+/* =====================================================================
+   RODADA 17c (2026-09-21) — correcoes da r17b. Refs em _ajustes/rodada-17/refs/
+   item 1 = hero volta a full-bleed (sem foto em frame) · item 2 = riskio
+   gradiente na divisoria · item 3 = fim do vinho/rosa ANTIGO (#572C35,
+   #BD6273, #9A4557, #A85565 e derivados) -> vinho NOVO (#4A1E2A/#6B2A3E) ·
+   item 4 = passo a passo em TIMELINE VERTICAL (cards mantidos) ·
+   item 5 = banda da area-reservada em vinho ESCURO · item 6 = aba dos
+   testemunhos pinta com a cor da seccao de cima (vinho)
+   ===================================================================== */
+:root{
+  /* item 3: tokens da familia rosa/vinho antigo remapeados para o vinho novo.
+     Contraste mantido (AA): branco/#4A1E2A 13,9 · branco/#6B2A3E 10,3 ·
+     #42301E/#C29A5E 4,8 (dourado-ink inalterado — ja AA) ·
+     #42301E/#D3ADB6 (selo eyebrow rosa) 6,2 */
+  --rosa:#6B2A3E; --rosa-esc:#4A1E2A; --rosa-medio:#5C2434;
+  --rosa-claro:#C99AA5;
+  --grad-rosa-forte:linear-gradient(135deg,#6B2A3E 0%,#4A1E2A 100%);
+  --grad-rosa:linear-gradient(135deg,#C99AA5 0%,#6B2A3E 45%,#4A1E2A 100%);
+  --linha:rgba(107,42,62,.30);
+  /* item 5: vinho ESCURO distinto (banda da area-reservada, para nao repetir
+     o gradiente do hero/sec-preco) */
+  --vinho-noite-1:#3A1520; --vinho-noite-2:#55202F;
+  --vinho-noite:linear-gradient(160deg,#3A1520 0%,#46202C 55%,#55202F 100%);
+}
+/* branco/vinho-noite-2 10,9 · #F5F3EE/vinho-noite-1 14,6 (texto claro AA) */
+
+/* --- item 1: HERO full-bleed de novo (formato r16) — o card/frame da foto
+   e o layout 2 colunas da r17b saem; fundo VINHO, SEM arte de fundo ------- */
+.hero-visual{display:none}
+.hero-foto{display:none}
+
+/* --- item 2: RISKIO gradiente na borda superior da divisoria (seam
+   hero -> transform): dourado no centro, esvaece a 0 nas duas pontas --- */
+.curva-div::after{content:"";position:absolute;top:-1px;left:0;right:0;height:2px;z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,rgba(220,187,134,0) 0%,rgba(220,187,134,.42) 20%,#dcbb86 50%,rgba(220,187,134,.42) 80%,rgba(220,187,134,0) 100%)}
+
+/* --- item 3: elementos restantes com vinho antigo, um a um (os tokens acima
+   cobrem --rosa/--rosa-esc/--grad-rosa-forte usados em texto, glifos e selos) --- */
+/* botao principal (sec-preciso + sec-final): rosa-escuro antigo -> vinho novo
+   (branco/#6B2A3E 10,3 · branco/#4A1E2A 13,9 = AA) */
+.btn{background:linear-gradient(135deg,#6B2A3E 0%,#4A1E2A 100%);outline-color:rgba(107,42,62,.30)}
+.btn:hover{background:linear-gradient(135deg,#7C3A4C 0%,#5C2434 100%)}
+@keyframes btn-glow{0%{box-shadow:0 10px 28px rgba(20,5,10,.32),0 0 0 0 rgba(107,42,62,.5)}60%{box-shadow:0 10px 28px rgba(20,5,10,.32),0 0 0 12px rgba(107,42,62,0)}100%{box-shadow:0 10px 28px rgba(20,5,10,.32),0 0 0 0 rgba(107,42,62,0)}}
+/* selos eyebrow rosa: tinta do vinho antigo (#F2DCE2/#D9AEB9) -> tinta do vinho novo */
+.eyebrow.rosa{background:linear-gradient(135deg,#F2E2E7 0%,#D3ADB6 100%);color:var(--gold-ink)}
+/* barra "indicado para ti": segmentos/discos impares #BD6273 -> vinho
+   (glifo branco 10,3:1) */
+.ind-item:nth-child(odd) .ind-ico{background:#6B2A3E}
+.ind-item:nth-child(odd) .ind-seg{background:#6B2A3E}
+/* card Sapori: gradiente rosa antigo -> vinho novo INVERTIDO (155deg claro->
+   escuro), distinto do fundo vinho da seccao pela direcao + borda dourada */
+.plano.destaque{background:linear-gradient(155deg,#6B2A3E 0%,#5C2434 45%,#4A1E2A 100%)}
+/* disco do circulo-chevron da divisoria: sombra no tint antigo -> vinho */
+.curva-div .cd-circle{box-shadow:0 6px 18px rgba(20,5,10,.32)}
+
+/* --- item 4: PASSO A PASSO em TIMELINE VERTICAL (desktop E mobile iguais,
+   mais compacta no mobile) — coluna central de passos numerados ligados por
+   linha vertical dourada; cards com borda dourada animada da r17 mantidos --- */
+.caminho{position:relative}
+.caminho::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);border-radius:2px;z-index:0;
+  background:linear-gradient(180deg,rgba(220,187,134,0) 0,rgba(220,187,134,.55) 60px,rgba(220,187,134,.55) calc(100% - 60px),rgba(220,187,134,0) 100%)}
+@media(min-width:861px){
+  .caminho{display:flex;flex-direction:column;gap:48px;max-width:700px;margin:64px auto 0;padding:36px 24px 0}
+  .caminho .no:nth-child(n){grid-area:auto}
+}
+@media(max-width:860px){
+  /* mobile: mesma timeline vertical, mais compacta */
+  .caminho{gap:36px;max-width:560px;padding:30px 18px 0}
+  .caminho .no{padding:46px 18px 20px}
+  .no-ico{width:54px;height:54px;top:-26px}
+  .no-corpo p{font-size:13.4px}
+}
+
+/* --- item 5: banda da area-reservada em vinho ESCURO (era caramelo
+   #42281A/#7A4526 — nao lia como paleta); distinto do vinho do hero/sec-preco
+   pela profundidade, mesma familia --- */
+.area-faixa{background:var(--vinho-noite)}
+
+/* --- item 6: aba dos testemunhos pinta com a cor da sec-preco (fim do
+   degrau branco); #62283A = tom de fecho do gradiente vinho (o mesmo da
+   divisoria curva, r17b) --- */
+.aba.from-vinho{--aba-cor:#62283A}
+/* item 3 (continuacao): tinta do rosa antigo #BD6273 nos ORBES -> tinta do
+   vinho novo (decoracao de fundo, mesmo papel) */
+.orb{background:radial-gradient(circle,rgba(229,137,96,.16),rgba(107,42,62,.08) 42%,transparent 70%)}
+.orb.rosa{background:radial-gradient(circle,rgba(107,42,62,.22),rgba(229,137,96,.06) 44%,transparent 70%)}
