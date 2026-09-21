@@ -1222,3 +1222,13 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
    vinho novo (decoracao de fundo, mesmo papel) */
 .orb{background:radial-gradient(circle,rgba(229,137,96,.16),rgba(107,42,62,.08) 42%,transparent 70%)}
 .orb.rosa{background:radial-gradient(circle,rgba(107,42,62,.22),rgba(229,137,96,.06) 44%,transparent 70%)}
+
+/* =====================================================================
+   RODADA 17d (2026-09-21) — item 1: H1 do hero = "Programa de"/"de"
+   BRANCOS (--claro #F5F3EE) e "Acompanhamento"/"Introdução Alimentar"
+   em gradiente dourado 135deg #C29A5E->#dcbb86 (var(--grad-gold)),
+   estilo .vagas-mirror da captura do Diogo Mateus. Ref r17d-item1.png
+   ===================================================================== */
+.hero h1{color:var(--claro)}
+.hero h1 .h1-l2{color:var(--claro)}
+.hero h1 .h1-gold{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
