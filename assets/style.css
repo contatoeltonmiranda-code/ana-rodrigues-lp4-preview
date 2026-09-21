@@ -1194,3 +1194,23 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .hero h1{color:var(--claro)}
 .hero h1 .h1-l2{color:var(--claro)}
 .hero h1 .h1-gold{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* =====================================================================
+   RODADA 17h (2026-09-21) — teste pontual: BORDA ANIMADA DOURADA SO no
+   card 1 (onboarding) do caminho. Ref: _ajustes/rodada-17/refs/r17h-item1.png
+   ===================================================================== */
+/* --- r17h: o card 1 (corpo do item 1) volta ao design de CARD da r17
+   (bg grad-card + borda + sombra) com a BORDA ANIMADA dourada — o mesmo
+   pattern conic-gradient via @property --angle / angleSpin das bordas dos
+   planos (r17), ring em --gold #DAC297 -> --gold-claro #F6E1BB (tom r17g).
+   APENAS o item 1: os outros 8 passos seguem exatamente como estao, e
+   layout, discos numerados, icone e fio conector curvo ficam INTOCADOS.
+   ZERO reflow: o card pinta em DUAS camadas absolutas sobre a caixa do
+   corpo (::after = bg/borda/sombra · ::before = anel conic animado),
+   com inset negativo (respiro de 14/18px) — nada desloca layout; a caixa
+   do corpo nao muda de bounding box. Stacking: corpo sobe (z-index:1,
+   contexto proprio) para o card cobrir o fio onde cruza --- */
+.caminho .no:nth-child(1) .no-corpo{position:relative;z-index:1}
+.caminho .no:nth-child(1) .no-corpo::after{content:"";position:absolute;inset:-14px -18px;border-radius:16px;background:var(--grad-card);border:1px solid var(--linha);box-shadow:var(--sh-soft);pointer-events:none;z-index:-2}
+.caminho .no:nth-child(1) .no-corpo::before{content:"";position:absolute;inset:-14px -18px;border-radius:16px;padding:2px;background:conic-gradient(from var(--angle),rgba(218,194,151,0) 0deg,rgba(218,194,151,0) 195deg,var(--gold) 255deg,var(--gold-claro) 300deg,#fff 330deg,var(--gold) 350deg,rgba(218,194,151,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:-1}
+@media(prefers-reduced-motion:reduce){.caminho .no:nth-child(1) .no-corpo::before{animation:none}}
