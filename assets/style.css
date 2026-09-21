@@ -12,16 +12,16 @@
   --cream:#F5F3F2; --paper:#FFFFFF; --white:#FFFFFF;
   --areia:#F1E3D8; --areia-fim:#ECD6C8;
   --rosa-tinta:#F7EEF1; --amarelo-tinta:#FBF5DE;
-  --rosa:#BD6273; --rosa-esc:#934C59; --rosa-claro:#E6BECA; --rosa-medio:#A85565;
+  --rosa:#6B2A3E; --rosa-esc:#4A1E2A; --rosa-claro:#C99AA5; --rosa-medio:#5C2434;
   /* r5 item 2: gradiente rosa ESCURO para discos pequenos com glifo/texto
      BRANCO (branco/#A85565 5,05:1 e branco/#934C59 6,14:1 = AA; o grad-rosa
      com ponta clara #E6BECA dava 1,75:1 com branco e 3,4:1 com #BD6273) */
-  --grad-rosa-forte:linear-gradient(135deg,#A85565 0%,#934C59 100%);
+  --grad-rosa-forte:linear-gradient(135deg,#6B2A3E 0%,#4A1E2A 100%);
   --amarelo:#F1B604; --amarelo-esc:#8A6A00;
   --marrom:#9C6D5E;
   --ink:#3F342E; --texto:#6E5A50; --texto2:#9C8378;
-  --linha:rgba(189,98,115,.30);
-  --grad-rosa:linear-gradient(135deg,#E6BECA 0%,#BD6273 45%,#A85565 100%);
+  --linha:rgba(107,42,62,.30);
+  --grad-rosa:linear-gradient(135deg,#C99AA5 0%,#6B2A3E 45%,#4A1E2A 100%);
   --grad-amarelo:linear-gradient(135deg,#F8E39E 0%,#F1B604 100%);
   --grad-warm:linear-gradient(160deg,#F5F3F2 0%,#F2E9E2 100%);
   --grad-card:linear-gradient(150deg,#FFFFFF 0%,#FDF8F5 100%);
@@ -40,7 +40,7 @@ section{position:relative}
 .center{text-align:center}
 .maxw{max-width:760px;margin:0 auto}
 .maxw-lg{max-width:980px;margin:0 auto}
-.txt-grad{background:linear-gradient(120deg,#934C59 0%,#A85565 52%,#BD6273 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#934C59}
+.txt-grad{background:linear-gradient(120deg,#4A1E2A 0%,#5C2434 52%,#6B2A3E 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#4A1E2A}
 .sec{padding:88px 0;position:relative}
 .sec h2{font-size:clamp(29px,3.7vw,48px);margin-bottom:16px;line-height:1.1}
 .sec .lead{font-size:17px;color:var(--texto)}
@@ -48,25 +48,25 @@ section{position:relative}
 .cta-row{display:flex;justify-content:center;margin-top:46px}
 .cta-note{margin-top:16px;text-align:center;font-size:13.5px;color:var(--texto2);letter-spacing:.2px}
 /* EYEBROW */
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#F8E39E 0%,#F1B604 100%);color:var(--gold-ink);font-size:11.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;padding:8px 17px;border-radius:50px;box-shadow:0 4px 16px rgba(189,98,115,.24);max-width:max-content}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#F8E39E 0%,#F1B604 100%);color:var(--gold-ink);font-size:11.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;padding:8px 17px;border-radius:50px;box-shadow:0 4px 16px rgba(107,42,62,.24);max-width:max-content}
 /* r3: grad-rosa ganhou stop escuro (#A85565) para os discos com numero branco
    passarem AA; o eyebrow rosa (texto pequeno escuro) usa um gradiente CLARO —
    texto var(--gold-ink) sobre #D9AEB9 = 5,7:1 (o antigo falhava na ponta escura) */
-.eyebrow.rosa{background:linear-gradient(135deg,#F2DCE2 0%,#D9AEB9 100%);color:var(--gold-ink)}
+.eyebrow.rosa{background:linear-gradient(135deg,#F2E2E7 0%,#D3ADB6 100%);color:var(--gold-ink)}
 .eyebrow.outline{background:transparent;border:1.5px solid var(--rosa);color:var(--rosa-esc);box-shadow:none}
 .center .eyebrow{margin-left:auto;margin-right:auto;margin-bottom:16px}
 /* BOTAO — rosa escuro da paleta (stop central #934C59 = 6,1:1 sobre branco, AA) */
-.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#A85565 0%,#934C59 45%,#7C414B 100%);color:#fff;font-family:'Cinzel',sans-serif;font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;padding:18px 34px;border-radius:14px;border:none;cursor:pointer;outline:1.5px solid rgba(189,98,115,.30);outline-offset:4px;box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 0 rgba(189,98,115,.55);transition:transform .25s,box-shadow .25s,background .25s;animation:btn-glow 2.8s ease-out infinite}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#6B2A3E 0%,#5C2434 45%,#4A1E2A 100%);color:#fff;font-family:'Cinzel',sans-serif;font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;padding:18px 34px;border-radius:14px;border:none;cursor:pointer;outline:1.5px solid rgba(107,42,62,.30);outline-offset:4px;box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 0 rgba(107,42,62,.55);transition:transform .25s,box-shadow .25s,background .25s;animation:btn-glow 2.8s ease-out infinite}
 .btn::before{content:"";position:absolute;top:0;left:0;width:60%;height:100%;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.55) 50%,transparent 100%);transform:translateX(-180%) skewX(-18deg);animation:btn-shine 8s ease-in-out infinite;pointer-events:none}
-.btn:hover{transform:translateY(-3px) scale(1.02);background:linear-gradient(135deg,#B16173 0%,#934C59 45%,#87454F 100%);box-shadow:0 16px 40px rgba(156,109,94,.42)}
+.btn:hover{transform:translateY(-3px) scale(1.02);background:linear-gradient(135deg,#7C3A4C 0%,#5C2434 45%,#3A1520 100%);box-shadow:0 16px 40px rgba(156,109,94,.42)}
 .btn.lg{font-size:16.5px;padding:21px 42px}
 .btn.full{width:100%}
-@keyframes btn-glow{0%{box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 0 rgba(189,98,115,.5)}60%{box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 12px rgba(189,98,115,0)}100%{box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 0 rgba(189,98,115,0)}}
+@keyframes btn-glow{0%{box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 0 rgba(107,42,62,.5)}60%{box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 12px rgba(107,42,62,0)}100%{box-shadow:0 10px 28px rgba(156,109,94,.32),0 0 0 0 rgba(107,42,62,0)}}
 @keyframes btn-shine{0%{transform:translateX(-180%) skewX(-18deg)}40%{transform:translateX(230%) skewX(-18deg)}100%{transform:translateX(230%) skewX(-18deg)}}
 @media(prefers-reduced-motion:reduce){.btn{animation:none}.btn::before{display:none}}
 /* ORBE */
-.orb{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(241,182,4,.16),rgba(189,98,115,.08) 42%,transparent 70%);filter:blur(30px);pointer-events:none;z-index:0;animation:orbBreath 9s ease-in-out infinite}
-.orb.rosa{background:radial-gradient(circle,rgba(189,98,115,.22),rgba(241,182,4,.06) 44%,transparent 70%)}
+.orb{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(241,182,4,.16),rgba(107,42,62,.08) 42%,transparent 70%);filter:blur(30px);pointer-events:none;z-index:0;animation:orbBreath 9s ease-in-out infinite}
+.orb.rosa{background:radial-gradient(circle,rgba(107,42,62,.22),rgba(241,182,4,.06) 44%,transparent 70%)}
 .orb.tl{top:-180px;left:-140px}
 .orb.br{bottom:-180px;right:-140px;animation-delay:-4.5s}
 @keyframes orbBreath{0%,100%{opacity:.28;transform:scale(.94)}50%{opacity:.6;transform:scale(1.04)}}
@@ -78,7 +78,7 @@ section{position:relative}
 @media(prefers-reduced-motion:reduce){.sr-hidden,.sr-hidden.sr-visible{opacity:1;transform:none;transition:none}*{scroll-behavior:auto}}
 /* FRAME conic reutilizavel */
 .prod-frame{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--sh-mid);z-index:1}
-.prod-frame::before{content:"";position:absolute;inset:0;border-radius:22px;padding:3px;background:conic-gradient(from var(--angle),rgba(189,98,115,0) 0deg,rgba(189,98,115,0) 200deg,var(--amarelo) 260deg,var(--rosa) 305deg,#fff 325deg,var(--amarelo) 345deg,rgba(189,98,115,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:3}
+.prod-frame::before{content:"";position:absolute;inset:0;border-radius:22px;padding:3px;background:conic-gradient(from var(--angle),rgba(107,42,62,0) 0deg,rgba(107,42,62,0) 200deg,var(--amarelo) 260deg,var(--rosa) 305deg,#fff 325deg,var(--amarelo) 345deg,rgba(107,42,62,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:3}
 .prod-frame img{width:100%;height:100%;object-fit:cover;border-radius:22px}
 @media(prefers-reduced-motion:reduce){.prod-frame::before{animation:none}}
 /* ===== ABA / DEGRAU DE SECCAO — geometria portada da LP 3 (r2e, medida) ====
@@ -141,11 +141,11 @@ section{position:relative}
 .curva-div{position:absolute;left:0;right:0;top:0;z-index:1;pointer-events:none;height:88px;line-height:0;filter:drop-shadow(0 3px 7px rgba(156,109,94,.10))}
 .curva-div svg{display:block;width:100%;height:100%}
 .curva-div .cd-fill{fill:var(--curva-cor,#F3EAE2)}
-.curva-div .cd-crest{fill:none;stroke:rgba(189,98,115,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
+.curva-div .cd-crest{fill:none;stroke:rgba(107,42,62,.45);stroke-width:1.6;vector-effect:non-scaling-stroke}
 .curva-div.from-hero{--curva-cor:url(#curvaGrad)}
-.curva-div .cd-circle{position:absolute;top:48px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--areia-fim);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(147,76,89,.30);z-index:2}
-.curva-div .cd-circle svg{width:22px;height:22px;fill:none;stroke:#934C59;stroke-width:2.5}
-@media(max-width:768px){.curva-div{height:64px}.curva-div .cd-circle{width:44px;height:44px;top:58px}.curva-div .cd-circle svg{width:18px;height:18px;stroke:#934C59}}
+.curva-div .cd-circle{position:absolute;top:48px;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--areia-fim);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(74,30,42,.30);z-index:2}
+.curva-div .cd-circle svg{width:22px;height:22px;fill:none;stroke:#4A1E2A;stroke-width:2.5}
+@media(max-width:768px){.curva-div{height:64px}.curva-div .cd-circle{width:44px;height:44px;top:58px}.curva-div .cd-circle svg{width:18px;height:18px;stroke:#4A1E2A}}
 @media(max-width:420px){.curva-div{height:56px}.curva-div .cd-circle{width:38px;height:38px;top:50px}.curva-div .cd-circle svg{width:16px;height:16px}}
 /* folga de topo das seccoes que RECEBEM a aba */
 .recebe-aba{padding-top:140px}
@@ -198,7 +198,7 @@ section{position:relative}
 .tg-col p{font-size:16.4px;color:var(--texto);line-height:1.74;margin-bottom:16px}
 .tg-col p:last-child{margin-bottom:0}
 .tg-col .tg-fecho{font-family:'Cinzel',sans-serif;font-weight:700;font-size:clamp(19px,2.4vw,24px);line-height:1.42;color:var(--ink);margin:0;border-left:3px solid var(--rosa);padding-left:20px}
-.tg-col .tg-fecho strong{font-weight:700;background:linear-gradient(120deg,#934C59 0%,#A85565 52%,#BD6273 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.tg-col .tg-fecho strong{font-weight:700;background:linear-gradient(120deg,#4A1E2A 0%,#5C2434 52%,#6B2A3E 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 /* r7C item 2 (especificação literal do Elton): UMA BARRA GROSSA na HORIZONTAL
    atravessando a largura (full-bleed), DIVIDIDA em 8 segmentos com cores
    alternadas (roxo #BD6273 / dourado #F1B604); cada item tem o ICONE em CIMA
@@ -210,14 +210,14 @@ section{position:relative}
 /* ICONE em cima da barra — disco na cor do segmento (branco sobre #BD6273 =
    4,07:1; var(--gold-ink) sobre #F1B604 = amarelo nunca leva branco, regra r4/r5) */
 .ind-ico{flex:0 0 auto;width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 6px 16px rgba(156,109,94,.28),inset 0 0 0 2px rgba(255,255,255,.4)}
-.ind-item:nth-child(odd) .ind-ico{background:#BD6273}
+.ind-item:nth-child(odd) .ind-ico{background:#6B2A3E}
 .ind-item:nth-child(odd) .ind-ico svg{stroke:#fff}
 .ind-item:nth-child(even) .ind-ico{background:#F1B604}
 .ind-item:nth-child(even) .ind-ico svg{stroke:var(--gold-ink)}
 .ind-ico svg{width:44px;height:44px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 /* a BARRA: segmentos contiguos (grid sem gap) leem como UMA linha dividida */
 .ind-seg{display:block;width:100%;height:12px}
-.ind-item:nth-child(odd) .ind-seg{background:#BD6273}
+.ind-item:nth-child(odd) .ind-seg{background:#6B2A3E}
 .ind-item:nth-child(even) .ind-seg{background:#F1B604}
 /* DESCRICAO logo abaixo da barra, centrada sob o segmento */
 .ind-desc{font-size:12.8px;color:var(--texto);line-height:1.52;padding:12px 12px 0;text-align:center;max-width:200px;margin:0 auto}
@@ -297,7 +297,7 @@ section{position:relative}
 .fc-slide:nth-child(2n) .fs-num{background:var(--grad-amarelo);color:#3F342E;box-shadow:0 8px 20px rgba(156,109,94,.3),inset 0 0 0 2px rgba(255,255,255,.6)}
 .fs-card h3{font-size:13.2px;line-height:1.24;margin-bottom:6px;color:var(--ink)}
 .tl-quando{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:#8A6A00;background:rgba(241,182,4,.14);border:1px solid rgba(138,106,0,.36);border-radius:50px;padding:3px 10px;margin-bottom:8px}
-.fc-slide:nth-child(2n) .tl-quando{color:var(--rosa-esc);background:rgba(189,98,115,.14);border-color:rgba(189,98,115,.42)}
+.fc-slide:nth-child(2n) .tl-quando{color:var(--rosa-esc);background:rgba(107,42,62,.14);border-color:rgba(107,42,62,.42)}
 .fs-card p{font-size:11.9px;color:var(--texto);line-height:1.5;margin-bottom:7px}
 .fs-card p:last-child{margin-bottom:0}
 .fs-card p strong{color:var(--ink);font-weight:600}
@@ -451,11 +451,11 @@ section{position:relative}
    dany-metodo-espere .sec-quem::before): 50% de largura, gradiente da paleta
    a esvaziar ate o MEIO da seccao no sentido horizontal */
 .sec-preco{background:var(--paper);overflow:hidden;padding-top:54px}
-.sec-preco::before{content:"";position:absolute;top:0;right:0;width:50%;height:30px;background:linear-gradient(270deg,var(--amarelo) 0%,var(--rosa) 46%,transparent 100%);pointer-events:none;z-index:2;filter:drop-shadow(0 0 10px rgba(189,98,115,.28))}
+.sec-preco::before{content:"";position:absolute;top:0;right:0;width:50%;height:30px;background:linear-gradient(270deg,var(--amarelo) 0%,var(--rosa) 46%,transparent 100%);pointer-events:none;z-index:2;filter:drop-shadow(0 0 10px rgba(107,42,62,.28))}
 .planos{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:940px;margin:34px auto 0;align-items:stretch}
 .plano{position:relative;z-index:1;background:linear-gradient(150deg,#FFFFFF 0%,#FDF8F5 100%);border-radius:26px;padding:44px 36px 36px;text-align:center;box-shadow:0 22px 52px rgba(156,109,94,.18);display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease}
 @media(hover:hover){.plano:hover{transform:translateY(-5px);box-shadow:0 28px 60px rgba(156,109,94,.24)}}
-.plano::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--angle),rgba(189,98,115,0) 0deg,rgba(189,98,115,0) 200deg,var(--amarelo) 260deg,var(--rosa) 310deg,#fff 330deg,var(--amarelo) 350deg,rgba(189,98,115,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:0}
+.plano::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--angle),rgba(107,42,62,0) 0deg,rgba(107,42,62,0) 200deg,var(--amarelo) 260deg,var(--rosa) 310deg,#fff 330deg,var(--amarelo) 350deg,rgba(107,42,62,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:0}
 .plano>*{position:relative;z-index:1}
 /* r2 item 6 (ref 23): card da ESQUERDA (Essenza) sem borda animada — filete estatico */
 .plano.essenza::before{content:none}
@@ -468,13 +468,13 @@ section{position:relative}
    borda conic animada (angleSpin) ja existente faz o shine da borda. O hover
    translateY fica sem efeito no Sapori (a animacao manda no transform) —
    o card ja flutua sozinho. */
-.plano.destaque{background:linear-gradient(155deg,#BD6273 0%,#A85565 45%,#934C59 100%);border-radius:26px;animation:sapori-flutua 6s ease-in-out infinite}
+.plano.destaque{background:linear-gradient(155deg,#6B2A3E 0%,#5C2434 45%,#4A1E2A 100%);border-radius:26px;animation:sapori-flutua 6s ease-in-out infinite}
 .plano.destaque::before{padding:2.5px}
 @keyframes sapori-flutua{
-  0%,100%{transform:translateY(0);box-shadow:0 30px 64px rgba(147,76,89,.30),0 0 0 0 rgba(189,98,115,.30)}
-  50%{transform:translateY(-6px);box-shadow:0 42px 78px rgba(147,76,89,.38),0 0 0 16px rgba(189,98,115,0)}
+  0%,100%{transform:translateY(0);box-shadow:0 30px 64px rgba(74,30,42,.30),0 0 0 0 rgba(107,42,62,.30)}
+  50%{transform:translateY(-6px);box-shadow:0 42px 78px rgba(74,30,42,.38),0 0 0 16px rgba(107,42,62,0)}
 }
-@media(prefers-reduced-motion:reduce){.plano.destaque{animation:none;box-shadow:0 30px 64px rgba(147,76,89,.30)}}
+@media(prefers-reduced-motion:reduce){.plano.destaque{animation:none;box-shadow:0 30px 64px rgba(74,30,42,.30)}}
 /* r6 item 4: preco do Essenza em PRETO (era dourado) */
 .plano.essenza .preco{color:var(--ink)}
 .plano-tit{color:var(--ink)}
@@ -489,7 +489,7 @@ section{position:relative}
 .plano-inc li .ck{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--grad-amarelo);display:flex;align-items:center;justify-content:center;margin-top:1px;box-shadow:0 4px 10px rgba(156,109,94,.3)}
 /* r5 item 5: sobre o fundo rosa os checks viram discos brancos com check rosa
    (branco #A85565/#934C59: check rosa-escuro 5-6:1 AA) */
-.plano.sapori .plano-inc li .ck{background:#fff;box-shadow:0 4px 10px rgba(87,44,54,.35)}
+.plano.sapori .plano-inc li .ck{background:#fff;box-shadow:0 4px 10px rgba(58,21,32,.35)}
 .plano-inc li .ck svg{width:11px;height:11px;stroke:var(--gold-ink);stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .plano.sapori .plano-inc li .ck svg{stroke:var(--rosa-esc)}
 .plano-inc li span.feat{color:var(--texto)}
@@ -575,7 +575,7 @@ section{position:relative}
 .form-box h3{font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:11px}
 .form-box h3 .fh{width:34px;height:34px;border-radius:50%;background:var(--grad-amarelo);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .form-box h3 .fh svg{width:18px;height:18px;stroke:var(--gold-ink);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.sec-forma .form-box{max-width:900px;margin:-74px auto 0;padding:38px 44px 44px;box-shadow:0 34px 76px rgba(87,44,54,.38)}
+.sec-forma .form-box{max-width:900px;margin:-74px auto 0;padding:38px 44px 44px;box-shadow:0 34px 76px rgba(58,21,32,.38)}
 .sec-forma .form-box h3{font-size:24px;margin-bottom:0;position:relative;z-index:3}
 .sec-forma .form-box h3 .fh{width:40px;height:40px}
 .sec-forma .form-box h3 .fh svg{width:21px;height:21px;stroke:var(--gold-ink)}
@@ -596,7 +596,7 @@ section{position:relative}
   box-shadow:0 8px 20px rgba(156,109,94,.34),inset 0 0 0 2px rgba(255,255,255,.5);
   transition:transform .3s ease}
 /* r5 item 2: numero BRANCO sobre o fundo rosa da escada */
-.esc-item:nth-child(2n) .esc-no{background:var(--grad-rosa-forte);color:#fff;box-shadow:0 8px 20px rgba(147,76,89,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
+.esc-item:nth-child(2n) .esc-no{background:var(--grad-rosa-forte);color:#fff;box-shadow:0 8px 20px rgba(74,30,42,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
 .esc-txt{font-size:14.6px;color:var(--texto);line-height:1.48}
 @media(hover:hover){.esc-item:hover .esc-no{transform:scale(1.08)}}
 /* SEC 7 — FAQ — r2 item 10 (ref 27): 10 perguntas em 2 COLUNAS, alternando
@@ -626,7 +626,7 @@ section{position:relative}
    2 colunas: textos esq. + botao centrado ao meio na direita */
 .sec-final{background:#F5EFEB url("art-prancheta2.webp") center center / cover no-repeat;overflow:hidden}
 .sec-final::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,#fff,transparent);pointer-events:none;z-index:3}
-.final-inner{position:relative;z-index:1;max-width:980px;margin:0 auto;background:linear-gradient(150deg,#FFFFFF 0%,#FDF8F5 100%);border-radius:26px;padding:56px 54px;box-shadow:0 24px 60px rgba(87,44,54,.4);display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:center}
+.final-inner{position:relative;z-index:1;max-width:980px;margin:0 auto;background:linear-gradient(150deg,#FFFFFF 0%,#FDF8F5 100%);border-radius:26px;padding:56px 54px;box-shadow:0 24px 60px rgba(58,21,32,.4);display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:center}
 .final-inner::before{content:"";position:absolute;inset:0;border-radius:26px;padding:1.6px;background:conic-gradient(from var(--angle),transparent 0deg,transparent 150deg,var(--amarelo) 230deg,var(--rosa) 285deg,#fff 315deg,var(--amarelo) 340deg,transparent 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 7s linear infinite;pointer-events:none;z-index:0}
 .final-inner>*{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){.final-inner::before{animation:none}}
@@ -697,7 +697,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 /* ===== r8p — pedidos do Elton (2026-09-10 22h) ===== */
 /* C) HERO: imagem da direita sai; 2 colunas mantidas (direita = janela da arte);
    fundo = Prancheta 1 (regra de ouro: cover, top, sem overlay) */
-.hero{background:linear-gradient(180deg,#F1B604 0%,#BD6273 100%);padding-top:52px}
+.hero{background:linear-gradient(180deg,#F1B604 0%,#6B2A3E 100%);padding-top:52px}
 .hero::after{content:"";position:absolute;left:0;right:0;top:0;bottom:-112px;background:#FAF7F5 url("art-prancheta1.webp") top center / cover no-repeat;z-index:-1}
 .hero-grid{grid-template-columns:1.15fr .85fr;gap:34px}
 .hero-visual{display:none}
@@ -711,7 +711,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 .fin-f{height:26%}}
 
 /* r9w: circulo do chevron animado — pulso suave + seta a descer em loop */
-@keyframes circPulsa{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 6px 18px rgba(147,76,89,.30)}50%{transform:translate(-50%,-50%) scale(1.12);box-shadow:0 10px 26px rgba(147,76,89,.42)}}
+@keyframes circPulsa{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 6px 18px rgba(74,30,42,.30)}50%{transform:translate(-50%,-50%) scale(1.12);box-shadow:0 10px 26px rgba(74,30,42,.42)}}
 .curva-div .cd-circle{animation:circPulsa 2.2s ease-in-out infinite}
 @keyframes setaDesce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
 .curva-div .cd-circle svg{animation:setaDesce 2.2s ease-in-out infinite}
@@ -791,7 +791,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
    fio conector (SVG) passa pelos centros dos icones */
 .caminho-wrap{position:relative;max-width:1180px;margin:64px auto 0;padding:0 24px}
 .caminho-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible}
-.caminho-svg .cs-linha{stroke:#BD6273;stroke-width:2.5;opacity:.55;stroke-linecap:round}
+.caminho-svg .cs-linha{stroke:#6B2A3E;stroke-width:2.5;opacity:.55;stroke-linecap:round}
 .caminho{list-style:none;position:relative;z-index:1;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 110px}
 .no:nth-child(1){grid-area:1/1}
 .no:nth-child(2){grid-area:1/2}
@@ -805,7 +805,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
 .no-fim{grid-area:4/2;justify-self:center;min-width:320px}
 .no{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--grad-card);border:1px solid var(--linha);border-radius:20px;padding:44px 22px 22px;box-shadow:var(--sh-soft)}
 .no-ico{position:absolute;top:-30px;left:50%;transform:translateX(-50%);width:60px;height:60px;border-radius:50%;background:var(--grad-amarelo);color:var(--gold-ink);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(156,109,94,.32),inset 0 0 0 2px rgba(255,255,255,.5);z-index:2}
-.no:nth-child(2n) .no-ico{background:var(--grad-rosa-forte);color:#fff;box-shadow:0 8px 20px rgba(147,76,89,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
+.no:nth-child(2n) .no-ico{background:var(--grad-rosa-forte);color:#fff;box-shadow:0 8px 20px rgba(74,30,42,.32),inset 0 0 0 2px rgba(255,255,255,.5)}
 .no-ico svg{width:27px;height:27px}
 .no-num{position:absolute;top:-36px;left:calc(50% + 18px);width:23px;height:23px;border-radius:50%;background:var(--ink);color:#fff;font-family:'Cinzel',sans-serif;font-weight:700;font-size:11.5px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.22);z-index:3}
 .no-fim .no-num{display:none}
@@ -826,7 +826,7 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
      com especificidade maior */
   .caminho .no:nth-child(n){grid-area:auto}
   .no-fim{justify-self:auto}
-  .caminho::before{content:"";position:absolute;left:34px;top:30px;bottom:30px;width:2px;border-radius:2px;background:rgba(189,98,115,.4)}
+  .caminho::before{content:"";position:absolute;left:34px;top:30px;bottom:30px;width:2px;border-radius:2px;background:rgba(107,42,62,.4)}
   .no,.no-fim{grid-area:auto;flex-direction:row;align-items:flex-start;gap:16px;background:none;border:none;border-radius:0;padding:0;box-shadow:none;min-width:0}
   .no-ico{position:relative;top:auto;left:auto;transform:none;flex:0 0 60px}
   .no-num{top:-5px;left:auto;right:-5px}
@@ -851,15 +851,15 @@ footer{position:relative;background:#EFE1D8;color:var(--texto);padding:40px 0 34
   --cream:#FAFAF8;
   --areia:#F5EEE7; --areia-fim:#EDE0D2;
   --rosa-tinta:#F7EEF1; --amarelo-tinta:#FDF3E0;
-  --rosa:#BD6273; --rosa-esc:#9A4557; --rosa-claro:#DDA0AC; --rosa-medio:#A85565;
+  --rosa:#6B2A3E; --rosa-esc:#4A1E2A; --rosa-claro:#C99AA5; --rosa-medio:#5C2434;
   --amarelo:#FADB9B; --amarelo-esc:#6E5400;
   --laranja:#E58960; --laranja-esc:#B96136; --laranja-claro:#EDB393;
   --grad-laranja:linear-gradient(135deg,#EDB393 0%,#CB7244 100%);
   --grad-laranja-claro:linear-gradient(135deg,#F9D3BE 0%,#EDB393 100%);
   --grad-amarelo:linear-gradient(135deg,#FADB9B 0%,#F3C478 100%);
-  --grad-rosa:linear-gradient(135deg,#DDA0AC 0%,#BD6273 45%,#9A4557 100%);
+  --grad-rosa:linear-gradient(135deg,#C99AA5 0%,#6B2A3E 45%,#4A1E2A 100%);
   --ink:#3B3330; --texto:#6B605C; --texto2:#9A8F8A;
-  --linha:rgba(189,98,115,.30);
+  --linha:rgba(107,42,62,.30);
   --sh-soft:0 10px 30px rgba(176,92,56,.14); --sh-mid:0 16px 40px rgba(176,92,56,.18);
 }
 html{background:#F5EEE7}
@@ -874,12 +874,12 @@ html{background:#F5EEE7}
    cover + object-position:center top encaixa na vertical) --- */
 .txt-grad{background:linear-gradient(120deg,#E58960 0%,#C0643F 52%,#B96A75 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#B96136}
 /* botoes principais: familia coral-esc da LP2v2 (branco/#9A4557 7,2:1 · branco/#A85565 5,1:1) */
-.btn{background:linear-gradient(135deg,#A85565 0%,#9A4557 45%,#823A48 100%);outline-color:rgba(154,69,87,.30);box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(189,98,115,.55)}
-.btn:hover{background:linear-gradient(135deg,#B16173 0%,#9A4557 45%,#8E404F 100%);box-shadow:0 16px 40px rgba(176,92,56,.42)}
-@keyframes btn-glow{0%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(189,98,115,.5)}60%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 12px rgba(189,98,115,0)}100%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(189,98,115,0)}}
+.btn{background:linear-gradient(135deg,#6B2A3E 0%,#4A1E2A 45%,#3A1520 100%);outline-color:rgba(74,30,42,.30);box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(107,42,62,.55)}
+.btn:hover{background:linear-gradient(135deg,#7C3A4C 0%,#5C2434 45%,#3A1520 100%);box-shadow:0 16px 40px rgba(176,92,56,.42)}
+@keyframes btn-glow{0%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(107,42,62,.5)}60%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 12px rgba(107,42,62,0)}100%{box-shadow:0 10px 28px rgba(176,92,56,.32),0 0 0 0 rgba(107,42,62,0)}}
 /* orbes: amarelo -> laranja */
-.orb{background:radial-gradient(circle,rgba(229,137,96,.16),rgba(189,98,115,.08) 42%,transparent 70%)}
-.orb.rosa{background:radial-gradient(circle,rgba(189,98,115,.22),rgba(229,137,96,.06) 44%,transparent 70%)}
+.orb{background:radial-gradient(circle,rgba(229,137,96,.16),rgba(107,42,62,.08) 42%,transparent 70%)}
+.orb.rosa{background:radial-gradient(circle,rgba(107,42,62,.22),rgba(229,137,96,.06) 44%,transparent 70%)}
 /* eyebrows e badges pequenos: laranja CLARO com texto escuro (6,3:1) */
 .eyebrow{background:var(--grad-laranja-claro);color:var(--gold-ink);box-shadow:0 4px 16px rgba(229,137,96,.24)}
 .eyebrow.outline{border-color:var(--laranja-esc);color:#8A4A22}
@@ -899,7 +899,7 @@ html{background:#F5EEE7}
 .cd-pivot::after{background:var(--grad-amarelo)}
 footer{background:#F5EEE7}
 .hero::after{background:#FAFAF8 url("hero-bg.webp") top center / cover no-repeat}
-.hero{background:linear-gradient(180deg,#EDB393 0%,#BD6273 100%)}
+.hero{background:linear-gradient(180deg,#EDB393 0%,#6B2A3E 100%)}
 @media(max-width:900px){.hero-txt{background:rgba(255,255,255,.9)}}
 
 /* --- r12c item 1 (ref 16): HERO — imagem do fundo centrada ao meio (era top
