@@ -1027,34 +1027,43 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .plano .btn::before,.plano.sapori .btn::before{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.75) 50%,transparent 100%)}
 .plano .btn:hover,.plano.sapori .btn:hover{background:linear-gradient(135deg,#cb9d61 0%,#d5b075 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
 
-/* --- r17 item 2: passos = CARDS com BORDA DOURADA ANIMADA (conic-gradient +
-   @property --angle, estilo da ref r17-item3); fio conector removido --- */
-.caminho-svg{display:none!important}
-.no::before,.no-fim::before{content:"";position:absolute;inset:0;border-radius:18px;padding:2px;background:conic-gradient(from var(--angle),rgba(194,154,94,0) 0deg,rgba(194,154,94,0) 195deg,var(--gold) 255deg,var(--gold-claro) 300deg,#fff 330deg,var(--gold) 350deg,rgba(194,154,94,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:1}
-@media(prefers-reduced-motion:reduce){.no::before,.no-fim::before{animation:none}}
-.no>*{position:relative;z-index:1}
-.no-ico{z-index:3}
+/* --- r17e: passo a passo = CARDS da r17 (empilhados full-width, icone em
+   disco na borda superior, borda conic dourada ANIMADA) + O FIO CONECTOR
+   CURVO DOURADO da r12g RESTAURADO (JS r11h adaptado: a curva Catmull-Rom
+   passa pelos centros dos discos E contorna cada card pela lateral direita
+   — 12px fora da borda, 42% da altura — serpenteando entre os passos,
+   passando por tras dos corpos dos cards: visivel nos gaps, nas pontas dos
+   discos e nas curvas ao lado das bordas). A timeline vertical reta da
+   r17c sai. Numeracao em disco. --- */
+.caminho-svg{z-index:0}
+.caminho-svg .cs-linha{stroke:var(--gold)}
+.caminho .no-corpo{position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;padding:26px 26px 20px;box-shadow:var(--sh-soft)}
+.caminho .no-corpo::before{content:"";position:absolute;inset:0;border-radius:18px;padding:2px;background:conic-gradient(from var(--angle),rgba(194,154,94,0) 0deg,rgba(194,154,94,0) 195deg,var(--gold) 255deg,var(--gold-claro) 300deg,#fff 330deg,var(--gold) 350deg,rgba(194,154,94,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:1}
+.caminho .no-corpo>*{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.caminho .no-corpo::before{animation:none}}
+/* desktop (>=861): cards empilhados full-width (caminho 700) — disco
+   centrado na borda superior de cada card; o fio curvo por tras desenha os
+   lacos ao lado direito dos cards (waypoints no JS) --- */
 @media(min-width:861px){
-  .caminho{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 24px;max-width:1080px;margin:60px auto 0;padding:34px 24px 0}
+  .caminho{display:flex;flex-direction:column;gap:52px;max-width:700px;margin:64px auto 0;padding:40px 24px 0}
   .caminho .no:nth-child(n){grid-area:auto}
   .no,.no-fim{display:block;min-height:0;position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;padding:46px 24px 26px;box-shadow:var(--sh-soft);text-align:center}
   .no-ico{position:absolute;top:-28px;right:auto;left:50%;bottom:auto;transform:translateX(-50%);width:58px;height:58px;flex:none;margin:0;grid-column:auto;grid-row:auto;justify-self:auto}
-  .caminho .no:nth-child(2n) .no-ico{transform:translateX(-50%);margin-left:0}
+  .caminho .no:nth-child(2n) .no-ico{transform:translateX(-50%)}
   .no .no-num{top:-6px;left:auto;right:-9px;bottom:auto;transform:none}
   .no .no-corpo,.caminho .no:nth-child(2n) .no-corpo{display:block;max-width:none;grid-column:auto;grid-row:auto;justify-self:auto;background:none;border:none;border-radius:0;padding:0;box-shadow:none;text-align:center}
   .no-corpo p,.caminho .no:nth-child(2n) .no-corpo p{text-align:left}
   .no-corpo .tl-nota{text-align:center}
 }
+/* mobile (<=860): mesma pilha de cards, COMPACTA (52→36px de gap, 560px) —
+   o fio curvo continua por tras, aparecendo nos gaps --- */
 @media(max-width:860px){
-  .caminho{display:flex;flex-direction:column;gap:46px;max-width:620px;margin:52px auto 0;padding:26px 20px 0}
-  .caminho .no:nth-child(n){grid-area:auto}
-  .no,.no-fim{display:block;min-height:0;position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;padding:42px 20px 22px;box-shadow:var(--sh-soft);text-align:center}
-  .no-ico{position:absolute;top:-26px;right:auto;left:50%;bottom:auto;transform:translateX(-50%);width:56px;height:56px;flex:none;margin:0;grid-column:auto;grid-row:auto;justify-self:auto}
-  .caminho .no:nth-child(2n) .no-ico{transform:translateX(-50%)}
-  .no .no-num{top:-6px;left:auto;right:-9px;transform:none}
-  .no .no-corpo,.caminho .no:nth-child(2n) .no-corpo{display:block;max-width:none;grid-column:auto;grid-row:auto;justify-self:auto;background:none;border:none;border-radius:0;padding:0;box-shadow:none;text-align:center}
+  .caminho{gap:40px;max-width:620px;margin:52px auto 0;padding:30px 18px 0}
+  .no,.no-fim{padding:42px 16px 18px;border-radius:16px}
+  .caminho .no-corpo::before{border-radius:16px}
+  .no-ico{top:-26px;width:56px;height:56px}
   .no-corpo h3{margin-top:0}
-  .no-corpo p,.caminho .no:nth-child(2n) .no-corpo p{text-align:left;font-size:13.6px}
+  .no-corpo p{font-size:13.4px}
 }
 
 /* --- r17 item 5: 3 mini-itens icone+label DEBAIXO do botao principal (ref
@@ -1190,24 +1199,6 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .plano.destaque{background:linear-gradient(155deg,#6B2A3E 0%,#5C2434 45%,#4A1E2A 100%)}
 /* disco do circulo-chevron da divisoria: sombra no tint antigo -> vinho */
 .curva-div .cd-circle{box-shadow:0 6px 18px rgba(20,5,10,.32)}
-
-/* --- item 4: PASSO A PASSO em TIMELINE VERTICAL (desktop E mobile iguais,
-   mais compacta no mobile) — coluna central de passos numerados ligados por
-   linha vertical dourada; cards com borda dourada animada da r17 mantidos --- */
-.caminho{position:relative}
-.caminho::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);border-radius:2px;z-index:0;
-  background:linear-gradient(180deg,rgba(220,187,134,0) 0,rgba(220,187,134,.55) 60px,rgba(220,187,134,.55) calc(100% - 60px),rgba(220,187,134,0) 100%)}
-@media(min-width:861px){
-  .caminho{display:flex;flex-direction:column;gap:48px;max-width:700px;margin:64px auto 0;padding:36px 24px 0}
-  .caminho .no:nth-child(n){grid-area:auto}
-}
-@media(max-width:860px){
-  /* mobile: mesma timeline vertical, mais compacta */
-  .caminho{gap:36px;max-width:560px;padding:30px 18px 0}
-  .caminho .no{padding:46px 18px 20px}
-  .no-ico{width:54px;height:54px;top:-26px}
-  .no-corpo p{font-size:13.4px}
-}
 
 /* --- item 5: banda da area-reservada em vinho ESCURO (era caramelo
    #42281A/#7A4526 — nao lia como paleta); distinto do vinho do hero/sec-preco

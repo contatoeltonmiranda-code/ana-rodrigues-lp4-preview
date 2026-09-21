@@ -1,0 +1,118 @@
+{
+ "1440": {
+  "overflow_x": 0,
+  "h1_n": 1,
+  "ctas": 5,
+  "svg_display": "block",
+  "linha_curvas": 17,
+  "linha_d_ini": "M 590 42 C 590.0 42.0 92",
+  "linha_stroke": "rgb(194, 154, 94)",
+  "linha_w": 338,
+  "corpos": 9,
+  "corpo_bg": "rgba(0, 0, 0, 0)",
+  "corpo_conic": "conic-ok",
+  "corpo_anim": "angleSpin",
+  "colisoes": 0,
+  "ico_margens": [
+   "0px",
+   "70px",
+   "0px"
+  ],
+  "ico_x": [
+   720,
+   790,
+   720
+  ],
+  "nums": 9,
+  "4xx": [],
+  "consola": [],
+  "anim_px": 1576
+ },
+ "1024": {
+  "overflow_x": 0,
+  "h1_n": 1,
+  "ctas": 5,
+  "svg_display": "block",
+  "linha_curvas": 17,
+  "linha_d_ini": "M 512 42 C 512.0 42.0 84",
+  "linha_stroke": "rgb(194, 154, 94)",
+  "linha_w": 338,
+  "corpos": 9,
+  "corpo_bg": "rgba(0, 0, 0, 0)",
+  "corpo_conic": "conic-ok",
+  "corpo_anim": "angleSpin",
+  "colisoes": 0,
+  "ico_margens": [
+   "0px",
+   "70px",
+   "0px"
+  ],
+  "ico_x": [
+   512,
+   582,
+   512
+  ],
+  "nums": 9,
+  "4xx": [],
+  "consola": [],
+  "anim_px": 1604
+ },
+ "768": {
+  "overflow_x": 0,
+  "h1_n": 1,
+  "ctas": 5,
+  "svg_display": "block",
+  "linha_curvas": 17,
+  "linha_d_ini": "M 140 74 C 140.0 74.0 67",
+  "linha_stroke": "rgb(194, 154, 94)",
+  "linha_w": 548,
+  "corpos": 9,
+  "corpo_bg": "rgba(0, 0, 0, 0)",
+  "corpo_conic": "conic-ok",
+  "corpo_anim": "angleSpin",
+  "colisoes": 0,
+  "ico_margens": [
+   "0px",
+   "0px",
+   "0px"
+  ],
+  "ico_x": [
+   140,
+   164,
+   140
+  ],
+  "nums": 9,
+  "4xx": [],
+  "consola": [],
+  "anim_px": 1712
+ },
+ "390": {
+  "overflow_x": 0,
+  "h1_n": 1,
+  "ctas": 5,
+  "svg_display": "block",
+  "linha_curvas": 17,
+  "linha_d_ini": "M 86 74 C 86.0 74.0 345.",
+  "linha_stroke": "rgb(194, 154, 94)",
+  "linha_w": 280,
+  "corpos": 9,
+  "corpo_bg": "rgba(0, 0, 0, 0)",
+  "corpo_conic": "conic-ok",
+  "corpo_anim": "angleSpin",
+  "colisoes": 0,
+  "ico_margens": [
+   "0px",
+   "0px",
+   "0px"
+  ],
+  "ico_x": [
+   86,
+   110,
+   86
+  ],
+  "nums": 9,
+  "4xx": [],
+  "consola": [],
+  "anim_px": 2148
+ }
+}

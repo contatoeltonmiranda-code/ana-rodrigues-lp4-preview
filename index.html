@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=r17d">
+<link rel="stylesheet" href="assets/style.css?v=r17e">
 
 </head>
 <body>
@@ -562,7 +562,17 @@ window.addEventListener('load',function(){
   }
   function desenha(){
     if(getComputedStyle(svg).display==='none'){linha.removeAttribute('d');return;}
-    var p=Array.prototype.map.call(wrap.querySelectorAll('.no .no-ico'),centro);
+    /* r17e: o fio serpenteia AO REDOR de cada card — disco (borda superior,
+       centro) + ponto de contorno na lateral direita (12px fora da borda,
+       ~42% da altura), alternando — a curva contorna os cards ligando os
+       discos (passa por tras dos corpos, visivel nos gaps e nas pontas) */
+    var p=[];
+    Array.prototype.forEach.call(wrap.querySelectorAll('.no'),function(card){
+      var ic=card.querySelector('.no-ico');
+      if(ic)p.push(centro(ic));
+      var r=card.getBoundingClientRect(),w=wrap.getBoundingClientRect();
+      p.push({x:r.right-w.left+12,y:r.top-w.top+r.height*0.42});
+    });
     if(p.length<2){linha.removeAttribute('d');return;}
     var W=wrap.offsetWidth,H=wrap.offsetHeight;
     svg.setAttribute('viewBox','0 0 '+W+' '+H);
