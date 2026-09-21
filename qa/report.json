@@ -1,7 +1,7 @@
 {
   "index@1440": {
     "overflow": 0,
-    "altura": 12099,
+    "altura": 11850,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],
@@ -30,7 +30,7 @@
   },
   "index@1024": {
     "overflow": 0,
-    "altura": 12154,
+    "altura": 11700,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],
@@ -59,7 +59,7 @@
   },
   "index@768": {
     "overflow": 0,
-    "altura": 14548,
+    "altura": 15512,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],
@@ -88,7 +88,7 @@
   },
   "index@390": {
     "overflow": 0,
-    "altura": 20522,
+    "altura": 21536,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],

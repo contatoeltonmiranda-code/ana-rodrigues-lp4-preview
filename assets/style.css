@@ -1064,3 +1064,73 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .cta-mini li svg{width:18px;height:18px;fill:currentColor;color:var(--gold);flex:0 0 auto}
 @media(max-width:960px){.cta-mini{justify-content:center}}
 @media(max-width:600px){.cta-mini{flex-direction:column;align-items:center;gap:8px;margin-top:16px}.cta-mini li{font-size:12.5px}}
+
+/* =====================================================================
+   RODADA 17b (2026-09-21) — cores de 3 seccoes (vinho + gradiente, para
+   a pagina deixar de ler "clean"). Refs em _ajustes/rodada-17/refs/r17b-*.png
+   item 1 = HERO · item 2 = SEC-PRECO · item 3 = banda da area-reservada
+   ===================================================================== */
+:root{
+  /* vinho elegante (base #4A1E2A -> #6B2A3E, 160deg escuro->mais claro) */
+  --vinho:#4A1E2A; --vinho-2:#6B2A3E;
+  --vinho-grad:linear-gradient(160deg,#4A1E2A 0%,#5C2434 55%,#6B2A3E 100%);
+  /* item 3: tom PROPRIO escuro que harmoniza com vinho + dourado (terracota/
+     caramelo profundo) — nao vinho, para a sequencia vinho/vinho/caramelo ler
+     intencional */
+  --caramelo:#42281A; --caramelo-2:#7A4526;
+  --caramelo-grad:linear-gradient(160deg,#42281A 0%,#57321F 52%,#7A4526 100%);
+}
+/* texto claro sobre vinho/caramelo (contraste calculado:
+   branco/vinho-1 13,9 · branco/vinho-2 10,4 · #F5F3EE/vinho-1 12,5 ·
+   #dcbb86/vinho-1 7,6 · #dcbb86/vinho-2 5,7 · #C29A5E/vinho-1 5,35 ·
+   branco/caramelo-2 7,8 · #F5F3EE/caramelo-2 7,0 — AA em todos os usos) */
+:root{--claro:#F5F3EE;--gold-claro-txt:#dcbb86}
+
+/* --- r17b item 1: HERO VINHO ----------------------------------------
+   A arte da cliente (Prancheta, fundo claro proprio) sai do full-bleed e
+   volta ao layout 2 colunas da r1: texto a ESQUERDA sobre o vinho, FOTO em
+   frame arredondado a DIREITA (object-position 62% = Ana centrada na janela,
+   medida por deteccao do vestido vermelho: x 1556-1958 de 2800). ---------- */
+.hero{background:var(--vinho-grad);padding:100px 0}
+.hero::after{content:none}
+.hero .sub{color:var(--claro)}
+.hero .sub strong{color:var(--gold-claro-txt);font-weight:600}
+.cta-mini li{color:rgba(245,243,238,.85)}
+.cta-mini li svg{color:var(--gold-claro-txt)}
+/* CTA do hero DOURADO (rosa do .btn perde contraste sobre o vinho;
+   dourado #C29A5E->#dcbb86 com --gold-ink 4,8:1 = AA, identidade r17) */
+.hero .btn{background:var(--grad-gold);color:var(--gold-ink);outline-color:rgba(220,187,134,.45);box-shadow:0 12px 30px rgba(0,0,0,.38)}
+.hero .btn::before{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.55) 50%,transparent 100%)}
+.hero .btn:hover{background:linear-gradient(135deg,#cb9d61 0%,#d5b075 100%);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+/* foto em frame: janela 62% centrada na Ana, arte inteira sem zoom */
+.hero-visual{display:block}
+.hero-foto{max-width:420px;margin:0 auto;aspect-ratio:720/960;border-radius:24px;overflow:hidden;border:1px solid rgba(220,187,134,.40);box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.22)}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+@media(max-width:900px){.hero-txt{background:transparent}}
+@media(max-width:960px){.hero-visual{margin-top:44px}.hero-foto{max-width:340px}}
+@media(max-width:600px){.hero{padding:64px 0}.hero-visual{margin-top:34px}.hero-foto{max-width:290px;border-radius:18px}}
+/* divisoria curva pos-hero: fio rosa -> dourado; circulo do chevron dourado
+   (identidade r17) */
+.curva-div .cd-crest{stroke:rgba(220,187,134,.55)}
+.curva-div .cd-circle{background:var(--grad-gold)}
+.curva-div .cd-circle svg{stroke:var(--gold-ink)}
+
+/* --- r17b item 2: SEC-PRECO VINHO (planos Essenza/Sapori + frase final) --- */
+.sec-preco{background:var(--vinho-grad)}
+.sec-preco h2{color:var(--claro)}
+/* cards destacam sobre o vinho; bordas douradas conic da r17 mantidas */
+.sec-preco .plano{box-shadow:0 28px 64px rgba(20,5,10,.5)}
+.sec-preco .plano.destaque{animation:sapori-flutua 6s ease-in-out infinite}
+.plano-fecho{color:var(--claro)}
+.plano-fecho .txt-grad{-webkit-text-fill-color:transparent}
+
+/* --- r17b item 3: banda CARAMELO na area reservada + covers + fecho ---
+   Filho DIRETO de .sec-func (full-bleed real: o .func-mais tem
+   overflow-x:clip e cortava as margens calc(50% - 50vw)) */
+.area-faixa{margin:56px 0 0;padding:64px 24px 0;background:var(--caramelo-grad);overflow-x:clip}
+.area-faixa .area-reservada h4{color:var(--claro)}
+.area-faixa .area-reservada p{color:rgba(245,243,238,.82)}
+.area-faixa .covers-pilha{margin-left:0;margin-right:0}
+.area-faixa .func-fecho{color:var(--claro)}
+.area-faixa .func-fecho .txt-grad{-webkit-text-fill-color:transparent}
+@media(max-width:600px){.area-faixa{margin-top:40px;padding:44px 16px 0}}

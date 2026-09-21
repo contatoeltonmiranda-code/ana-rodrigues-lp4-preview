@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=r17">
+<link rel="stylesheet" href="assets/style.css?v=r17b">
 
 </head>
 <body>
@@ -37,6 +37,14 @@
 
     </div>
 
+    <!-- r17b item 1: hero VINHO — arte clara da cliente volta ao layout 2 colunas
+         da r1 (texto esq. + FOTO em frame a dir.), agora sobre o fundo vinho -->
+    <div class="hero-visual">
+      <div class="hero-foto">
+        <img src="assets/hero-bg-desktop.webp" alt="Ana Rodrigues Lopes, nutricionista pediátrica, no programa de acompanhamento de introdução alimentar">
+      </div>
+    </div>
+
   </div>
 
   </section>
@@ -51,7 +59,8 @@
   
   <div class="curva-div from-hero" aria-hidden="true">
     <svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false">
-      <defs><linearGradient id="curvaGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#BD6273"/><stop offset="45%" stop-color="#9A4557"/><stop offset="100%" stop-color="#823A48"/></linearGradient></defs>
+      <!-- r17b: fill = cor da base do hero VINHO (era o grad-rosa do hero antigo) -->
+      <defs><linearGradient id="curvaGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#5E2637"/><stop offset="55%" stop-color="#6B2A3E"/><stop offset="100%" stop-color="#62283A"/></linearGradient></defs>
       <path class="cd-fill" d="M0,0 H1440 V52 H836 C788,52 764,112 720,112 C676,112 652,52 604,52 H0 Z"/>
       <path class="cd-crest" d="M0,52 H604 C652,52 676,112 720,112 C764,112 788,52 836,52 H1440"/>
     </svg>
@@ -164,12 +173,19 @@
           <p>Terás acesso ao curso durante <strong>12 meses</strong>, para veres e reveres os conteúdos sempre que precisares.</p>
           </div>
         </div>
-        <div class="area-reservada sr-hidden">
+      </div><!-- /.apoio -->
+    </div>
+  </div>
+  <!-- r17b item 3: banda CARAMELO/terracota profundo (tom proprio, harmoniza
+       com vinho + dourado; sequencia intencional vinho, vinho, caramelo).
+       Filho DIRETO da section (o .func-mais tem overflow-x:clip e cortaria as
+       margens full-bleed da faixa). -->
+  <div class="area-faixa">
+      <div class="area-reservada sr-hidden">
           <!-- r4 item 3: icone do titulo REMOVIDO a pedido do Elton -->
           <h4>Área reservada com conteúdo exclusivo para as famílias acompanhadas no programa</h4>
           <p>Para além de todo o conteúdo do curso As Primeiras Comidinhas, tens ainda acesso a conteúdo exclusivo como masterclasses, e-books e outros recursos complementares, criados para apoiar as consultas e responder às necessidades que vão surgindo ao longo do acompanhamento.</p>
         </div>
-      </div>
       <!-- r5 item 4 / r6 item 3: a 4a capa (ementa, eb-7) sai da 1a linha e
            fica EMBAIXO da ultima capa (viajar) — r6: alinhada a DIREITA, sob
            aquela coluna (nao centrada), e todas as capas 2x -->
@@ -183,8 +199,7 @@
         <img src="assets/eb-7.webp" width="747" height="523" loading="lazy" alt="Capa do material de apoio Sugestão de ementa para os 6 meses">
       </div>
       <p class="func-fecho sr-hidden">Neste programa encontras <span class="txt-grad">presença, orientação e acompanhamento</span> ao longo de toda a introdução alimentar do teu bebé - para que não te sintas sozinha em nenhuma fase ou desafio.</p>
-    </div>
-  </div>
+      </div><!-- /area-faixa r17b -->
 </section>
 
 <!-- ============ SECÇÃO 4 — PREÇO ============ -->
