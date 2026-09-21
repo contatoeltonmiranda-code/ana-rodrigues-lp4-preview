@@ -1,0 +1,48 @@
+{
+  "overflow-390-antes": 0,
+  "inspecao": {
+    "h2Fonte": "Cinzel, serif",
+    "h2Peso": "700",
+    "h3Fonte": "Cinzel, serif",
+    "corpoFonte": "Montserrat, sans-serif",
+    "btnFonte": "Montserrat, sans-serif",
+    "btnPeso": "700",
+    "ckBg": "linear-gradient(135deg, rgb(194, 154, 94) 0%, rgb(220, 187, 134) 100%)",
+    "btnEssenzaBg": "linear-gradient(135deg, rgb(194, 154, 94) 0%, rgb(220, 187, 134) 100%)",
+    "btnSaporiBg": "linear-gradient(135deg, rgb(194, 154, 94) 0%, rgb(220, 187, 134) 100%)",
+    "btnEssenzaCor": "rgb(66, 48, 30)",
+    "noBg": "18px",
+    "noBefore": "linear-gradient(150deg, rgb(255, 255, 255) 0%, rgb(253, 248, 245) 100%)",
+    "miniItens": 3,
+    "miniTxt": [
+      "Mais confiança no dia a dia",
+      "Orientação baseada na ciência",
+      "Uma família mais tranquila"
+    ],
+    "bonusCount": 2,
+    "footerLinks": [
+      "Termos e Condições",
+      "Política de Privacidade",
+      "Livro de Reclamações"
+    ]
+  },
+  "overflow-390-depois": 0,
+  "borda-animada-antes": {
+    "bbox_diff": [
+      512,
+      115,
+      543,
+      178
+    ],
+    "pixels_diferentes": 9
+  },
+  "borda-animada-depois": {
+    "bbox_diff": [
+      1,
+      2,
+      327,
+      392
+    ],
+    "pixels_diferentes": 1677
+  }
+}
