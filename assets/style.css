@@ -508,7 +508,7 @@ section{position:relative}
    o amarelo #F1B604 — amarelo nunca leva branco) */
 .plano .btn{margin-top:26px;width:100%;background:var(--grad-amarelo);color:var(--gold-ink);outline-color:rgba(138,106,0,.35);animation:none;box-shadow:0 10px 24px rgba(138,106,0,.28)}
 .plano .btn::before{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.75) 50%,transparent 100%)}
-.plano .btn:hover{background:linear-gradient(135deg,#E8AD03 0%,#C89303 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
+.plano .btn:hover{background:linear-gradient(135deg,#DFC79C 0%,#E8D4AF 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
 .plano-fecho{max-width:760px;margin:60px auto 0;text-align:center;font-family:'Cinzel',sans-serif;font-weight:700;font-size:clamp(18px,2.3vw,24px);color:var(--ink);line-height:1.42}
 .plano-fecho .grande{display:block;font-size:clamp(21px,2.8vw,30px);margin-top:6px}
 @media(max-width:860px){
@@ -931,7 +931,7 @@ footer{background:#F5EEE7}
    MANTEM o botao verde da r11d. Estado final: Essenza = verde
    #4E7A61->#35584A branco · Sapori = amarelo #FADB9B->#F3C478 escuro --- */
 .plano.sapori .btn{background:var(--grad-amarelo);color:var(--gold-ink);outline-color:rgba(138,106,0,.35);box-shadow:0 10px 24px rgba(138,106,0,.28)}
-.plano.sapori .btn:hover{background:linear-gradient(135deg,#E8AD03 0%,#C89303 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
+.plano.sapori .btn:hover{background:linear-gradient(135deg,#DFC79C 0%,#E8D4AF 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
 
 /* --- r12f item 2 (refs/17+18): cadeia FIEL a LP 2 v2 — regras .duv-body e
    .pivot copiadas do CSS live da LP2v2 (q-grid/duv-body/pivot), com os
@@ -1001,14 +1001,16 @@ footer{background:#F5EEE7}
 /* =====================================================================
    RODADA 17 (2026-09-21) — refs em _ajustes/rodada-17/refs/
    ===================================================================== */
-/* --- r17 item 3: IDENTIDADE DOURADA (tom do Diogo Mateus, captura.html):
-   --gold #C29A5E / --gold-claro #dcbb86 / gradiente 135deg; glifos e textos
-   sobre o dourado passam a --gold-ink #42301E (4,8:1 sobre #C29A5E, AA) --- */
+/* --- r17g item 1: IDENTIDADE DOURADA no tom da REF
+   (_ajustes/rodada-17/refs/r17g-item1.png — mais CLARO que o r17):
+   centro estavel #DAC297, highlight #F6E1BB, gradiente 135deg; glifos e
+   textos sobre o dourado seguem --gold-ink #42301E (#42301E/#DAC297
+   5,97:1 · /#F6E1BB 8,1:1 — AA em ambos, acima das 4,8 do tom antigo) --- */
 :root{
-  --gold:#C29A5E; --gold-claro:#dcbb86; --gold-ink:#42301E;
-  --grad-gold:linear-gradient(135deg,#C29A5E 0%,#dcbb86 100%);
-  --amarelo:#C29A5E;
-  --grad-amarelo:linear-gradient(135deg,#C29A5E 0%,#dcbb86 100%);
+  --gold:#DAC297; --gold-claro:#F6E1BB; --gold-ink:#42301E;
+  --grad-gold:linear-gradient(135deg,#DAC297 0%,#F6E1BB 100%);
+  --amarelo:#DAC297;
+  --grad-amarelo:linear-gradient(135deg,#DAC297 0%,#F6E1BB 100%);
 }
 /* FONTES: titulos = Cinzel (600/700), texto geral = Montserrat (300-700) */
 body{font-weight:400}
@@ -1016,55 +1018,24 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .btn{font-family:'Montserrat',sans-serif;font-weight:700}
 .eyebrow,.plano .pm,.tl-quando,.no-num,.fs-num,.esc-no{font-family:'Montserrat',sans-serif}
 /* gradiente de TEXTO dourado (135deg exato do brief) */
-.txt-grad{background:linear-gradient(135deg,#C29A5E 0%,#dcbb86 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#8A6A3A}
+.txt-grad{background:linear-gradient(135deg,#DAC297 0%,#F6E1BB 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#8A6A3A}
 /* bordas conic animadas (planos/prod-frame/final) agora DOURADAS */
-.prod-frame::before,.plano::before,.final-inner::before{background:conic-gradient(from var(--angle),rgba(194,154,94,0) 0deg,rgba(194,154,94,0) 195deg,var(--gold) 255deg,var(--gold-claro) 300deg,#fff 330deg,var(--gold) 350deg,rgba(194,154,94,0) 360deg)}
+.prod-frame::before,.plano::before,.final-inner::before{background:conic-gradient(from var(--angle),rgba(218,194,151,0) 0deg,rgba(218,194,151,0) 195deg,var(--gold) 255deg,var(--gold-claro) 300deg,#fff 330deg,var(--gold) 350deg,rgba(218,194,151,0) 360deg)}
 /* filete do bloco-pivo: gradiente dourado exato */
 .pivot::after,.cd-pivot::after{background:var(--grad-gold)}
 
 /* --- r17 item 4: AMBOS os botoes dos planos DOURADOS (mesmo estilo) --- */
 .plano .btn,.plano.sapori .btn{background:var(--grad-gold);color:var(--gold-ink);outline-color:rgba(138,106,0,.30);animation:none;box-shadow:0 10px 24px rgba(138,106,0,.26)}
 .plano .btn::before,.plano.sapori .btn::before{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.75) 50%,transparent 100%)}
-.plano .btn:hover,.plano.sapori .btn:hover{background:linear-gradient(135deg,#cb9d61 0%,#d5b075 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
+.plano .btn:hover,.plano.sapori .btn:hover{background:linear-gradient(135deg,#DFC79C 0%,#E8D4AF 100%);box-shadow:0 14px 32px rgba(138,106,0,.36)}
 
-/* --- r17e: passo a passo = CARDS da r17 (empilhados full-width, icone em
-   disco na borda superior, borda conic dourada ANIMADA) + O FIO CONECTOR
-   CURVO DOURADO da r12g RESTAURADO (JS r11h adaptado: a curva Catmull-Rom
-   passa pelos centros dos discos E contorna cada card pela lateral direita
-   — 12px fora da borda, 42% da altura — serpenteando entre os passos,
-   passando por tras dos corpos dos cards: visivel nos gaps, nas pontas dos
-   discos e nas curvas ao lado das bordas). A timeline vertical reta da
-   r17c sai. Numeracao em disco. --- */
-.caminho-svg{z-index:0}
+/* --- r17g item 2: passo a passo RESTAURADO ao estado pre-r17 (commit
+   3737a21, estrutura r12g): grid 3 colunas no desktop com o fio conector
+   curvo (Catmull-Rom) passando pelos CENTROS dos discos — os cards
+   full-width da r17, a serpentina ao redor deles (r17e) e a timeline
+   vertical da r17c SAEM (markup/CSS/JS de volta ao 3737a21). O fio
+   conector segue DOURADO, agora no tom claro da ref r17g-item1.png --- */
 .caminho-svg .cs-linha{stroke:var(--gold)}
-.caminho .no-corpo{position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;padding:26px 26px 20px;box-shadow:var(--sh-soft)}
-.caminho .no-corpo::before{content:"";position:absolute;inset:0;border-radius:18px;padding:2px;background:conic-gradient(from var(--angle),rgba(194,154,94,0) 0deg,rgba(194,154,94,0) 195deg,var(--gold) 255deg,var(--gold-claro) 300deg,#fff 330deg,var(--gold) 350deg,rgba(194,154,94,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:1}
-.caminho .no-corpo>*{position:relative;z-index:1}
-@media(prefers-reduced-motion:reduce){.caminho .no-corpo::before{animation:none}}
-/* desktop (>=861): cards empilhados full-width (caminho 700) — disco
-   centrado na borda superior de cada card; o fio curvo por tras desenha os
-   lacos ao lado direito dos cards (waypoints no JS) --- */
-@media(min-width:861px){
-  .caminho{display:flex;flex-direction:column;gap:52px;max-width:700px;margin:64px auto 0;padding:40px 24px 0}
-  .caminho .no:nth-child(n){grid-area:auto}
-  .no,.no-fim{display:block;min-height:0;position:relative;background:var(--grad-card);border:1px solid var(--linha);border-radius:18px;padding:46px 24px 26px;box-shadow:var(--sh-soft);text-align:center}
-  .no-ico{position:absolute;top:-28px;right:auto;left:50%;bottom:auto;transform:translateX(-50%);width:58px;height:58px;flex:none;margin:0;grid-column:auto;grid-row:auto;justify-self:auto}
-  .caminho .no:nth-child(2n) .no-ico{transform:translateX(-50%)}
-  .no .no-num{top:-6px;left:auto;right:-9px;bottom:auto;transform:none}
-  .no .no-corpo,.caminho .no:nth-child(2n) .no-corpo{display:block;max-width:none;grid-column:auto;grid-row:auto;justify-self:auto;background:none;border:none;border-radius:0;padding:0;box-shadow:none;text-align:center}
-  .no-corpo p,.caminho .no:nth-child(2n) .no-corpo p{text-align:left}
-  .no-corpo .tl-nota{text-align:center}
-}
-/* mobile (<=860): mesma pilha de cards, COMPACTA (52→36px de gap, 560px) —
-   o fio curvo continua por tras, aparecendo nos gaps --- */
-@media(max-width:860px){
-  .caminho{gap:40px;max-width:620px;margin:52px auto 0;padding:30px 18px 0}
-  .no,.no-fim{padding:42px 16px 18px;border-radius:16px}
-  .caminho .no-corpo::before{border-radius:16px}
-  .no-ico{top:-26px;width:56px;height:56px}
-  .no-corpo h3{margin-top:0}
-  .no-corpo p{font-size:13.4px}
-}
 
 /* --- r17 item 5: 3 mini-itens icone+label DEBAIXO do botao principal (ref
    r17-item5) — discreto, alinhado ao CTA do hero; empilha no telemovel --- */
@@ -1091,9 +1062,9 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 }
 /* texto claro sobre vinho/caramelo (contraste calculado:
    branco/vinho-1 13,9 · branco/vinho-2 10,4 · #F5F3EE/vinho-1 12,5 ·
-   #dcbb86/vinho-1 7,6 · #dcbb86/vinho-2 5,7 · #C29A5E/vinho-1 5,35 ·
+   #F6E1BB/vinho-1 10,9 · #F6E1BB/vinho-2 8,1 · #DAC297/vinho-1 8,0 ·
    branco/caramelo-2 7,8 · #F5F3EE/caramelo-2 7,0 — AA em todos os usos) */
-:root{--claro:#F5F3EE;--gold-claro-txt:#dcbb86}
+:root{--claro:#F5F3EE;--gold-claro-txt:#F6E1BB}
 
 /* --- r17b item 1: HERO VINHO ----------------------------------------
    A arte da cliente (Prancheta, fundo claro proprio) sai do full-bleed e
@@ -1107,20 +1078,20 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .cta-mini li{color:rgba(245,243,238,.85)}
 .cta-mini li svg{color:var(--gold-claro-txt)}
 /* CTA do hero DOURADO (rosa do .btn perde contraste sobre o vinho;
-   dourado #C29A5E->#dcbb86 com --gold-ink 4,8:1 = AA, identidade r17) */
-.hero .btn{background:var(--grad-gold);color:var(--gold-ink);outline-color:rgba(220,187,134,.45);box-shadow:0 12px 30px rgba(0,0,0,.38)}
+   dourado #DAC297->#F6E1BB com --gold-ink 5,97:1 = AA, identidade r17g) */
+.hero .btn{background:var(--grad-gold);color:var(--gold-ink);outline-color:rgba(246,225,187,.45);box-shadow:0 12px 30px rgba(0,0,0,.38)}
 .hero .btn::before{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.55) 50%,transparent 100%)}
-.hero .btn:hover{background:linear-gradient(135deg,#cb9d61 0%,#d5b075 100%);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.hero .btn:hover{background:linear-gradient(135deg,#DFC79C 0%,#E8D4AF 100%);box-shadow:0 16px 40px rgba(0,0,0,.45)}
 /* foto em frame: janela 62% centrada na Ana, arte inteira sem zoom */
 .hero-visual{display:block}
-.hero-foto{max-width:420px;margin:0 auto;aspect-ratio:720/960;border-radius:24px;overflow:hidden;border:1px solid rgba(220,187,134,.40);box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.22)}
+.hero-foto{max-width:420px;margin:0 auto;aspect-ratio:720/960;border-radius:24px;overflow:hidden;border:1px solid rgba(246,225,187,.40);box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.22)}
 .hero-foto img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
 @media(max-width:900px){.hero-txt{background:transparent}}
 @media(max-width:960px){.hero-visual{margin-top:44px}.hero-foto{max-width:340px}}
 @media(max-width:600px){.hero{padding:64px 0}.hero-visual{margin-top:34px}.hero-foto{max-width:290px;border-radius:18px}}
 /* divisoria curva pos-hero: fio rosa -> dourado; circulo do chevron dourado
    (identidade r17) */
-.curva-div .cd-crest{stroke:rgba(220,187,134,.55)}
+.curva-div .cd-crest{stroke:rgba(246,225,187,.55)}
 .curva-div .cd-circle{background:var(--grad-gold)}
 .curva-div .cd-circle svg{stroke:var(--gold-ink)}
 
@@ -1157,7 +1128,7 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 :root{
   /* item 3: tokens da familia rosa/vinho antigo remapeados para o vinho novo.
      Contraste mantido (AA): branco/#4A1E2A 13,9 · branco/#6B2A3E 10,3 ·
-     #42301E/#C29A5E 4,8 (dourado-ink inalterado — ja AA) ·
+     #42301E/#DAC297 5,97 (dourado-ink inalterado — AA mantido) ·
      #42301E/#D3ADB6 (selo eyebrow rosa) 6,2 */
   --rosa:#6B2A3E; --rosa-esc:#4A1E2A; --rosa-medio:#5C2434;
   --rosa-claro:#C99AA5;
@@ -1179,7 +1150,7 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 /* --- item 2: RISKIO gradiente na borda superior da divisoria (seam
    hero -> transform): dourado no centro, esvaece a 0 nas duas pontas --- */
 .curva-div::after{content:"";position:absolute;top:-1px;left:0;right:0;height:2px;z-index:2;pointer-events:none;
-  background:linear-gradient(90deg,rgba(220,187,134,0) 0%,rgba(220,187,134,.42) 20%,#dcbb86 50%,rgba(220,187,134,.42) 80%,rgba(220,187,134,0) 100%)}
+  background:linear-gradient(90deg,rgba(246,225,187,0) 0%,rgba(246,225,187,.42) 20%,#F6E1BB 50%,rgba(246,225,187,.42) 80%,rgba(246,225,187,0) 100%)}
 
 /* --- item 3: elementos restantes com vinho antigo, um a um (os tokens acima
    cobrem --rosa/--rosa-esc/--grad-rosa-forte usados em texto, glifos e selos) --- */
@@ -1217,7 +1188,7 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 /* =====================================================================
    RODADA 17d (2026-09-21) — item 1: H1 do hero = "Programa de"/"de"
    BRANCOS (--claro #F5F3EE) e "Acompanhamento"/"Introdução Alimentar"
-   em gradiente dourado 135deg #C29A5E->#dcbb86 (var(--grad-gold)),
+   em gradiente dourado 135deg #DAC297->#F6E1BB (var(--grad-gold)),
    estilo .vagas-mirror da captura do Diogo Mateus. Ref r17d-item1.png
    ===================================================================== */
 .hero h1{color:var(--claro)}
