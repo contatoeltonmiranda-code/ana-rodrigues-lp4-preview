@@ -1381,3 +1381,23 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
 }
 .final-txt h2 .txt-grad{background-image:var(--grad-text-cobre);color:#8A6248}
 .plano-fecho .fecho-chave::after{background:linear-gradient(90deg,transparent,#DEB39C 0%,#8A6248 100%,transparent)}
+
+/* RODADA 17v — nova arte de fundo da primeira secção. */
+.hero{
+  background-color:#F8F4F1;
+  background-image:url("hero-prancheta12222.webp");
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.hero h1,.hero h1 .h1-l2{color:var(--ink)}
+.hero .sub,.hero .cta-mini li{color:var(--texto)}
+.hero .sub strong{color:var(--rosa-esc)}
+.hero .cta-mini svg{color:var(--rosa)}
+@media(max-width:600px){
+  .hero{
+    padding:64px 0 280px;
+    background-size:auto 40%;
+    background-position:78% bottom;
+  }
+}
