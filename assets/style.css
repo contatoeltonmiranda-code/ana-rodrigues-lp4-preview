@@ -1252,6 +1252,7 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;back
 /* Aba circular sob o card formacao, sobre o mosaico existente. */
 .sec-forma .form-box{overflow:visible;border-bottom:0;border-radius:20px 20px 0 0;background:linear-gradient(150deg,#fff,#FDF8F5);padding-bottom:40px;margin-bottom:42px}
 .forma-divider{position:absolute;left:-1px;bottom:-57px;width:calc(100% + 2px);height:58px;display:block;overflow:visible;fill:#FDF8F5;pointer-events:none}
+.forma-divider-mobile{display:none}
 .forma-divider-icon{position:absolute;left:50%;bottom:-36px;transform:translateX(-50%);width:46px;height:46px;border-radius:50%;background:var(--grad-gold);display:flex;align-items:center;justify-content:center;box-shadow:0 5px 14px rgba(74,30,42,.22);z-index:3}
 .forma-divider-icon svg{width:23px;height:23px;fill:none;stroke:var(--gold-ink);stroke-width:1.8}
 
@@ -1425,11 +1426,12 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
 @media(max-width:600px){
   /* Hero: arte vertical fornecida para mobile; desktop permanece intocado. */
   .hero{
-    padding:64px 0 250px;
+    padding:64px 0 350px;
     background-image:url("hero-mobile01.webp");
     background-position:center bottom;
     background-size:cover;
   }
+  .curva-div.from-hero::after{display:none}
 
   /* Chamada e ícones da secção "indicado para ti". */
   .perguntas{padding-top:25px}
@@ -1469,18 +1471,22 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
   /* Ondas mais abertas no mobile. */
   .area-divider{overflow:hidden}
   .area-divider>svg{position:relative;left:-40%;width:180%}
-  .sec-forma{overflow:hidden}
-  .forma-divider{left:-40%;width:180%}
+  .sec-forma{overflow:visible;z-index:4}
+  .sec-forma .forma-wrap{position:relative;z-index:5}
+  .sec-forma .form-box{position:relative;z-index:6}
+  .forma-divider{left:-1px;width:calc(100% + 2px)}
+  .forma-divider-desktop{display:none}
+  .forma-divider-mobile{display:block}
 
   /* Materiais: carrossel mobile com foco central e vizinhos visíveis. */
   .covers-pilha.materials-carousel{
-    --cw:72vw;
+    --cw:60vw;
     display:block;
     position:relative;
     width:100%;
     margin:32px 0 0;
-    height:calc(var(--cw) * .70 + 58px);
-    padding:20px 0 38px;
+    height:calc(var(--cw) * .70 + 70px);
+    padding:20px 0 50px;
     overflow:hidden;
   }
   .covers-break{display:none}
@@ -1493,9 +1499,11 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
     top:20px;
     left:50%;
     width:var(--cw);
-    height:auto;
+    height:calc(var(--cw) * .70);
+    object-fit:contain;
+    object-position:center;
     margin:0;
-    transform:translateX(-50%) scale(.62);
+    transform:translateX(-50%) scale(.3);
     transform-origin:center;
     filter:blur(3px);
     opacity:0;
@@ -1512,21 +1520,23 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
     box-shadow:0 20px 40px rgba(20,5,10,.38);
   }
   .covers-pilha.materials-carousel img.is-prev{
-    transform:translateX(calc(-50% - 62vw)) scale(.68);
+    left:10%;
+    transform:translateX(-50%) scale(.3);
     filter:blur(2.5px);
-    opacity:.48;
+    opacity:.55;
     z-index:1;
   }
   .covers-pilha.materials-carousel img.is-next{
-    transform:translateX(calc(-50% + 62vw)) scale(.68);
+    left:90%;
+    transform:translateX(-50%) scale(.3);
     filter:blur(2.5px);
-    opacity:.48;
+    opacity:.55;
     z-index:1;
   }
-  .materials-arrow{position:absolute;top:calc(50% - 20px);z-index:6;width:40px;height:40px;border:1px solid rgba(222,179,156,.72);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(74,30,42,.9);color:#F6E1BB;box-shadow:0 6px 16px rgba(20,5,10,.3);cursor:pointer}
+  .materials-arrow{position:absolute;top:auto;bottom:3px;z-index:6;width:40px;height:40px;border:1px solid rgba(222,179,156,.72);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(74,30,42,.9);color:#F6E1BB;box-shadow:0 6px 16px rgba(20,5,10,.3);cursor:pointer}
   .materials-arrow svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .materials-prev{left:12px}
-  .materials-next{right:12px}
+  .materials-prev{left:calc(50% - 48px)}
+  .materials-next{right:calc(50% - 48px)}
 
   /* Barra dos planos sem filete lateral. */
   .sec-preco::before{left:auto;right:0;width:100%;background:linear-gradient(270deg,var(--gold-claro) 0%,var(--gold) 66%,transparent 100%);border-left:0;box-shadow:none}
