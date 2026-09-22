@@ -35,8 +35,12 @@ with sync_playwright() as pw:
             heroPosition: cs('.hero').backgroundPosition,
             heroBold: document.querySelectorAll('.hero-txt > p.sub:nth-of-type(2) strong').length,
             areaDivider: document.querySelectorAll('.area-divider-icon').length,
+            areaDividerGap: (()=>{const i=q('.area-divider-icon').getBoundingClientRect(),d=q('.area-divider').getBoundingClientRect();return Math.round(d.bottom-i.bottom)})(),
             saporiButton: cs('.plano.sapori .btn').backgroundImage,
             saporiBorder: cs('.plano.sapori','::before').backgroundImage,
+            saporiBorderWidth: cs('.plano.sapori','::before').paddingTop,
+            finalGradients: document.querySelectorAll('.final-txt h2 .txt-grad').length,
+            forcedBreak: document.querySelectorAll('.fecho-ponte br').length,
             timelinePath: q('.caminho-svg path')?.getAttribute('d') || ''
           };
         }""")
@@ -46,6 +50,8 @@ with sync_playwright() as pw:
         assert data["cards"] == data["arrows"] == data["animatedCards"] == 9, data
         assert "hero-prancheta1.png" in data["heroBackground"], data
         assert data["heroBold"] == 3 and data["areaDivider"] == 1, data
+        assert data["areaDividerGap"] >= 15 and data["saporiBorderWidth"] == "4px", data
+        assert data["finalGradients"] == 3 and data["forcedBreak"] == 1, data
         assert "74, 30, 42" in data["saporiButton"] and "conic-gradient" in data["saporiBorder"], data
         page.emulate_media(reduced_motion="reduce")
         for name, selector in (("hero", ".hero"), ("timeline", ".caminho-wrap"), ("reserved", ".area-faixa"), ("sapori", ".plano.sapori")):
