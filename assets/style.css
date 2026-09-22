@@ -1337,3 +1337,20 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;back
 h1,h2,h3,h4,h5,h6,.display{font-family:'Bevenida','Georgia',serif;font-weight:400;letter-spacing:0}
 .btn,.eyebrow,.plano .pm,.tl-quando,.no-num,.fs-num,.prova-num,.prova-lab{font-family:'Montserrat',sans-serif}
 .btn{font-weight:600}
+
+/* RODADA 17m — hierarquia após a troca para Bevenida. */
+h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
+.hero h1{font-size:clamp(34px,4.7vw,58px)}
+.fs-card h3{font-size:15px;line-height:1.28}
+.tg-col .tg-fecho{font-size:clamp(21px,2.6vw,28px)}
+.func-fecho{max-width:1100px}
+.final-txt h2 .txt-grad{background:var(--grad-gold)}
+.hero-ticker-track{animation-duration:46s}
+.hero-ticker-group{font-family:'Montserrat',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.45px}
+.a-fix{font-family:Georgia,serif;font-weight:400;-webkit-text-fill-color:currentColor;color:inherit}
+.h1-gold .a-fix{color:#F6E1BB}
+.h1-l2 .a-fix{color:#F6E1BB}
+.fecho-chave .a-fix{color:#C39A5F}
+@media(max-width:1280px){.fs-card h3{font-size:14px}}
+@media(max-width:1100px){.fs-card h3{font-size:14.4px}}
+@media(max-width:600px){.hero h1{font-size:clamp(29px,8.2vw,40px)}.fs-card h3{font-size:15px}}
