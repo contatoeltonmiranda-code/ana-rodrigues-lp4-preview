@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=r17y">
+<link rel="stylesheet" href="assets/style.css?v=r17z">
 
 </head>
 <body>
@@ -617,7 +617,7 @@ window.addEventListener('load',function(){
   document.addEventListener('keydown',function(e){if(e.key==='Escape')fecha();});
 })();
 
-/* ===== r17y: carrossel mobile dos materiais, com item central em destaque ===== */
+/* ===== r17z: carrossel mobile dos materiais, com vizinhos e loop ===== */
 (function(){
   if(!window.matchMedia||!window.matchMedia('(max-width:600px)').matches)return;
   var track=document.querySelector('.covers-pilha');
@@ -627,27 +627,41 @@ window.addEventListener('load',function(){
   track.setAttribute('role','region');
   track.setAttribute('aria-roledescription','carrossel');
   cards.forEach(function(card,i){
-    card.setAttribute('tabindex','0');
     card.setAttribute('role','group');
     card.setAttribute('aria-label',(i+1)+' de '+cards.length);
   });
-  function atualiza(){
-    var centro=track.scrollLeft+track.clientWidth/2;
-    var ativo=cards.reduce(function(melhor,card){
-      var cardCentro=card.offsetLeft+card.offsetWidth/2;
-      return Math.abs(cardCentro-centro)<Math.abs((melhor.offsetLeft+melhor.offsetWidth/2)-centro)?card:melhor;
-    },cards[0]);
-    cards.forEach(function(card){card.classList.toggle('is-active',card===ativo)});
+  track.classList.add('materials-carousel');
+  var anterior=document.createElement('button'),proximo=document.createElement('button');
+  anterior.type=proximo.type='button';
+  anterior.className='materials-arrow materials-prev';
+  proximo.className='materials-arrow materials-next';
+  anterior.setAttribute('aria-label','Material anterior');
+  proximo.setAttribute('aria-label','Próximo material');
+  anterior.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>';
+  proximo.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>';
+  track.appendChild(anterior);track.appendChild(proximo);
+  var atual=0;
+  function render(){
+    var prev=(atual-1+cards.length)%cards.length,next=(atual+1)%cards.length;
+    cards.forEach(function(card,i){
+      card.classList.toggle('is-active',i===atual);
+      card.classList.toggle('is-prev',i===prev);
+      card.classList.toggle('is-next',i===next);
+      card.setAttribute('aria-hidden',i===atual?'false':'true');
+      card.setAttribute('tabindex',i===atual?'0':'-1');
+    });
   }
-  var raf=0;
-  track.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(atualiza)},{passive:true});
-  cards.forEach(function(card){card.addEventListener('focus',function(){card.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})})});
-  window.addEventListener('load',function(){
-    var inicial=cards[1]||cards[0];
-    track.scrollLeft=inicial.offsetLeft-(track.clientWidth-inicial.offsetWidth)/2;
-    atualiza();
+  function muda(delta){atual=(atual+delta+cards.length)%cards.length;render()}
+  anterior.addEventListener('click',function(){muda(-1)});
+  proximo.addEventListener('click',function(){muda(1)});
+  track.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'){e.preventDefault();muda(-1)}
+    if(e.key==='ArrowRight'){e.preventDefault();muda(1)}
   });
-  atualiza();
+  var inicioX=0;
+  track.addEventListener('touchstart',function(e){inicioX=e.changedTouches[0].clientX},{passive:true});
+  track.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-inicioX;if(Math.abs(dx)>42)muda(dx>0?-1:1)},{passive:true});
+  render();
 })();
 
 </script>
