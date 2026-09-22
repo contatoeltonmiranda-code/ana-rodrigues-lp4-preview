@@ -1361,6 +1361,7 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
 /* RODADA 17t — degradê rosé/cobre com contraste reforçado. */
 :root{
   --grad-text-cobre:linear-gradient(108deg,#DEB39C 0%,#8A6248 100%);
+  --grad-text-cobre-inverso:linear-gradient(108deg,#8A6248 0%,#DEB39C 100%);
 }
 .txt-grad,.tg-col .tg-fecho strong{
   background-image:var(--grad-text-cobre);
@@ -1373,31 +1374,31 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
 .area-faixa .func-fecho .txt-grad,
 .plano-fecho .fecho-chave,
 .sec-sobre .txt-grad{
-  background-image:var(--grad-text-cobre);
+  background-image:var(--grad-text-cobre-inverso);
   background-clip:text;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   color:#DEB39C;
 }
 .final-txt h2 .txt-grad{background-image:var(--grad-text-cobre);color:#8A6248}
-.plano-fecho .fecho-chave::after{background:linear-gradient(90deg,transparent,#DEB39C 0%,#8A6248 100%,transparent)}
+.plano-fecho .fecho-chave::after{background:linear-gradient(90deg,transparent,#8A6248 0%,#DEB39C 100%,transparent)}
 
 /* RODADA 17v — nova arte de fundo da primeira secção. */
 .hero{
-  background-color:#F8F4F1;
+  background-color:var(--vinho);
   background-image:url("hero-prancheta12222.webp");
   background-position:center center;
   background-size:cover;
   background-repeat:no-repeat;
 }
-.hero h1,.hero h1 .h1-l2{color:var(--ink)}
-.hero .sub,.hero .cta-mini li{color:var(--texto)}
-.hero .sub strong{color:var(--rosa-esc)}
-.hero .cta-mini svg{color:var(--rosa)}
+.hero h1,.hero h1 .h1-l2{color:var(--claro)}
+.hero .sub,.hero .cta-mini li{color:rgba(245,243,238,.92)}
+.hero .sub strong{color:var(--gold-claro)}
+.hero .cta-mini svg{color:var(--gold-claro)}
 @media(max-width:600px){
   .hero{
-    padding:64px 0 280px;
-    background-size:auto 40%;
-    background-position:78% bottom;
+    padding:64px 0;
+    background-size:cover;
+    background-position:center center;
   }
 }
