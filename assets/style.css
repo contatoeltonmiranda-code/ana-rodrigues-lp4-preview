@@ -1360,25 +1360,24 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
 
 /* RODADA 17t — degradê rosé/cobre com contraste reforçado. */
 :root{
-  --grad-text-cobre:linear-gradient(108deg,#87483D 0%,#C1735E 48%,#944B3F 100%);
-  --grad-text-cobre-claro:linear-gradient(108deg,#FFF4EE 0%,#EAB7A6 48%,#D28C73 100%);
+  --grad-text-cobre:linear-gradient(108deg,#DEB39C 0%,#8A6248 100%);
 }
 .txt-grad,.tg-col .tg-fecho strong{
   background-image:var(--grad-text-cobre);
   background-clip:text;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  color:#87483D;
+  color:#8A6248;
 }
 .hero h1 .h1-gold,
 .area-faixa .func-fecho .txt-grad,
 .plano-fecho .fecho-chave,
 .sec-sobre .txt-grad{
-  background-image:var(--grad-text-cobre-claro);
+  background-image:var(--grad-text-cobre);
   background-clip:text;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  color:#FFF4EE;
+  color:#DEB39C;
 }
-.final-txt h2 .txt-grad{background-image:var(--grad-text-cobre);color:#87483D}
-.plano-fecho .fecho-chave::after{background:linear-gradient(90deg,transparent,#EAB7A6,transparent)}
+.final-txt h2 .txt-grad{background-image:var(--grad-text-cobre);color:#8A6248}
+.plano-fecho .fecho-chave::after{background:linear-gradient(90deg,transparent,#DEB39C 0%,#8A6248 100%,transparent)}
