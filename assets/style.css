@@ -1214,3 +1214,81 @@ h1,h2,h3,h4,.display{font-family:'Cinzel',serif;font-weight:700;letter-spacing:0
 .caminho .no:nth-child(1) .no-corpo::after{content:"";position:absolute;inset:-14px -18px;border-radius:16px;background:var(--grad-card);border:1px solid var(--linha);box-shadow:var(--sh-soft);pointer-events:none;z-index:-2}
 .caminho .no:nth-child(1) .no-corpo::before{content:"";position:absolute;inset:-14px -18px;border-radius:16px;padding:2px;background:conic-gradient(from var(--angle),rgba(218,194,151,0) 0deg,rgba(218,194,151,0) 195deg,var(--gold) 255deg,var(--gold-claro) 300deg,#fff 330deg,var(--gold) 350deg,rgba(218,194,151,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:-1}
 @media(prefers-reduced-motion:reduce){.caminho .no:nth-child(1) .no-corpo::before{animation:none}}
+
+/* RODADA 17i — ajustes visuais dos 12 itens recuperados (2026-09-22). */
+/* A arte permanece intacta; a mistura recolore somente seu fundo. */
+.sec-final{background-color:var(--vinho-2);background-image:url("art-prancheta2.webp");background-blend-mode:multiply}
+.sec-final::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(74,30,42,.18),rgba(107,42,62,.08));pointer-events:none;z-index:0}
+footer{background:var(--vinho-grad);color:var(--claro)}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold-claro) 50%,var(--gold) 70%,transparent)}
+.foot-links a,.foot-copy{color:var(--claro)}
+.foot-links a:hover{color:var(--gold-claro)}
+.sec-sobre{background:var(--vinho-grad)}
+.sec-sobre h2,.sec-sobre h3,.sec-sobre .sobre-body p{color:var(--claro)}
+.sec-sobre .sobre-body p strong{color:var(--gold-claro)}
+.sec-forma{background:var(--vinho)}
+.sec-preco::before{width:85%;background:linear-gradient(270deg,var(--gold-claro) 0%,var(--gold) 48%,rgba(218,194,151,0) 100%);filter:drop-shadow(0 0 10px rgba(218,194,151,.18))}
+
+/* Faixa animada dentro da divisoria, acima do circulo central. */
+.curva-div.from-hero{height:156px;background:linear-gradient(180deg,#62283A 0%,#62283A 62%,transparent 62%)}
+.curva-div.from-hero>svg{position:absolute;left:0;bottom:0;width:100%;height:88px}
+.curva-div.from-hero .cd-circle{top:118px}
+.sec-transform.recebe-aba{padding-top:218px}
+.hero-ticker{position:absolute;inset:0 0 auto;height:76px;display:flex;align-items:center;overflow:hidden;z-index:2;line-height:1.3;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.hero-ticker-track{display:flex;width:max-content;flex-shrink:0;animation:hero-ticker-roll 32s linear infinite}
+.hero-ticker-group{display:flex;align-items:center;flex-shrink:0;gap:44px;padding-right:44px;white-space:nowrap;font-family:'Cinzel',serif;font-size:clamp(18px,2.1vw,29px);font-weight:700;color:var(--gold-claro)}
+.hero-ticker-group>span{display:inline-flex;align-items:center;gap:18px}
+.curva-div .hero-ticker svg{display:block;width:28px;height:28px;flex:0 0 28px;fill:none;stroke:currentColor;stroke-width:1.7}
+@keyframes hero-ticker-roll{to{transform:translateX(-50%)}}
+
+/* O badge ancora no card, sem depender da altura do texto. */
+.apoio-card.bg-wa .apoio-corpo{position:static}
+.apoio-card.bg-wa .apoio-corpo>*{position:relative;z-index:1}
+.apoio-card.bg-wa .apoio-corpo h4{position:static}
+.apoio-card.bg-wa h4 .apoio-tag{top:0;left:30px;z-index:3}
+.apoio-card.bg-wa::before{width:min(68%,650px);background-position:72% top;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 23%,#000 56%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 23%,#000 56%)}
+.apoio-card p strong{font-weight:700}
+
+/* Aba circular sob o card formacao, sobre o mosaico existente. */
+.sec-forma .form-box{overflow:visible;border-bottom:0;border-radius:20px 20px 0 0;background:linear-gradient(150deg,#fff,#FDF8F5);padding-bottom:40px;margin-bottom:42px}
+.forma-divider{position:absolute;left:-1px;bottom:-57px;width:calc(100% + 2px);height:58px;display:block;overflow:visible;fill:#FDF8F5;pointer-events:none}
+.forma-divider-icon{position:absolute;left:50%;bottom:-36px;transform:translateX(-50%);width:46px;height:46px;border-radius:50%;background:var(--grad-gold);display:flex;align-items:center;justify-content:center;box-shadow:0 5px 14px rgba(74,30,42,.22);z-index:3}
+.forma-divider-icon svg{width:23px;height:23px;fill:none;stroke:var(--gold-ink);stroke-width:1.8}
+
+/* Hierarquia de frase: introducao leve, ponte clara e chave dourada. */
+.plano-fecho{max-width:900px;font-weight:500;line-height:1.65}
+.plano-fecho .fecho-intro{display:block;font-family:'Montserrat',sans-serif;font-size:clamp(16px,1.7vw,20px);font-weight:400;color:rgba(245,243,238,.86)}
+.plano-fecho .fecho-ponte{display:block;max-width:700px;margin:17px auto 12px;font-size:clamp(19px,2.3vw,26px);font-weight:500;color:var(--claro)}
+.plano-fecho .fecho-chave{display:inline-block;position:relative;margin-top:3px;padding-bottom:12px;font-size:clamp(26px,3.4vw,40px);font-weight:700;line-height:1.3;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.plano-fecho .fecho-chave::after{content:"";position:absolute;bottom:0;left:12%;right:12%;height:2px;background:linear-gradient(90deg,transparent,var(--gold-claro),transparent)}
+.plano.sapori{background:linear-gradient(135deg,#F6E1BB 0%,#DAC297 46%,#EBD4A9 74%,#C8A873 100%)}
+.plano.sapori h3,.plano.sapori .plano-tit-claro,.plano.sapori .plano-inc li span.feat,.plano.sapori .plano-inc li span.feat b,.plano.sapori .preco,.plano.sapori .parcelas,.plano.sapori .iva{color:var(--gold-ink)}
+.plano.sapori .plano-inc,.plano.sapori .valor{border-top-color:rgba(66,48,30,.28)}
+.plano.sapori .pm{background:rgba(255,255,255,.45);border-color:rgba(66,48,30,.24);color:var(--gold-ink)}
+.plano.sapori .btn{background:var(--grad-gold);color:var(--gold-ink);outline-color:rgba(74,30,42,.45);box-shadow:0 8px 22px rgba(66,48,30,.22)}
+.plano.sapori .btn:hover{background:linear-gradient(135deg,#DFC79C,#F6E1BB)}
+
+/* Somente onboarding: disco de icone sobreposto e padding real de 30px. */
+.caminho .no:nth-child(1) .no-corpo{padding:30px;max-width:460px}
+.caminho .no:nth-child(1) .no-corpo::before,.caminho .no:nth-child(1) .no-corpo::after{inset:0}
+.onboarding-icon{position:absolute;top:0;left:30px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--grad-gold);box-shadow:0 5px 14px rgba(74,30,42,.22);z-index:3}
+.onboarding-icon svg{width:23px;height:23px;fill:none;stroke:var(--gold-ink);stroke-width:1.8}
+@media(max-width:768px){
+  .curva-div.from-hero{height:132px;background:linear-gradient(180deg,#62283A 0%,#62283A 67%,transparent 67%)}
+  .curva-div.from-hero>svg{height:64px}
+  .curva-div.from-hero .cd-circle{top:112px}
+  .sec-transform.recebe-aba{padding-top:188px}
+  .hero-ticker{height:70px}
+  .hero-ticker-group{gap:28px;padding-right:28px}
+  .hero-ticker-group>span{gap:12px}
+  .curva-div .hero-ticker svg{width:23px;height:23px;flex-basis:23px}
+}
+@media(max-width:600px){
+  .apoio-card.bg-wa h4 .apoio-tag{left:22px}
+  .apoio-card.bg-wa::before{width:min(62%,260px);background-position:center top;-webkit-mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.16) 40%,#000 100%);mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.16) 40%,#000 100%)}
+  .sec-forma .form-box{padding-bottom:30px}
+  .forma-divider{bottom:-47px;height:48px}
+  .forma-divider-icon{bottom:-31px;width:40px;height:40px}
+  .plano-fecho{margin-top:42px}
+}
+@media(prefers-reduced-motion:reduce){.hero-ticker-track{animation:none}.hero-ticker{overflow-x:auto;pointer-events:auto}.sec-preco .plano.destaque{animation:none}}
