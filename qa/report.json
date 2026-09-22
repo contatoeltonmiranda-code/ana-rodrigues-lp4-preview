@@ -1,7 +1,7 @@
 {
   "index@1440": {
     "overflow": 0,
-    "altura": 13037,
+    "altura": 13828,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],
@@ -12,7 +12,6 @@
       "lp02-curso",
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
-      "lp02-curso",
       "lp02-curso",
       "checkout"
     ],
@@ -30,7 +29,7 @@
   },
   "index@1024": {
     "overflow": 0,
-    "altura": 12828,
+    "altura": 13826,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],
@@ -41,7 +40,6 @@
       "lp02-curso",
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
-      "lp02-curso",
       "lp02-curso",
       "checkout"
     ],
@@ -59,7 +57,7 @@
   },
   "index@768": {
     "overflow": 0,
-    "altura": 15665,
+    "altura": 15889,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],
@@ -70,7 +68,6 @@
       "lp02-curso",
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
-      "lp02-curso",
       "lp02-curso",
       "checkout"
     ],
@@ -88,7 +85,7 @@
   },
   "index@390": {
     "overflow": 0,
-    "altura": 21327,
+    "altura": 22528,
     "imgs": 35,
     "partidas": [],
     "semDestino": [],
@@ -99,7 +96,6 @@
       "lp02-curso",
       "arte-fundo-temporaria",
       "arte-fundo-temporaria",
-      "lp02-curso",
       "lp02-curso",
       "checkout"
     ],
