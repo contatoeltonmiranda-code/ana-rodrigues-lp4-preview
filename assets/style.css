@@ -1344,7 +1344,7 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
 .fs-card h3{font-size:15px;line-height:1.28}
 .tg-col .tg-fecho{font-size:clamp(21px,2.6vw,28px)}
 .func-fecho{max-width:1100px}
-.final-txt h2 .txt-grad{background:var(--grad-gold)}
+.final-txt h2 .txt-grad{background-image:var(--grad-gold);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#8A6A3A}
 .hero-ticker-track{animation-duration:46s}
 .hero-ticker-group{font-family:'Montserrat',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.45px}
 .a-fix{font-family:Georgia,serif;font-weight:400;-webkit-text-fill-color:currentColor;color:inherit}
