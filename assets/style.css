@@ -1402,3 +1402,20 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
     background-position:center center;
   }
 }
+
+/* RODADA 17x — divisores circulares minimalistas no marquee. */
+.curva-div .hero-ticker svg{display:none}
+.hero-ticker-group{font-size:clamp(16px,1.75vw,25px)}
+.hero-ticker-group>span::before{
+  content:"";
+  width:9px;
+  height:9px;
+  flex:0 0 9px;
+  border:1.5px solid #8A6248;
+  border-radius:50%;
+  background:#DEB39C;
+  box-shadow:0 0 0 3px rgba(222,179,156,.12);
+}
+@media(max-width:768px){
+  .hero-ticker-group>span::before{width:7px;height:7px;flex-basis:7px;border-width:1px}
+}
