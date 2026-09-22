@@ -1419,3 +1419,124 @@ h1,h2,h3,h4,h5,h6,.display,.txt-grad{font-synthesis:none}
 @media(max-width:768px){
   .hero-ticker-group>span::before{width:7px;height:7px;flex-basis:7px;border-width:1px}
 }
+
+/* RODADA 17y — ajustes exclusivos de telemóvel. */
+.mobile-break{display:none}
+@media(max-width:600px){
+  /* Hero: arte vertical fornecida para mobile; desktop permanece intocado. */
+  .hero{
+    padding:64px 0 250px;
+    background-image:url("hero-mobile01.webp");
+    background-position:center top;
+    background-size:cover;
+  }
+
+  /* Chamada e ícones da secção "indicado para ti". */
+  .perguntas{padding-top:25px}
+  .mobile-break{display:block}
+  .ind-ico{width:56px;height:56px;margin-bottom:10px}
+  .ind-ico svg{width:27px;height:27px}
+
+  /* Timeline reta, com ícones e cards sem colisão. */
+  .caminho-svg{display:none!important}
+  .caminho{position:relative;gap:38px;padding:20px 14px 0 18px}
+  .caminho::before{content:"";position:absolute;left:48px;top:48px;bottom:48px;width:2px;border-radius:2px;background:var(--gold);opacity:.72}
+  .no,.no-fim{grid-template-columns:60px minmax(0,1fr);gap:0 22px}
+  .caminho .no:nth-child(2n) .no-ico{transform:none}
+  .no-ico{width:58px;height:58px;z-index:2}
+  .no-ico svg{width:28px;height:28px}
+  .caminho .no .no-corpo,
+  .caminho .no:nth-child(1) .no-corpo{padding:42px 20px 22px;max-width:none}
+  .caminho .no .no-corpo h3{margin-top:0}
+  .step-card-icon{left:20px;width:40px;height:40px}
+  .step-card-icon svg{width:20px;height:20px}
+
+  /* Cards de apoio: imagem no topo e fade inferior. */
+  .apoio-card,
+  .apoio-card.bg-wa{min-height:0;padding:200px 20px 24px}
+  .apoio-card::before,
+  .apoio-card.bg-wa::before,
+  .apoio-card.bg-curso::before{
+    inset:0 0 auto;
+    width:100%;
+    height:220px;
+    border-radius:20px 20px 0 0;
+    background-position:center 20%;
+    -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 58%,rgba(0,0,0,.54) 78%,transparent 100%);
+    mask-image:linear-gradient(180deg,#000 0%,#000 58%,rgba(0,0,0,.54) 78%,transparent 100%);
+  }
+  .apoio-card.bg-wa::before{background-position:center top}
+  .apoio-card .apoio-corpo,
+  .apoio-card.bg-wa .apoio-corpo{position:relative}
+  .apoio-card h4,
+  .apoio-card.bg-wa .apoio-corpo h4{position:relative}
+  .apoio-card h4 .apoio-tag,
+  .apoio-card.bg-wa h4 .apoio-tag,
+  .apoio-card.bg-curso h4 .apoio-tag{top:0;left:0;right:auto;transform:translateY(-58%)}
+
+  /* Ondas mais abertas no mobile. */
+  .area-divider{overflow:hidden}
+  .area-divider>svg{position:relative;left:-40%;width:180%}
+  .sec-forma{overflow:hidden}
+  .forma-divider{left:-40%;width:180%}
+
+  /* Materiais: carrossel mobile com foco central e vizinhos visíveis. */
+  .covers-pilha{
+    --cw:68vw;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    margin:32px 0 0;
+    padding:22px 16vw 30px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:16vw;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .covers-pilha::-webkit-scrollbar{display:none}
+  .covers-break{display:none}
+  .covers-pilha img,
+  .covers-pilha img:first-child,
+  .covers-pilha img:nth-child(odd),
+  .covers-pilha img:nth-child(even),
+  .covers-pilha img:last-child{
+    flex:0 0 var(--cw);
+    width:var(--cw);
+    height:auto;
+    margin:0;
+    scroll-snap-align:center;
+    scroll-snap-stop:always;
+    transform:scale(.78);
+    transform-origin:center;
+    filter:blur(1.8px);
+    opacity:.5;
+    z-index:1;
+    transition:transform .3s ease,filter .3s ease,opacity .3s ease,box-shadow .3s ease;
+  }
+  .covers-pilha img.is-active{
+    transform:scale(1);
+    filter:none;
+    opacity:1;
+    z-index:3;
+    box-shadow:0 20px 40px rgba(20,5,10,.38);
+  }
+
+  /* Barra dos planos sem filete lateral. */
+  .sec-preco::before{left:auto;right:0;width:100%;background:linear-gradient(270deg,var(--gold-claro) 0%,var(--gold) 66%,transparent 100%);border-left:0;box-shadow:none}
+
+  /* As quatro imagens da apresentação ganham largura útil. */
+  .sobre-visual{max-width:none;width:100%}
+  .sobre-fotos{width:calc(100vw - 28px);margin-left:calc(50% - 50vw + 14px);gap:7px}
+
+  /* Divisória superior final sem o filete/sombra gradiente à esquerda. */
+  .sec-final>.aba{filter:none}
+}
+
+@media(max-width:600px) and (prefers-reduced-motion:reduce){
+  .covers-pilha{scroll-behavior:auto}
+  .covers-pilha img{transition:none}
+}

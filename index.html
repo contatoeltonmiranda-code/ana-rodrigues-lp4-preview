@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=r17x">
+<link rel="stylesheet" href="assets/style.css?v=r17y">
 
 </head>
 <body>
@@ -81,7 +81,7 @@
     <div class="pivot sr-hidden">
       <h3>É aí que <span class="txt-grad">um acompanhamento personalizado</span><br>faz toda a diferença.</h3>
     </div>
-    <p class="perguntas sr-hidden">Este programa é especialmente indicado para ti se:</p>
+    <p class="perguntas sr-hidden">Este programa é especialmente<br class="mobile-break" aria-hidden="true"> indicado para ti se:</p>
   </div>
   <div class="wrap">
   <!-- r7C item 2: BARRA GROSSA horizontal atravessando a largura, DIVIDIDA em
@@ -615,6 +615,39 @@ window.addEventListener('load',function(){
   btnX.addEventListener('click',fecha);
   lb.addEventListener('click',function(e){if(e.target===lb)fecha();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')fecha();});
+})();
+
+/* ===== r17y: carrossel mobile dos materiais, com item central em destaque ===== */
+(function(){
+  if(!window.matchMedia||!window.matchMedia('(max-width:600px)').matches)return;
+  var track=document.querySelector('.covers-pilha');
+  if(!track)return;
+  var cards=Array.prototype.slice.call(track.querySelectorAll('img'));
+  if(!cards.length)return;
+  track.setAttribute('role','region');
+  track.setAttribute('aria-roledescription','carrossel');
+  cards.forEach(function(card,i){
+    card.setAttribute('tabindex','0');
+    card.setAttribute('role','group');
+    card.setAttribute('aria-label',(i+1)+' de '+cards.length);
+  });
+  function atualiza(){
+    var centro=track.scrollLeft+track.clientWidth/2;
+    var ativo=cards.reduce(function(melhor,card){
+      var cardCentro=card.offsetLeft+card.offsetWidth/2;
+      return Math.abs(cardCentro-centro)<Math.abs((melhor.offsetLeft+melhor.offsetWidth/2)-centro)?card:melhor;
+    },cards[0]);
+    cards.forEach(function(card){card.classList.toggle('is-active',card===ativo)});
+  }
+  var raf=0;
+  track.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(atualiza)},{passive:true});
+  cards.forEach(function(card){card.addEventListener('focus',function(){card.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})})});
+  window.addEventListener('load',function(){
+    var inicial=cards[1]||cards[0];
+    track.scrollLeft=inicial.offsetLeft-(track.clientWidth-inicial.offsetWidth)/2;
+    atualiza();
+  });
+  atualiza();
 })();
 
 </script>
